@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('')
+        .module('myApp')
         .factory('API', function($http) {
 
             /*var postInfo = function(data) {
@@ -45,6 +45,6 @@
                 getInfo,
                 searchData,
                 getPopData
-            }
-        })*/
+            }*/
+        });
 })();
