@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('')
+        .module('flowers')
         .factory('back', function($http, Backand) {
 
             /*var postInfo = function(data) {
@@ -16,6 +16,7 @@
             return {
 
                 postInfo,
-            }
-        });*/
-})();
+            }*/
+        });
+})
+        ();

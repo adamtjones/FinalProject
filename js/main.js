@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('', ['ui.router','backand'])
+        .module('flowers', ['ui.router','backand'])
         .config(function($stateProvider, $urlRouterProvider, BackandProvider) {
             
             /*BackandProvider.setAppName('newcountryapp');
@@ -9,12 +9,12 @@
             BackandProvider.setAnonymousToken('6a7fe20f-21d2-4abd-a727-e1388c2d72ad');
 
             //maybe don't need this:
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/');*/
 
             $stateProvider
             .state('home', {
                     url: '/',
-                    templateUrl: '/views/partials/home.html',
+                    templateUrl: '/views/partials/imageSearch.html',
                     controller: 'mainController',
                     controllerAs: 'controller'
             })
