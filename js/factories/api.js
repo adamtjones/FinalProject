@@ -1,7 +1,11 @@
 (function() {
     'use strict';
     angular
+<<<<<<< HEAD
         .module('flowers')
+=======
+        .module('myApp')
+>>>>>>> 26e44ae6887d590b4fcfb04d852248a6abdf0235
         .factory('API', function($http) {
 
             function getInfo(image) {
@@ -68,7 +72,14 @@
             
             return {
                 getInfo,
+<<<<<<< HEAD
                 searchImage,
             }
         })
+=======
+                searchData,
+                getPopData
+            }*/
+        });
+>>>>>>> 26e44ae6887d590b4fcfb04d852248a6abdf0235
 })();
