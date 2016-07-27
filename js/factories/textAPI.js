@@ -8,7 +8,7 @@
 
 			 	var gettingData = $http({
 				  method: 'GET',
-				  url : "http://loripsum.net/api/10/",
+				  url : "http://www.randomtext.me/api/lorem/p-20/20-62",
 				});
 
 				return gettingData;
@@ -25,10 +25,10 @@
 
 		 	};
 
-		 	var getSkateIpsum = function () {
+		 	var getGibberishIpsum = function () {
 		 		var gettingData = $http ({
 		 			method: 'GET',
-		 			url: "http://skateipsum.com/get/5/0/JSON",
+		 			url: "http://www.randomtext.me/api/gibberish/p-20/20-62",
 		 		});
 
 		 		return gettingData;
@@ -48,7 +48,7 @@
 		 	return {
 		 		getLoremIpsum: getLoremIpsum,
 		 		getBaconIpsum: getBaconIpsum,
-		 		getSkateIpsum: getSkateIpsum,
+		 		getGibberishIpsum: getGibberishIpsum,
 		 		getHipsterIpsum: getHipsterIpsum,
 
 
