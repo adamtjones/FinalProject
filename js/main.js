@@ -9,7 +9,7 @@
             $urlRouterProvider.otherwise('/');
 
             $stateProvider
-            .state('home', {
+            .state('imageSearch', {
                     url: '/',
                     templateUrl: '/views/partials/imageSearch.html',
                     controller: 'mainController',
