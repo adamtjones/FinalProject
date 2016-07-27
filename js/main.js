@@ -6,7 +6,6 @@
 
         .config(function($stateProvider, $urlRouterProvider, BackandProvider) {
 
-            //maybe don't need this:
             $urlRouterProvider.otherwise('/');
 
             $stateProvider
