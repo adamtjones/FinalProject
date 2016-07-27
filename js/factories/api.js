@@ -68,14 +68,9 @@
             
             return {
                 getInfo,
-<<<<<<< HEAD
                 searchImage,
             }
-        })
-=======
-                searchData,
-                getPopData
-            }*/
-        });
->>>>>>> 26e44ae6887d590b4fcfb04d852248a6abdf0235
+
+        });    
+
 })();

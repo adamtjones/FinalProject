@@ -12,12 +12,12 @@
 		});
 
 		var animals = ["cat", "dog", "monkey", "human", "bird", "dinosaur"];
-		var numbers = [1, 2, 3, 4, 5, 6];
+		var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 		var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];		
 		
-		var obj = new objectTemplate(animals,25);
-		var obj2 = new objectTemplate(numbers,25);
-		var obj3 = new objectTemplate(planets,50);
+		var obj = new objectTemplate(animals,33);
+		var obj2 = new objectTemplate(numbers,33);
+		var obj3 = new objectTemplate(planets,33);
 		var containerArray = [obj, obj2, obj3];
 
 		var tempArray = JSON.parse(JSON.stringify(containerArray));
@@ -29,7 +29,7 @@
 
 		var finalArray = [];
 
-		var wordLength = 50;
+		var wordLength = 9;
 		var words = wordLength / tempArray.length;
 
 		while (finalArray.length <= words) {
