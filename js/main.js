@@ -15,10 +15,10 @@
                     controller: 'mainController',
                     controllerAs: 'controller'
             })
-            .state('results', {
-                url: '/results/:country',
-                templateUrl: '/views/partials/results.html',
-                controller: 'resultsController',
+            .state('main', {
+                url: '/text',
+                templateUrl: '/views/text.html',
+                controller: 'textController',
                 controllerAs: 'controller'
             })
             .state('contact', {
@@ -33,6 +33,6 @@
                 controller: 'chartController',
                 controllerAs: 'controller'
             });
-        })
+        });
     })();
             
