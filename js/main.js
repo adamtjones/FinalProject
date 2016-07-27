@@ -15,11 +15,15 @@
                     controller: 'mainController',
                     controllerAs: 'controller'
             })
-            .state('main', {
-                url: '/text',
-                templateUrl: '/views/text.html',
-                controller: 'textController',
-                controllerAs: 'controller'
+            .state('text', {
+            url: '/text',
+            views: {
+                'main': {
+                    templateUrl: '../views/text.html',
+                    controller: 'textController',
+                    controllerAs: 'controller'
+                  }
+              },
             })
             .state('contact', {
                 url: '/contact',

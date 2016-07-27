@@ -2,7 +2,7 @@
     'use strict';
     
     angular
-    .module("myApp")
+    .module('flowers')
     .controller('textController', function(textAPI) {
         var vm = this;
 

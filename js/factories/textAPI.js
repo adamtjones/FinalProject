@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 	angular
-		.module('myApp')
+		.module('flowers')
 		 .factory('textAPI', function($http) {
 
 		 	var getLoremIpsum = function() {
