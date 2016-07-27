@@ -9,10 +9,10 @@
             $urlRouterProvider.otherwise('/');
 
             $stateProvider
-            .state('imageSearch', {
+            .state('home', {
                     url: '/',
-                    templateUrl: '/views/partials/imageSearch.html',
-                    controller: 'mainController',
+                    templateUrl: '/views/home.html',
+                    controller: 'homeController',
                     controllerAs: 'controller'
             })
             .state('text', {
@@ -31,10 +31,23 @@
                 controller: 'contactController',
                 controllerAs: 'controller'
             })
-            .state('chart', {
-                url: '/chart',
-                templateUrl: '/views/partials/chart.html',
-                controller: 'chartController',
+            .state('results', {
+                url: '/results',
+                templateUrl: '/views/partials/results.html',
+                controller: 'resultsController',
+                controllerAs: 'controller'
+            })
+            .state('imageSearch', {
+                url: '/imageSearch',
+                views: {
+                    'main': {
+                        templateUrl: '../views/partials/imageSearch.html',
+                        controller: 'textController',
+                        controllerAs: 'controller'
+                    }
+             
+            },
+                controller: 'mainController',
                 controllerAs: 'controller'
             });
         });

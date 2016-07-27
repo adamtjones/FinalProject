@@ -3,7 +3,7 @@
     
     angular
     .module("flowers")
-    .controller('mainController', function() {
+    .controller('', function() {
         var vm = this;
 
       
