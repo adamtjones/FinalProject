@@ -36,8 +36,6 @@
     }
 )();
 
-<<<<<<< HEAD
-=======
             function getInfo(image) {
 
             var call = $http({
@@ -108,4 +106,3 @@
         });    
 
 })();
->>>>>>> fc414f8a9a4e53763ae40af6b3015a364034987c
