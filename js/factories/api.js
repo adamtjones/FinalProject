@@ -1,10 +1,57 @@
 (function() {
     'use strict';
     angular
+<<<<<<< HEAD
+        .module('flowers')
+=======
         .module('myApp')
+>>>>>>> 26e44ae6887d590b4fcfb04d852248a6abdf0235
         .factory('API', function($http) {
 
-            /*var postInfo = function(data) {
+            function getInfo(image) {
+
+            var call = $http({
+            headers:{
+                "Ocp-Apim-Subscription-Key":"da6b094ff8914d0597d301ebb935eefd",
+            },
+
+            method: 'GET',
+
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + image,
+            });
+
+            return call;
+            }
+
+            var searchImage = function(search) {
+                var data = $http({
+                    method: 'GET',
+                    url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?" + search,
+                });
+
+                return data;
+
+            }
+
+            /*var searchPhoto = function(search) {
+                var data = $http({
+                    method: 'GET',
+                    url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + search +"&count=5&offset=0&mkt=en-us&safeSearch=Moderate",
+                });
+
+                return data;
+
+            }
+
+            /*function getPhoto(country) {
+                var call = $http({
+                    method: 'GET',
+                    url: "https://restcountries.eu/rest/v1/name/" + country,
+                });
+
+                return call;
+            }
+            var postInfo = function(data) {
                 var gettingData = $http({
                     method: 'POST',
                     data: data,
@@ -14,15 +61,6 @@
                 return gettingData;
             }
 
-            function getInfo(country) {
-                var call = $http({
-                    method: 'GET',
-                    url: "https://restcountries.eu/rest/v1/name/" + country,
-                });
-
-                return call;
-            }
-            
             function getPopData() {
                 var call = $http({
                     method:'GET',
@@ -30,21 +68,18 @@
                 });
 
                 return call;
-            }
-            var searchData = function(search) {
-                var data = $http({
-                    method: 'GET',
-                    url: "https://restcountries.eu/rest/v1/name/" + search,
-                });
-
-                return data;
-
-            }
+            }*/
+            
             return {
-                postInfo,
                 getInfo,
+<<<<<<< HEAD
+                searchImage,
+            }
+        })
+=======
                 searchData,
                 getPopData
             }*/
         });
+>>>>>>> 26e44ae6887d590b4fcfb04d852248a6abdf0235
 })();
