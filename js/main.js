@@ -1,29 +1,28 @@
-
 (function() {
     'use strict';
     angular
-        .module('flowers', ['ui.router','backand'])
+        .module('flowers', ['ui.router', 'backand'])
 
-        .config(function($stateProvider, $urlRouterProvider, BackandProvider) {
+    .config(function($stateProvider, $urlRouterProvider, BackandProvider) {
 
-            $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
 
-            $stateProvider
+        $stateProvider
             .state('home', {
-                    url: '/',
-                    templateUrl: '/views/partials/imageSearch.html',
-                    controller: 'mainController',
-                    controllerAs: 'controller'
+                url: '/',
+                templateUrl: '/views/home.html',
+                controller: 'homeController',
+                controllerAs: 'controller'
             })
             .state('text', {
-            url: '/text',
-            views: {
-                'main': {
-                    templateUrl: '../views/text.html',
-                    controller: 'textController',
-                    controllerAs: 'controller'
-                  }
-              },
+                url: '/text',
+                views: {
+                    'main': {
+                        templateUrl: '../views/text.html',
+                        controller: 'textController',
+                        controllerAs: 'controller'
+                    }
+                },
             })
             .state('contact', {
                 url: '/contact',
@@ -31,12 +30,19 @@
                 controller: 'contactController',
                 controllerAs: 'controller'
             })
-            .state('chart', {
-                url: '/chart',
-                templateUrl: '/views/partials/chart.html',
-                controller: 'chartController',
+            .state('results', {
+                url: '/results/:country',
+                templateUrl: '/views/partials/results.html',
+                controller: 'resultsController',
                 controllerAs: 'controller'
-            });
-        });
-    })();
-            
+            })
+            .state('imageSearch', {
+                    url: '/imageSearch',
+                    templateUrl: '../views/partials/imageSearch.html',
+                    controller: 'mainController',
+                    controllerAs: 'controller'
+                }
+        );
+    });
+})();
+
