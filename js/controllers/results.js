@@ -10,7 +10,7 @@
 
             var data = API.getInfo(country);
             data.then(function(response) {
-                vm.data = response.data[0];
+                vm.data = response.data.value;
             });
         });
 })();
