@@ -1,11 +1,11 @@
-(function() {
-    'use strict';
+// (function() {
+//     'use strict';
     
-    angular
-    .module("flowers")
-    .controller('mainController', function() {
-        var vm = this;
+//     angular
+//     .module("flowers")
+//     .controller('mainController', function() {
+//         var vm = this;
 
       
-    });
-})();
+//     });
+// })();
