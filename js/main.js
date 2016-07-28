@@ -49,7 +49,7 @@
                 templateUrl: '/views/partials/results.html',
                 controller: 'resultsController',
                 controllerAs: 'controller'
-            })
+            });
 
     });
 })();
