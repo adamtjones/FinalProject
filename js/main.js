@@ -29,8 +29,8 @@
                 },
             })
             .state('imageSearch', {
-                    url: '/imageSearch',
-               views: {
+                url: '/imageSearch',
+                views: {
                     'main': {
                         templateUrl: '../views/partials/imageSearch.html',
                         controller: 'mainController',
@@ -46,20 +46,14 @@
             })
             .state('results', {
                 url: '/results/:country',
-                templateUrl: '/views/partials/results.html',
-                controller: 'resultsController',
-                controllerAs: 'controller'
-            })
-            .state('imageSearch', {
-                    url: '/imageSearch',
-                    views: {
-                        'main': {
-                            templateUrl: '../views/partials/imageSearch.html',
-                            controller: 'mainController',
-                            controllerAs: 'controller'
-                }
-            },
-        );
+                views: {
+                    'main': {
+                        templateUrl: '/views/partials/results.html',
+                        controller: 'resultsController',
+                        controllerAs: 'controller'
+                    }
+                },
+            });
 
     });
 })();
