@@ -50,7 +50,6 @@
                 controller: 'resultsController',
                 controllerAs: 'controller'
             })
-<<<<<<< HEAD
             .state('imageSearch', {
                     url: '/imageSearch',
                     views: {
@@ -61,9 +60,7 @@
                 }
             },
         );
-=======
 
->>>>>>> 2ce6300ee05513ba20758634df62a836d77100f0
     });
 })();
 
