@@ -38,10 +38,13 @@
             })
             .state('imageSearch', {
                     url: '/imageSearch',
-                    templateUrl: '../views/partials/imageSearch.html',
-                    controller: 'mainController',
-                    controllerAs: 'controller'
+                    views: {
+                        'main': {
+                            templateUrl: '../views/partials/imageSearch.html',
+                            controller: 'mainController',
+                            controllerAs: 'controller'
                 }
+            },
         );
     });
 })();
