@@ -29,8 +29,8 @@
                 },
             })
             .state('imageSearch', {
-                    url: '/imageSearch',
-               views: {
+                url: '/imageSearch',
+                views: {
                     'main': {
                         templateUrl: '../views/partials/imageSearch.html',
                         controller: 'mainController',
@@ -49,6 +49,13 @@
                 templateUrl: '/views/partials/results.html',
                 controller: 'resultsController',
                 controllerAs: 'controller'
+                views: {
+                    'main': {
+                        templateUrl: '/views/partials/results.html',
+                        controller: 'resultsController',
+                        controllerAs: 'controller'
+                    }
+                },
             });
 
     });
