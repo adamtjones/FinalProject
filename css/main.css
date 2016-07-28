@@ -6,3 +6,9 @@
   .rowText .textOutput {
     border: 1px solid black;
     height: 200px; }
+
+.imageResults {
+  height: 110%;
+  width: 110%;
+  margin: 0px auto;
+  display: block; }
