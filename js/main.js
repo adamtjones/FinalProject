@@ -10,9 +10,13 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: '/views/home.html',
-                controller: 'homeController',
-                controllerAs: 'controller'
+                views: {
+                    'main': {
+                        templateUrl: '../views/home.html',
+                        controller: 'textController',
+                        controllerAs: 'controller'
+                    }
+                },
             })
             .state('text', {
                 url: '/text',
@@ -24,6 +28,16 @@
                     }
                 },
             })
+            .state('imageSearch', {
+                    url: '/imageSearch',
+               views: {
+                    'main': {
+                        templateUrl: '../views/partials/imageSearch.html',
+                        controller: 'mainController',
+                        controllerAs: 'controller'
+                    }
+                },
+            })           
             .state('contact', {
                 url: '/contact',
                 templateUrl: '/views/partials/contact.html',
@@ -36,13 +50,7 @@
                 controller: 'resultsController',
                 controllerAs: 'controller'
             })
-            .state('imageSearch', {
-                    url: '/imageSearch',
-                    templateUrl: '../views/partials/imageSearch.html',
-                    controller: 'mainController',
-                    controllerAs: 'controller'
-                }
-        );
+
     });
 })();
 
