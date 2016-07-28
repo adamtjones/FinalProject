@@ -29,5 +29,5 @@ gulp.task('browserSync', function() {
 })
  
 gulp.task('watch',['browserSync','sass'], function () {
-  gulp.watch(['./sass/*.scss','./js/*.js','./js/**/*.js','./*.html','./views/**/*.html', './views/partials/**/*.html'], ['sass','lint']);
+  gulp.watch(['./sass/*','./js/*.js','./js/**/*.js','./*.html','./views/**/*.html', './views/partials/**/*.html'], ['sass','lint']);
 });
