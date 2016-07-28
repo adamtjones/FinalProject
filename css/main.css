@@ -1,11 +1,8 @@
-.rowText .enterSelectText {
-  border: 1px solid black;
-  height: 200px; }
-
-.rowText .enterPercentage {
-  border: 1px solid black;
-  height: 200px; }
-
-.rowText .textOutput {
-  border: 1px solid black;
-  height: 200px; }
+.rowText {
+  padding-top: 50px; }
+  .rowText .enterPercentage {
+    border: 1px solid black;
+    height: 200px; }
+  .rowText .textOutput {
+    border: 1px solid black;
+    height: 200px; }
