@@ -11,7 +11,7 @@
                             "Ocp-Apim-Subscription-Key": "da6b094ff8914d0597d301ebb935eefd",
                         },
                         method: 'GET',
-                        url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + image,
+                        url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + image + "&count=5",
                     });
 
                     return call;
@@ -20,7 +20,7 @@
                 var searchImage = function(search) {
                     var data = $http({
                         method: 'GET',
-                        url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?" + search,
+                        url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?" + search + params,
                     });
 
                     return data;
