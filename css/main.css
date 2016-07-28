@@ -6,8 +6,9 @@
 .imageResults {
   height: 100%;
   width: 100%;
-  margin: 10px;
+  margin: 5px;
   display: block; }
 
 .results {
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin: 0px auto; }
