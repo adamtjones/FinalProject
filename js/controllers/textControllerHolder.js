@@ -8,68 +8,22 @@
         var vm = this;
 
         var finalArray = [];
-        var containerArray = [];
 
         var loremArray = [];
         var baconArray = [];
         var gibberishArray = [];
         var hipsterArray = [];
-        var userArray = [];
 
         var animals = ["cat", "dog", "monkey", "human", "bird", "dinosaur"];
 		var numbers = ["1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13"];
 		var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];	
 
 
-		vm.submit = function(){
-			vm.form.checkbox = [];
-			vm.form.checkbox.loremInput = false;
-			vm.form.checkbox.gibberishInput = false;
-			vm.form.checkbox.hipsterInput = false;
-			vm.form.checkbox.baconInput = false;
-
-
+		var writeTextArray = function(){
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
 			  this.percentage = percentage;
 			});
-
-			if (vm.form.textInput !== null) {
-				var data = vm.form.textInput
-				data = data.split(" ");
-				userArray.push(data);
-				console.log(userArray);
-				var obj = new objectTemplate (userArray, vm.form.percentage.textInput);
-				containerArray.push(obj);
-			}
-
-			if (vm.form.checkbox.loremInput === true){
-				console.log("hi");
-				var obj = new objectTemplate(loremArray, vm.form.percentage.loremInput);
-				containerArray.push(obj);
-			}
-
-			if (vm.form.checkbox.gibberishInput === true){
-				var obj = new objectTemplate(gibberishArray, vm.form.percentage.gibberishInput);
-				containerArray.push(obj);
-			}
-			if (vm.form.checkbox.hipsterInput === true){
-				var obj = new objectTemplate(hipsterArray, vm.form.percentage.hipsterInput);
-				containerArray.push(obj);
-			}
-			if (vm.form.checkbox.baconInput === true){
-				var obj = new objectTemplate(baconArray, vm.form.percentage.baconInput);
-				containerArray.push(obj);
-				
-			}
-			console.log(containerArray);
-		}
-
-
-
-
-		var writeTextArray = function(){
-
 
 			var obj1 = new objectTemplate(animals,5);
 			var obj2 = new objectTemplate(numbers,5);
@@ -78,7 +32,7 @@
 			var obj5 = new objectTemplate(baconArray,5);
 			var obj6 = new objectTemplate(gibberishArray, 50)
 			var obj7 = new objectTemplate(hipsterArray, 10);
-
+			var containerArray = [obj1, obj2, obj3, obj4, obj5, obj6, obj7];
 			var wordLength = 100;
 
 

@@ -2,12 +2,14 @@
   padding-top: 50px; }
   .rowText .enterSelectText .checkbox {
     margin-top: 0px; }
-  .rowText .enterPercentage {
-    border: 1px solid black;
-    height: 200px; }
-  .rowText .textOutput {
-    border: 1px solid black;
-    height: 200px; }
+  .rowText .enterPercentage label {
+    text-align: left; }
+  .rowText .enterPercentage input {
+    margin-bottom: 5px; }
+  .rowText .enterPercentage button {
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px; }
 
 .imageResults {
   height: 110%;

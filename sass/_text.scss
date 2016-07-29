@@ -1,15 +1,29 @@
 .rowText {
 	padding-top: 50px;
 	.enterSelectText {
+		textarea {
+
+		} 
 		.checkbox {
 			margin-top: 0px;
 		}
 
 	}
 	.enterPercentage {
+		label {
+			text-align: left;
+		}
+		input {
+			margin-bottom: 5px;
+		}
 
+		button {
+			float: right;
+			margin-right: 15px;
+			margin-top: 20px;
 
-	}
+		}
+	}	
 	.textOutput {
 
 
