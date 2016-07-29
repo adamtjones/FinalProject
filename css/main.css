@@ -12,7 +12,11 @@
     margin-top: 20px; }
 
 .imageResults {
-  height: 110%;
-  width: 110%;
-  margin: 0px auto;
+  height: 100%;
+  width: 100%;
+  margin: 5px;
   display: block; }
+
+.results {
+  margin-top: 40px;
+  margin: 0px auto; }
