@@ -8,32 +8,59 @@
         var vm = this;
 
         var finalArray = [];
+        var containerArray = [];
 
         var loremArray = [];
         var baconArray = [];
         var gibberishArray = [];
         var hipsterArray = [];
+        var userArray = [];
 
-        var animals = ["cat", "dog", "monkey", "human", "bird", "dinosaur"];
-		var numbers = ["1","2","3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13"];
-		var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];	
+		vm.form =[];
+		vm.form.checkbox = [];
+		vm.form.checkbox.loremInput = false;
+		vm.form.checkbox.gibberishInput = false;
+		vm.form.checkbox.hipsterInput = false;
+		vm.form.checkbox.baconInput = false;
 
+		vm.submit = function(){
 
-		var writeTextArray = function(){
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
 			  this.percentage = percentage;
 			});
 
-			var obj1 = new objectTemplate(animals,5);
-			var obj2 = new objectTemplate(numbers,5);
-			var obj3 = new objectTemplate(planets,5);
-			var obj4 = new objectTemplate(loremArray,5);
-			var obj5 = new objectTemplate(baconArray,5);
-			var obj6 = new objectTemplate(gibberishArray, 50)
-			var obj7 = new objectTemplate(hipsterArray, 10);
-			var containerArray = [obj1, obj2, obj3, obj4, obj5, obj6, obj7];
-			var wordLength = 100;
+			if (vm.form.textInput != null) {
+				var data = vm.form.textInput
+				data = data.split(" ");
+				userArray.push(data);
+				userArray = _.flatten(userArray); 				
+				var obj = new objectTemplate (userArray, vm.form.percentage.textInput);
+				containerArray.push(obj);
+			}
+
+			if (vm.form.checkbox.loremInput === true){
+				var obj = new objectTemplate(loremArray, vm.form.percentage.loremInput);
+				containerArray.push(obj);
+			}
+			if (vm.form.checkbox.gibberishInput === true){
+				var obj = new objectTemplate(gibberishArray, vm.form.percentage.gibberishInput);
+				containerArray.push(obj);
+			}
+			if (vm.form.checkbox.hipsterInput === true){
+				var obj = new objectTemplate(hipsterArray, vm.form.percentage.hipsterInput);
+				containerArray.push(obj);
+			}
+			if (vm.form.checkbox.baconInput === true){
+				var obj = new objectTemplate(baconArray, vm.form.percentage.baconInput);
+				containerArray.push(obj);	
+			}
+			writeTextArray();
+		}
+
+		var writeTextArray = function(){
+
+			var wordLength = vm.form.wordTotal;
 
 
 			var tempArray = JSON.parse(JSON.stringify(containerArray));
@@ -70,8 +97,8 @@
 			finalArray = finalArray.splice(0, wordLength);
 			console.log(finalArray);
 			console.log(finalArray.length);
+			vm.form.textOutput = finalArray.join(" ");
 		};	
-
 
 		//getting text arrays from APIs
 		var loremText = textAPI.getLoremIpsum();
@@ -83,7 +110,6 @@
 			data = data.split(" ");
 			loremArray.push(data);
 			loremArray = _.flatten(loremArray);
-			writeTextArray();
 	    });
 
 
@@ -96,7 +122,6 @@
 	      	data = data.split(" ");
 			baconArray.push(data);
 			baconArray = _.flatten(baconArray);
-		    writeTextArray();
 	    });
 
 	    var gibberishText = textAPI.getGibberishIpsum();
@@ -107,8 +132,7 @@
 	  		data = data.replace(/(\r\n|\n|\r)/gm," ");
 			data = data.split(" ");
 			gibberishArray.push(data);
-			gibberishArray = _.flatten(gibberishArray);
-			writeTextArray();   
+			gibberishArray = _.flatten(gibberishArray);  
 	    }); 
 
 	    var hipsterText = textAPI.getHipsterIpsum();
@@ -119,8 +143,7 @@
 	      	data = data.replace(/\s\s+/g, ' ');	   		 
 			data = data.split(" ");	   		
 			hipsterArray.push(data);
-			hipsterArray = _.flatten(hipsterArray);
-			writeTextArray(); 	      
+			hipsterArray = _.flatten(hipsterArray); 	      
 	    });
 	     	   	
 
