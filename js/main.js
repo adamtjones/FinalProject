@@ -7,6 +7,11 @@
 
         $urlRouterProvider.otherwise('/');
 
+            BackandProvider.setAppName('finalproject');
+            BackandProvider.setSignUpToken('a77a0d3e-cc54-4b8e-95ea-ecd2e424897f');
+            BackandProvider.setAnonymousToken('1122b21c-12db-4f88-b28b-a6da4138655e');
+
+
         $stateProvider
             .state('home', {
                 url: '/',
