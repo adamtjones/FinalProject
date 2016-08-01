@@ -8,11 +8,10 @@
 
 			 	var gettingData = $http({
 				  method: 'GET',
-				  url : "http://www.randomtext.me/api/lorem/p-20/20-62",
+				  url : "http://www.randomtext.me/api/lorem/p-5/",
 				});
 
 				return gettingData;
-
 		 	};
 
 		 	var getBaconIpsum = function () {
@@ -22,17 +21,15 @@
 		 		});
 
 		 		return gettingData;
-
 		 	};
 
 		 	var getGibberishIpsum = function () {
 		 		var gettingData = $http ({
 		 			method: 'GET',
-		 			url: "http://www.randomtext.me/api/gibberish/p-20/20-62",
+		 			url: "http://www.randomtext.me/api/gibberish/p-5/",
 		 		});
 
 		 		return gettingData;
-
 		 	};
 
 		 	var getHipsterIpsum = function () {
@@ -42,7 +39,6 @@
 		 		});
 
 		 		return gettingData;
-
 		 	};			 			 	
 
 		 	return {
@@ -50,10 +46,7 @@
 		 		getBaconIpsum: getBaconIpsum,
 		 		getGibberishIpsum: getGibberishIpsum,
 		 		getHipsterIpsum: getHipsterIpsum,
-
-
 		 	};
 
-		 
 		 });
 })();

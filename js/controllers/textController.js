@@ -7,15 +7,16 @@
         
         var vm = this;
 
+        // empty container arrays to be populated by writeTextArray()
         var finalArray = [];
         var containerArray = [];
-
+        //empty container arrays to be populated by submit()
         var loremArray = [];
         var baconArray = [];
         var gibberishArray = [];
         var hipsterArray = [];
         var userArray = [];
-
+        // defining form variables
 		vm.form =[];
 		vm.form.checkbox = [];
 		vm.form.checkbox.loremInput = false;
@@ -23,6 +24,8 @@
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;
 
+		//translates user inputs to objectTemplate and pushes to containerArray
+		//calls function writeTextArray()
 		vm.submit = function(){
 
 			var objectTemplate = (function(array,percentage){
@@ -31,7 +34,8 @@
 			});
 
 			if (vm.form.textInput != null) {
-				var data = vm.form.textInput
+				var data = vm.form.textInput.toLowerCase();
+				data = data.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
 				data = data.split(" ");
 				userArray.push(data);
 				userArray = _.flatten(userArray); 				
@@ -55,14 +59,22 @@
 				var obj = new objectTemplate(baconArray, vm.form.percentage.baconInput);
 				containerArray.push(obj);	
 			}
+
 			writeTextArray();
 		}
 
+		//takes containerArray and creates textOutput based on user inputs
 		var writeTextArray = function(){
+			//sets default wordTotal to 200 if none is provided by user
+			if (vm.form.wordTotal == null) {
+				var wordLength = 200;
+			}
+			else {
+				var wordLength = vm.form.wordTotal;
+			}
 
-			var wordLength = vm.form.wordTotal;
-
-
+			//calculates the percentage of selected arrays types based on user inputs,
+			//sets containerArray to tempArray for further changes
 			var tempArray = JSON.parse(JSON.stringify(containerArray));
 			var tempArray = tempArray.map(function(item){
 				var percentPull = item.percentage / 100;
@@ -85,14 +97,15 @@
 					
 			});
 
-
+			//mixes up the tempArray so everything is random, makes sure wordTotal 
+			//from output is equal to user input or default, pushes tempArray to
+			//finalArray and writes it to html
 			tempArray = _.flatten(tempArray);	
 			var words = wordLength / tempArray.length;
 
 			while (finalArray.length <= words) {
 			  	finalArray.push(_.shuffle(tempArray));
 			}
-
 			finalArray = _.flatten(finalArray);
 			finalArray = finalArray.splice(0, wordLength);
 			console.log(finalArray);
@@ -104,9 +117,8 @@
 		var loremText = textAPI.getLoremIpsum();
 	      	
 	      loremText.then(function(response){
-	      	var data = response.data.text_out;
-	  		data = data.replace(/<[^>]*>/g, "");
-	  		data = data.replace(/(\r\n|\n|\r)/gm," ");
+	      	var data = response.data.text_out.toLowerCase();
+			data = data.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
 			data = data.split(" ");
 			loremArray.push(data);
 			loremArray = _.flatten(loremArray);
@@ -117,8 +129,8 @@
 	      	
 	      baconText.then(function(response){ 
 	      	var data = response.data.toString();
-	      	data = data.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"") 
-	      	data = data.replace(/\s\s+/g, ' ');
+	      	data = data.toLowerCase();
+			data = data.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
 	      	data = data.split(" ");
 			baconArray.push(data);
 			baconArray = _.flatten(baconArray);
@@ -127,9 +139,8 @@
 	    var gibberishText = textAPI.getGibberishIpsum();
 	      	
 	      gibberishText.then(function(response){     
-	      	var data = response.data.text_out;
-	  		data = data.replace(/<[^>]*>/g, "");
-	  		data = data.replace(/(\r\n|\n|\r)/gm," ");
+	      	var data = response.data.text_out.toLowerCase();
+	  		data = data.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, ""); 		
 			data = data.split(" ");
 			gibberishArray.push(data);
 			gibberishArray = _.flatten(gibberishArray);  
@@ -138,16 +149,11 @@
 	    var hipsterText = textAPI.getHipsterIpsum();
 	      	
 	      hipsterText.then(function(response){
-	    	var data = response.data.text;
-	   		data = data.replace(/<[^>]*>/g, "");
-	      	data = data.replace(/\s\s+/g, ' ');	   		 
+	    	var data = response.data.text.toLowerCase();
+	   		data = data.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");		 
 			data = data.split(" ");	   		
 			hipsterArray.push(data);
 			hipsterArray = _.flatten(hipsterArray); 	      
-	    });
-	     	   	
-
-
-      
+	    });      
     });
 })();
