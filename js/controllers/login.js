@@ -27,5 +27,11 @@
                     }
                 })
             }
+
+            vm.clearLogin = function(){
+                vm.controller.form.username = null;
+                vm.controller.form.password = null;
+                
+            }
         });
 })();
