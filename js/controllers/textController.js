@@ -3,7 +3,7 @@
     
     angular
     .module('flowers')
-    .controller('textController', function(textAPI) {
+    .controller('textController', function(textAPI,clipboard) {
         
         var vm = this;
 
@@ -23,6 +23,19 @@
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;
+
+		vm.supported = false;
+
+        vm.textToCopy = 'I can copy by clicking!';
+
+        vm.success = function () {
+        	clipboard.copyText(vm.form.textOutput);
+            console.log('Copied!');
+        };
+
+        vm.fail = function (err) {
+            console.error('Error!', err);
+        };
 
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()
@@ -108,8 +121,6 @@
 			}
 			finalArray = _.flatten(finalArray);
 			finalArray = finalArray.splice(0, wordLength);
-			console.log(finalArray);
-			console.log(finalArray.length);
 			vm.form.textOutput = finalArray.join(" ");
 		};	
 

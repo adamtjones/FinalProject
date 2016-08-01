@@ -79,8 +79,8 @@
 		<div class = "col-xs-6 textOutput">
 
 			<div class = "form-group">
-				<label for = "textOutput">Here's your custom text:</label>
-				<textarea class="form-control" id = "textOutput" rows="20" readonly ng-model= "controller.form.textOutput">{{controller.form.textOutput}}</textarea>
+				<label for = "textOutput">Here's your custom text:</label><button clipboard supported="controller.supported" text="textToCopy" on-copied="controller.success()" on-error="controller.fail(err)">Copy</button>
+				<textarea class="form-control" id = "textOutput" rows="20" readonly ng-model= "controller.form.textOutput" ng-model="textToCopy">{{controller.form.textOutput}}</textarea>
 			</div>
 
 		</div>
