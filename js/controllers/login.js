@@ -3,13 +3,13 @@
 
     angular
         .module('flowers')
-        .controller('loginController', function(API, $location, $stateParams, back) {
+        .controller('loginController', function(API, $location, $state, back) {
             var vm = this;
-            
+
             vm.showAlert = false;
 
             if (API.getToken() !== null) {
-                $stateParams.go('admin');
+                $state.go('admin');
             }
 
             vm.submit = function() {
@@ -21,17 +21,17 @@
                         API.saveToken(results.data.data[0].token);
                         API.saveUserId(results.data.data[0].id);
                         vm.showAlert = false;
-                        $stateParams.go('admin');
+                        $state.go('admin');
                     } else {
                         vm.showAlert = true;
                     }
                 })
             }
 
-            vm.clearLogin = function(){
+            vm.clearLogin = function() {
                 vm.controller.form.username = null;
                 vm.controller.form.password = null;
-                
+
             }
         });
 })();
