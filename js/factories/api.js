@@ -4,7 +4,7 @@
         .module('flowers')
         .factory('API', function($http) {
 
-            function getInfo(image) {
+            var getInfo = function(image) {
 
                 var call = $http({
                     headers: {
@@ -15,10 +15,18 @@
                 });
 
                 return call;
+
+
             }
+
+            var getToken = function() {
+                return localStorage.getItem('token');
+            }
+
 
             return {
                 getInfo,
+                getToken,
             }
         })
 })();

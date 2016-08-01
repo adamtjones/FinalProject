@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('loginController', function(API, $location, $stateParams, back) {
+        .controller('registerController', function(API, $location, $stateParams, back) {
             var vm = this;
 
             vm.submit = function() {
@@ -13,6 +13,15 @@
                     API.saveUserId(results.data.__metadata.id);
                     $stateParams.go('admin');
                 })
+            }
+
+            vm.clearRegister = function(){
+                vm.controller.form.firstName = null;
+                vm.controller.form.lastName = null;
+                vm.controller.form.email = null;
+                vm.controller.form.userName = null;
+                vm.controller.form.password = null;
+                
             }
         });
 })();

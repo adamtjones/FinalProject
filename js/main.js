@@ -61,12 +61,6 @@
                         controllerAs: 'controller'
                     }
                 },
-            })
-            .state('contact', {
-                url: '/contact',
-                templateUrl: '/views/partials/contact.html',
-                controller: 'contactController',
-                controllerAs: 'controller'
             });
 
     });
