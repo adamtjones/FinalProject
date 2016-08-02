@@ -14,13 +14,32 @@ $offWhite: #fefbf7;
 
 body {
 	background-color: $red;
+	font-family: $bodyFont;
+	font-size: 18px;
+	color: $gray;
 }
 .container-fluid {
 	width: 95%;
 }
 
-.rowMain {
+.rowText {
 	margin-top: 20px;
 	background-color: $offWhite;
 	padding: 20px;
+}
+
+.rowImageSearch {
+	margin-top: 20px;
+	background-color: $offWhite;
+	padding:20px;
+}
+.rowRegister {
+	margin-top: 20px;
+	background-color: $offWhite;
+	padding:20px;
+}
+.rowLogin {
+	margin-top: 20px;
+	background-color: $offWhite;
+	padding:20px;
 }

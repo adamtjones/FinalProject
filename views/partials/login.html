@@ -1,15 +1,17 @@
-<div class="login">
-	<div ng-show="controller.showAlert" class="alert alert-warning alert-dismissible" role="alert">
-		<p>fail</p>
+<div class = "row rowLogin">	
+	<div class=" col-xs-12 login">
+		<div ng-show="controller.showAlert" class="alert alert-warning alert-dismissible" role="alert">
+			<p>fail</p>
+		</div>
+		<form ng-submit="controller.submit()">
+			<h2>Login</h2>
+			<input class="form-control" type="text" placeholder="Email Address" ng-model="controller.form.email">
+			</br>
+			<input clas="form-control" type="text" placeholder="Password" ng-model="controller.form.password">
+			</br>
+			<button type="submit">Login</button>
+			</br>
+			<button ng-href="#/register">Register</button>
+		</form>
 	</div>
-	<form ng-submit="controller.submit()">
-		<h2>Login</h2>
-		<input class="form-control" type="text" placeholder="Email Address" ng-model="controller.form.email">
-		</br>
-		<input clas="form-control" type="text" placeholder="Password" ng-model="controller.form.password">
-		</br>
-		<button type="submit">Login</button>
-		</br>
-		<button ng-href="#/register">Register</button>
-	</form>
-</div>
+</div>	

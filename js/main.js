@@ -12,34 +12,19 @@
         BackandProvider.setAnonymousToken('1122b21c-12db-4f88-b28b-a6da4138655e');
   
         $stateProvider
-            .state('home', {
-                url: '/',
-                views: {
-                    'main': {
-                        templateUrl: '../views/home.html',
-                        controller: 'textController',
-                        controllerAs: 'controller'
-                    }
-                },
-            })
             .state('text', {
-                url: '/text',
+                url: '/home',
                 views: {
                     'main': {
                         templateUrl: '../views/text.html',
                         controller: 'textController',
                         controllerAs: 'controller'
-                    }
-                },
-            })
-            .state('imageSearch', {
-                url: '/imageSearch',
-                views: {
-                    'main': {
+                    },
+                    'imageSearch': {
                         templateUrl: '../views/partials/imageSearch.html',
                         controller: 'imageSearchController',
-                        controllerAs: 'vm'
-                    }
+                        controllerAs: 'vm',
+                    },
                 },
             })
             .state('login', {
