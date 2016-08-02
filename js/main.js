@@ -38,7 +38,7 @@
                     'main': {
                         templateUrl: '../views/partials/imageSearch.html',
                         controller: 'imageSearchController',
-                        controllerAs: 'controller'
+                        controllerAs: 'vm'
                     }
                 },
             })
