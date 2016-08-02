@@ -11,17 +11,10 @@
                 register.then(function(results) {
                     API.saveToken(results.config.data.token);
                     API.saveUserId(results.data.__metadata.id);
-                    $state.go('admin');
+                    vm.form = [];
+                    $state.go('home');                    
                 })
             }
 
-            vm.clearRegister = function(){
-                vm.controller.form.firstName = null;
-                vm.controller.form.lastName = null;
-                vm.controller.form.email = null;
-                vm.controller.form.userName = null;
-                vm.controller.form.password = null;
-                
-            }
         });
 })();

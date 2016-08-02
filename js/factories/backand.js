@@ -2,14 +2,14 @@
     'use strict';
     angular
         .module('flowers')
-        .factory('back', function($http, Backand, API) {
+        .factory('back', function($http, Backand) {
 
             var login = function(data) {
 
                 var array = [{
-                    "fieldName": "userName",
+                    "fieldName": "email",
                     "operator": "equals",
-                    "value": data.userName,
+                    "value": data.email,
                 }, {
                     "fieldName": "password",
                     "operator": "equals",
@@ -33,7 +33,7 @@
                 return $http({
                     method: 'POST',
                     data: data,
-                    url: 'https://api.backand.com:443/1/objects/posts' + '/1/objects/users',
+                    url: Backand.getApiUrl() + '/1/objects/users',
                 });
             }
             function randomString(length, chars) {

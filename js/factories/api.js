@@ -31,17 +31,12 @@
                 localStorage.removeItem('token');
                 return true;
             }
-            var saveToken = function(token)
-                        {
-                            localStorage.setItem('token',token);
-                        }
+            var saveToken = function(token){
+                localStorage.setItem('token',token);
+            }
             var getToken = function() {
                 return localStorage.getItem('token');
             }
-
-
-
-
             return {
                 getInfo,
                 saveUserId,

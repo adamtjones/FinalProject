@@ -2,9 +2,9 @@
 	<div ng-show="controller.showAlert" class="alert alert-warning alert-dismissible" role="alert">
 		<p>fail</p>
 	</div>
-	<form ng-submit="controller.submit">
+	<form ng-submit="controller.submit()">
 		<h2>Login</h2>
-		<input class="form-control" type="text" placeholder="Username" ng-model="controller.form.username">
+		<input class="form-control" type="text" placeholder="Email Address" ng-model="controller.form.email">
 		</br>
 		<input clas="form-control" type="text" placeholder="Password" ng-model="controller.form.password">
 		</br>
