@@ -1,11 +1,14 @@
 $titleFont: 'Rochester', cursive;
+$bodyFont: 'Reem Kufi', sans-serif;
 $gray: #444444;
 $red: #ef143c;
 $offWhite: #fefbf7;
 
 @import "text";
 @import "results";
+@import "animations";
 @import "header";
+
 
 
 

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="flowers">
+<html lang='en' ng-app="flowers">
 
 	<head>
+		<meta charset='utf-8'>
 		<title>Final Project</title>
+
+		<meta name='description' content='A simple cricket scorecard'>
+        <meta name='author' content='Adam Jone & Martha Fairbanks'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+
+
 		<!--Bootstrap CDN-->
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Rochester|Reem+Kufi" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
         <script src="https://use.fontawesome.com/247c14072a.js"></script>		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -33,14 +40,18 @@
 					</svg>
 					<h1>::placeholder<div class = "blinkingLine"></div></h1>						
 				</div>
-				<div class = "col-xs-6 rightColumn">
-						<i class="fa fa-bars" aria-hidden="true"></i>
+				<div class = "col-xs-6 rightColumn">	
+					<i class="fa fa-bars" aria-hidden="true" ng-click="vis = !vis"></i>
+						<ul class = "menuList" ng-show="vis" ng-animate="{show: 'menu-show', hide: 'menu-hide'}">
+							<li><a ui-sref="home">Home</a></li>
+					        <li><a ui-sref="login">Login</a></li>
+					        <li><a ui-sref="register">Register</a></li>
+					    </ul>
 				</div>
 			</div>
 			<div class = "row rowMain">
 				<nav class="col-sm-12">
 					<a ui-sref="imageSearch">Image Search</a>
-					<a ui-sref="login">Login/Register</a>
 				</nav>
 				
 				<main ui-view='main' ></main>
@@ -52,8 +63,7 @@
 
 		<!--links to JS files-->
 		<script src="node_modules/lodash/lodash.js"></script>
-				<script src="js/angular-clipboard.js"></script>		
-
+		<script src="js/angular-clipboard.js"></script>		
 		<script src="js/main.js"></script>
 		<script src="js/factories/api.js"></script>
 		<script src="js/factories/backand.js"></script>
