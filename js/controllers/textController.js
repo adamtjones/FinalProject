@@ -123,15 +123,16 @@
 			finalArray = finalArray.splice(0, wordLength);
 			vm.form.textOutput = "";
 			vm.form.textOutput = finalArray.join(" ");
-			console.log(finalArray);
 		};
 
 		vm.reset = function() {
 			$state.reload();
 		};
+		$('#modal').on('hidden.bs.modal', function (e) {
+ 			vm.reset();
+		})
 
 		vm.random = function() {
-
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
 			  this.percentage = percentage;
