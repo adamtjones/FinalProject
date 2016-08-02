@@ -1,12 +1,13 @@
 <div class="container">
-	<form class="col-lg-12 dallas" ng-submit="controller.search()">
-		<input type="text" placeholder="Image Search" ng-model="controller.getInfo"></input>
+	<form class="col-lg-12 dallas" ng-submit="vm.search()">
+		<input type="text" placeholder="Image Search" ng-model="vm.getInfo"></input>
 		<button type="submit">Search</button>
 	</form>
 	<div class="results">
-		<div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="data in controller.data">
-			
-			<a href="#/home/{{pic._id}}"><img class="imageResults" src="{{data.thumbnailUrl}}"></a>
-		</div>
+		<img src="{{vm.data.contentUrl}}">
+		<img src="{{vm.data1.contentUrl}}">
+		<img src="{{vm.data2.contentUrl}}">
+		<img src="{{vm.data3.contentUrl}}">
 	</div>
 </div>
+
