@@ -8,9 +8,9 @@
 
             vm.showAlert = false;
 
-            if (API.getToken() !== null) {
-                // $state.go('admin');
-            }
+            // if (API.getToken() !== null) {
+            //     $state.go('admin');
+            // }
 
             vm.submit = function() {
 
