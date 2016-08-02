@@ -36,6 +36,11 @@
                     url: 'https://api.backand.com:443/1/objects/posts' + '/1/objects/users',
                 });
             }
+            function randomString(length, chars) {
+                var result = '';
+                for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+                return result;
+            }
             return {
 
                 registerUser,

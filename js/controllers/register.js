@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('registerController', function(API, $location, $stateParams, back) {
+        .controller('registerController', function(API, $state, back) {
             var vm = this;
 
             vm.submit = function() {
@@ -11,7 +11,7 @@
                 register.then(function(results) {
                     API.saveToken(results.config.data.token);
                     API.saveUserId(results.data.__metadata.id);
-                    $stateParams.go('admin');
+                    $state.go('admin');
                 })
             }
 

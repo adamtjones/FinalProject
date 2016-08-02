@@ -1,15 +1,15 @@
-<div>
+<div class="login">
 	<div ng-show="controller.showAlert" class="alert alert-warning alert-dismissible" role="alert">
 		<p>fail</p>
 	</div>
 	<form ng-submit="controller.submit">
 		<h2>Login</h2>
-		<input placeholder="Username" ng-model="controller.form.username"></input>
+		<input class="form-control" type="text" placeholder="Username" ng-model="controller.form.username">
 		</br>
-		<input placeholder="Password" ng-model="controller.form.password"></input>
+		<input clas="form-control" type="text" placeholder="Password" ng-model="controller.form.password">
 		</br>
 		<button type="submit">Login</button>
 		</br>
-		<button>Register</button>
+		<button ng-href="#/register">Register</button>
 	</form>
 </div>

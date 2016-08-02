@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('loginController', function(API, $location, $state, back) {
+        .controller('loginController', function(API, $state, back) {
             var vm = this;
 
             vm.showAlert = false;
@@ -17,12 +17,14 @@
                 var login = back.login(vm.form);
 
                 login.then(function(results) {
-                    if (results.data.data[0]) {
+                    if (results.data.data[0]) 
+                    {
                         API.saveToken(results.data.data[0].token);
                         API.saveUserId(results.data.data[0].id);
                         vm.showAlert = false;
                         $state.go('admin');
-                    } else {
+                    } 
+                    else {
                         vm.showAlert = true;
                     }
                 })

@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('mainController', function(API, $location, $stateParams) {
+        .controller('imageSearchController', function(API, $location, $stateParams) {
             var vm = this;
 
             vm.search = function() {

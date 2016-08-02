@@ -3,7 +3,7 @@
     angular
     .module('flowers', ['ui.router', 'backand', 'angular-clipboard'])
 
-    .config(function($stateProvider, $urlRouterProvider, BackandProvider) {
+    .config(function(BackandProvider,$stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
 
@@ -37,7 +37,7 @@
                 views: {
                     'main': {
                         templateUrl: '../views/partials/imageSearch.html',
-                        controller: 'mainController',
+                        controller: 'imageSearchController',
                         controllerAs: 'controller'
                     }
                 },

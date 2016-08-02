@@ -15,17 +15,39 @@
                 });
 
                 return call;
-
-
+            }
+            var saveUserId = function(userid)
+            {
+                localStorage.setItem('userID',userid);
             }
 
+            var getUserId = function()
+            {
+                return localStorage.getItem('userID');
+            }
+            var logout = function()
+            {
+                localStorage.removeItem('userID');
+                localStorage.removeItem('token');
+                return true;
+            }
+            var saveToken = function(token)
+                        {
+                            localStorage.setItem('token',token);
+                        }
             var getToken = function() {
                 return localStorage.getItem('token');
             }
 
 
+
+
             return {
                 getInfo,
+                saveUserId,
+                getUserId,
+                logout,
+                saveToken,
                 getToken,
             }
         })
