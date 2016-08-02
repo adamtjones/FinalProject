@@ -1,2 +1,23 @@
+$titleFont: 'Rochester', cursive;
+$gray: #444444;
+$red: #ef143c;
+$offWhite: #fefbf7;
+
 @import "text";
 @import "results";
+@import "header";
+
+
+
+body {
+	background-color: $red;
+}
+.container-fluid {
+	width: 95%;
+}
+
+.rowMain {
+	margin-top: 20px;
+	background-color: $offWhite;
+	padding: 20px;
+}

@@ -1,0 +1,41 @@
+
+@keyframes blink {
+	50% { 
+		border-color: transparent; 
+	}
+}
+.rowHeader {
+	background-color: $offWhite;
+	padding-top: 25px;
+	margin-top: 30px;
+	.leftColumn {
+		svg {
+			width: 25%;
+			margin-top: -26px;
+			margin-left: -20px;
+		}
+		h1 {
+			margin-left: -10px;
+			font-family: $titleFont;
+			font-size: 60px;
+			color: $gray;
+			display: inline-block;
+			vertical-align: top;
+
+			.blinkingLine {
+				border-left: 1px solid $gray;
+				display: inline;
+				animation: 1.75s blink infinite;
+			}
+		}		
+
+	}
+
+	.rightColumn {
+		.fa {
+			font-size: 25px;
+			float: right;
+			margin-top: -15px;
+		}
+	}
+}	
