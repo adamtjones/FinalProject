@@ -3,7 +3,7 @@
     
     angular
     .module('flowers')
-    .controller('textController', function(textAPI,clipboard) {
+    .controller('textController', function($state, textAPI,clipboard) {
         
         var vm = this;
 
@@ -24,15 +24,14 @@
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;
 
+		//clipboard function so users can copy text
 		vm.supported = false;
-
         vm.textToCopy = 'I can copy by clicking!';
 
         vm.success = function () {
         	clipboard.copyText(vm.form.textOutput);
             console.log('Copied!');
         };
-
         vm.fail = function (err) {
             console.error('Error!', err);
         };
@@ -51,7 +50,8 @@
 				data = data.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
 				data = data.split(" ");
 				userArray.push(data);
-				userArray = _.flatten(userArray); 				
+				userArray = _.flatten(userArray);
+
 				var obj = new objectTemplate (userArray, vm.form.percentage.textInput);
 				containerArray.push(obj);
 			}
@@ -121,8 +121,34 @@
 			}
 			finalArray = _.flatten(finalArray);
 			finalArray = finalArray.splice(0, wordLength);
+			vm.form.textOutput = "";
 			vm.form.textOutput = finalArray.join(" ");
-		};	
+		};
+
+		vm.reset = function() {
+			$state.reload();
+		};
+		$('#modal').on('hidden.bs.modal', function (e) {
+ 			vm.reset();
+		})
+
+		vm.random = function() {
+			var objectTemplate = (function(array,percentage){
+			  this.array = array;
+			  this.percentage = percentage;
+			});
+			var obj = new objectTemplate(loremArray, 25);
+				containerArray.push(obj);
+			var obj = new objectTemplate(gibberishArray, 25);
+				containerArray.push(obj);
+			var obj = new objectTemplate(hipsterArray, 25);
+				containerArray.push(obj);
+			var obj = new objectTemplate(baconArray, 25);
+				containerArray.push(obj);			
+
+			writeTextArray();
+		}	
+
 
 		//getting text arrays from APIs
 		var loremText = textAPI.getLoremIpsum();

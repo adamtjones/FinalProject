@@ -1,7 +1,21 @@
 .rowText {
   padding-top: 50px; }
+  .rowText .enterSelectText input[type="checkbox"] {
+    display: none; }
+  .rowText .enterSelectText input[type="checkbox"]:checked + label {
+    color: #F15A24; }
+  .rowText .enterSelectText label:hover {
+    color: #F15A24;
+    cursor: pointer;
+    /* transitions and animations */
+    -webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease; }
   .rowText .enterSelectText .checkbox {
-    margin-top: 0px; }
+    margin-top: 0px;
+    margin-left: -20px; }
   .rowText .enterPercentage label {
     text-align: left; }
   .rowText .enterPercentage input {
@@ -20,3 +34,42 @@
 .results {
   margin-top: 40px;
   margin: 0px auto; }
+
+@keyframes blink {
+  50% {
+    border-color: transparent; } }
+
+.rowHeader {
+  background-color: #fefbf7;
+  padding-top: 25px;
+  margin-top: 30px; }
+  .rowHeader .leftColumn svg {
+    width: 25%;
+    margin-top: -26px;
+    margin-left: -20px; }
+  .rowHeader .leftColumn h1 {
+    margin-left: -10px;
+    font-family: "Rochester", cursive;
+    font-size: 60px;
+    color: #444444;
+    display: inline-block;
+    vertical-align: top; }
+    .rowHeader .leftColumn h1 .blinkingLine {
+      border-left: 1px solid #444444;
+      display: inline;
+      animation: 1.75s blink infinite; }
+  .rowHeader .rightColumn .fa {
+    font-size: 25px;
+    float: right;
+    margin-top: -15px; }
+
+body {
+  background-color: #ef143c; }
+
+.container-fluid {
+  width: 95%; }
+
+.rowMain {
+  margin-top: 20px;
+  background-color: #fefbf7;
+  padding: 20px; }
