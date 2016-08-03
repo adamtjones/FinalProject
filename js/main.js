@@ -5,7 +5,7 @@
 
     .config(function(BackandProvider,$stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home');
 
         BackandProvider.setAppName('finalproject');
         BackandProvider.setSignUpToken('a77a0d3e-cc54-4b8e-95ea-ecd2e424897f');

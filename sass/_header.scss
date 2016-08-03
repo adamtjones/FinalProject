@@ -27,7 +27,7 @@
 		}		
 	}
 	.rightColumn {
-		.fa {
+		.fa-bars {
 			font-size: 25px;
 			float: right;
 			margin-top: -15px;
@@ -43,6 +43,7 @@
 			margin-top: 15px;
 			font-family: $bodyFont;
 			font-size: 18px;
+			margin-left: 5px;
 
 			li {
 				a {
@@ -53,6 +54,19 @@
 					text-decoration: none;
 				}
 			}			
+		}
+		h3 {
+			text-align: right;
+			font-family: $titleFont;
+			font-size: 34px;
+			margin-top: 75px;
+			span {
+				color: $red;
+				.fa-heart {
+					font-size: 28px;
+				}
+
+			}
 		}
 	}
 }

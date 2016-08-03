@@ -5,41 +5,22 @@ $red: #ef143c;
 $offWhite: #fefbf7;
 
 @import "text";
-@import "results";
+@import "imageSearch";
 @import "animations";
 @import "header";
-
-
-
+@import "login";
+@import "register";
 
 body {
 	background-color: $red;
 	font-family: $bodyFont;
 	font-size: 18px;
 	color: $gray;
-}
-.container-fluid {
-	width: 95%;
-}
-
-.rowText {
-	margin-top: 20px;
-	background-color: $offWhite;
-	padding: 20px;
+	.container-fluid {
+		width: 95%;
+	}
 }
 
-.rowImageSearch {
-	margin-top: 20px;
-	background-color: $offWhite;
-	padding:20px;
-}
-.rowRegister {
-	margin-top: 20px;
-	background-color: $offWhite;
-	padding:20px;
-}
-.rowLogin {
-	margin-top: 20px;
-	background-color: $offWhite;
-	padding:20px;
+.m-b-10 {
+	margin-bottom: 10px;
 }

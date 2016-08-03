@@ -1,5 +1,7 @@
 .rowText {
 	padding-top: 50px;
+	margin-top: 20px;
+	background-color: $offWhite;	
 	.enterSelectText {
 		textarea {
 
@@ -8,10 +10,10 @@
   			display: none;
 		}
 		input[type="checkbox"]:checked + label {
-  			color: #F15A24;
+  			color: $red;
   		}
   		label:hover {
-  			color: #F15A24;
+  			color: $red;
   			cursor: pointer;
   
 			  /* transitions and animations */

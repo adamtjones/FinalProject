@@ -1,11 +1,13 @@
 .rowText {
-  padding-top: 50px; }
+  padding-top: 50px;
+  margin-top: 20px;
+  background-color: #fefbf7; }
   .rowText .enterSelectText input[type="checkbox"] {
     display: none; }
   .rowText .enterSelectText input[type="checkbox"]:checked + label {
-    color: #F15A24; }
+    color: #ef143c; }
   .rowText .enterSelectText label:hover {
-    color: #F15A24;
+    color: #ef143c;
     cursor: pointer;
     /* transitions and animations */
     -webkit-transition: color .5s ease;
@@ -25,13 +27,20 @@
     margin-right: 15px;
     margin-top: 20px; }
 
-.imageResults {
-  margin: 5px;
-  display: block; }
-
-.results {
-  margin-top: 60px;
-  margin: 0px auto; }
+.rowImageSearch {
+  min-height: 1150px;
+  margin-top: 20px;
+  background-color: #fefbf7;
+  padding: 20px; }
+  .rowImageSearch form {
+    padding-bottom: 20px; }
+    .rowImageSearch form .searchBox {
+      width: 100%; }
+  .rowImageSearch .results {
+    padding: 0px; }
+    .rowImageSearch .results img {
+      margin: 0px auto;
+      padding-bottom: 20px; }
 
 @keyframes fadeIn {
   0% {
@@ -85,7 +94,7 @@
         border-left: 1px solid #444444;
         display: inline;
         animation: 1.75s blink infinite; }
-  .rowHeader .rightColumn .fa {
+  .rowHeader .rightColumn .fa-bars {
     font-size: 25px;
     float: right;
     margin-top: -15px;
@@ -99,38 +108,55 @@
     margin-right: -22px;
     margin-top: 15px;
     font-family: "Reem Kufi", sans-serif;
-    font-size: 18px; }
+    font-size: 18px;
+    margin-left: 5px; }
     .rowHeader .rightColumn .menuList li a {
       text-decoration: none !important;
       color: #fefbf7; }
     .rowHeader .rightColumn .menuList li :hover {
       text-decoration: none; }
+  .rowHeader .rightColumn h3 {
+    text-align: right;
+    font-family: "Rochester", cursive;
+    font-size: 34px;
+    margin-top: 75px; }
+    .rowHeader .rightColumn h3 span {
+      color: #ef143c; }
+      .rowHeader .rightColumn h3 span .fa-heart {
+        font-size: 28px; }
+
+.rowLogin {
+  width: 50%;
+  margin: 0px auto;
+  margin-top: 20px;
+  background-color: #fefbf7;
+  padding: 20px; }
+  .rowLogin h2 {
+    text-align: center;
+    margin-bottom: 20px; }
+  .rowLogin button {
+    float: right;
+    margin-left: 5px; }
+
+.rowRegister {
+  width: 50%;
+  margin: 0px auto;
+  margin-top: 20px;
+  background-color: #fefbf7;
+  padding: 20px; }
+  .rowRegister h2 {
+    text-align: center;
+    margin-bottom: 20px; }
+  .rowRegister button {
+    float: right; }
 
 body {
   background-color: #ef143c;
   font-family: "Reem Kufi", sans-serif;
   font-size: 18px;
   color: #444444; }
+  body .container-fluid {
+    width: 95%; }
 
-.container-fluid {
-  width: 95%; }
-
-.rowText {
-  margin-top: 20px;
-  background-color: #fefbf7;
-  padding: 20px; }
-
-.rowImageSearch {
-  margin-top: 20px;
-  background-color: #fefbf7;
-  padding: 20px; }
-
-.rowRegister {
-  margin-top: 20px;
-  background-color: #fefbf7;
-  padding: 20px; }
-
-.rowLogin {
-  margin-top: 20px;
-  background-color: #fefbf7;
-  padding: 20px; }
+.m-b-10 {
+  margin-bottom: 10px; }

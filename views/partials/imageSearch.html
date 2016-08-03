@@ -1,13 +1,44 @@
 <div class="row rowImageSearch">
-	<form class="col-lg-12 dallas" ng-submit="vm.search()">
-		<input type="text" placeholder="Image Search" ng-model="vm.getInfo"></input>
-		<button type="submit">Search</button>
+	<form class="col-xs-12 form-inline" ng-submit="vm.search()">
+		<div class = "form-group">
+			<input type="text" class="form-control searchBox" placeholder="Image Search" ng-model="vm.getInfo"></input>
+		</div>	
+		<button class="btn btn-default" type="submit" ng-click = "searchResults = true">Search</button>		
 	</form>
 	<div class="results">
-		<img src="{{vm.data.contentUrl}}">
-		<img src="{{vm.data1.contentUrl}}">
-		<img src="{{vm.data2.contentUrl}}">
-		<img src="{{vm.data3.contentUrl}}">
+		
+		<div class = "col-lg-3 col-md-12" ng-hide="searchResults">
+			<img src="http://placehold.it/125x125">
+		</div>		
+		<div class = "col-lg-3 col-md-12" ng-show="searchResults">
+			<img src="{{vm.data.contentUrl}}">
+			<figcaption>125x125</figcaption>
+		</div>	
+
+		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">	
+			<img src="http://placehold.it/250x250">
+		</div>	
+		<div class = "col-lg-4 col-md-12" ng-show="searchResults">	
+			<img src="{{vm.data1.contentUrl}}">
+			<figcaption>250x250</figcaption>
+		</div>	
+
+		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
+			<img src="http://placehold.it/400x400">
+		</div>
+		<div class = "col-lg-4 col-md-12" ng-show="searchResults">	
+			<img src="{{vm.data2.contentUrl}}">
+			<figcaption>400x400</figcaption>
+		</div>	
+
+		<div class = "col-xs-12 check-element" ng-hide="searchResults">
+			<img src="http://placehold.it/600x600">
+		</div>	
+		<div class = "col-xs-12 check-element" ng-show="searchResults">	
+			<img src="{{vm.data3.contentUrl}}">
+			<figcaption>600x600</figcaption>			
+		</div>
+
 	</div>
 </div>
 

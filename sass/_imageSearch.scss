@@ -1,0 +1,21 @@
+.rowImageSearch {
+	min-height: 1150px;
+	margin-top: 20px;
+	background-color: $offWhite;
+	padding:20px;
+	form {
+		padding-bottom: 20px;
+		.searchBox {
+			width: 100%;
+		}
+	}		
+	.results {
+		padding: 0px;
+		img{
+			margin: 0px auto;
+			padding-bottom: 20px;
+		}
+	}
+}	
+
+
