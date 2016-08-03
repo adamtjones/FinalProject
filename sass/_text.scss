@@ -4,7 +4,8 @@
 	background-color: $offWhite;	
 	.enterSelectText {
 		textarea {
-
+			border: 1px solid $gray;
+			background-color: $offWhite;
 		} 
 		input[type="checkbox"] {
   			display: none;
@@ -16,12 +17,12 @@
   			color: $red;
   			cursor: pointer;
   
-			  /* transitions and animations */
-			  -webkit-transition: color .5s ease;
-			  -moz-transition: color .5s ease;
-			  -ms-transition: color .5s ease;
-			  -o-transition: color .5s ease;
-			  transition: color .5s ease;
+			/* transitions and animations */
+			-webkit-transition: color .5s ease;
+			-moz-transition: color .5s ease;
+			-ms-transition: color .5s ease;
+			-o-transition: color .5s ease;
+			transition: color .5s ease;
 		}
 
 		.checkbox {
@@ -36,13 +37,16 @@
 		}
 		input {
 			margin-bottom: 5px;
+			border: 1px solid $gray;
+			background-color: $offWhite;
 		}
 
 		button {
 			float: right;
 			margin-right: 15px;
 			margin-top: 20px;
-
+			border: 1px solid $gray;
+			background-color: $offWhite;
 		}
 	}	
 	.textOutput {

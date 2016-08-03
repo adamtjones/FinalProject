@@ -7,6 +7,12 @@
 		padding-bottom: 20px;
 		.searchBox {
 			width: 100%;
+			border: 1px solid $gray;
+			background-color: $offWhite;
+		}
+		button {
+			border: 1px solid $gray;
+			background-color: $offWhite;
 		}
 	}		
 	.results {
