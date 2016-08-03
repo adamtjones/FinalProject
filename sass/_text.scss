@@ -3,6 +3,11 @@
 	margin-top: 20px;
 	background-color: $offWhite;	
 	.enterSelectText {
+		.saveButton {
+			float: right;
+			margin-top: 5px;
+			cursor: pointer;
+		}
 		textarea {
 			border: 1px solid $gray;
 			background-color: $offWhite;
@@ -13,7 +18,7 @@
 		input[type="checkbox"]:checked + label {
   			color: $red;
   		}
-  		label:hover {
+  		.checkboxLabel:hover {
   			color: $red;
   			cursor: pointer;
   
@@ -49,8 +54,5 @@
 			background-color: $offWhite;
 		}
 	}	
-	.textOutput {
-
-
-	}
+	
 }

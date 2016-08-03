@@ -41,10 +41,27 @@
                 for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
                 return result;
             }
-            return {
 
+            var getUserInfo = function(data) {
+                var tokenArray = [{
+                    "fieldName" : "token", 
+                    "operator" : "equals",
+                    "value" : data,
+                }]
+                return $http ({
+                    method: 'GET',
+                    url: 'https://api.backand.com:443/1/objects/users',
+                    params: {
+                        filter:tokenArray,
+                    }
+                });
+            }
+
+
+            return {
                 registerUser,
-                login
+                login,
+                getUserInfo,
             }
 
         });

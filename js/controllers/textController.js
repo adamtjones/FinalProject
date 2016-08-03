@@ -3,7 +3,7 @@
     
     angular
     .module('flowers')
-    .controller('textController', function($state, textAPI,clipboard) {
+    .controller('textController', function($state, textAPI,clipboard, API) {
         
         var vm = this;
 
@@ -22,7 +22,13 @@
 		vm.form.checkbox.loremInput = false;
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
-		vm.form.checkbox.baconInput = false;
+		vm.form.checkbox.baconInput = false;        
+
+        //shows slightly different features when user is logged in
+        var loggedIn = false;
+    	if(API.getToken() !== null) {
+        	vm.loggedIn = true;
+       	}
 
 		//clipboard function so users can copy text
 		vm.supported = false;
@@ -30,7 +36,7 @@
 
         vm.success = function () {
         	clipboard.copyText(vm.form.textOutput);
-            console.log('Copied!');
+            alert('Copied!');
         };
         vm.fail = function (err) {
             console.error('Error!', err);

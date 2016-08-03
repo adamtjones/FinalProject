@@ -2,6 +2,10 @@
   padding-top: 50px;
   margin-top: 20px;
   background-color: #fefbf7; }
+  .rowText .enterSelectText .saveButton {
+    float: right;
+    margin-top: 5px;
+    cursor: pointer; }
   .rowText .enterSelectText textarea {
     border: 1px solid #444444;
     background-color: #fefbf7; }
@@ -9,7 +13,7 @@
     display: none; }
   .rowText .enterSelectText input[type="checkbox"]:checked + label {
     color: #ef143c; }
-  .rowText .enterSelectText label:hover {
+  .rowText .enterSelectText .checkboxLabel:hover {
     color: #ef143c;
     cursor: pointer;
     /* transitions and animations */
@@ -127,6 +131,10 @@
       color: #fefbf7; }
     .rowHeader .rightColumn .menuList li :hover {
       text-decoration: none; }
+  .rowHeader .rightColumn h4 {
+    margin-top: -14px;
+    float: right;
+    margin-right: 20px; }
   .rowHeader .rightColumn h3 {
     text-align: right;
     font-family: "Rochester", cursive;

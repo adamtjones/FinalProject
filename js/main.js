@@ -12,7 +12,7 @@
         BackandProvider.setAnonymousToken('1122b21c-12db-4f88-b28b-a6da4138655e');
   
         $stateProvider
-            .state('text', {
+            .state('home', {
                 url: '/home',
                 views: {
                     'main': {
@@ -21,9 +21,14 @@
                         controllerAs: 'controller'
                     },
                     'imageSearch': {
-                        templateUrl: '../views/partials/imageSearch.html',
+                        templateUrl: '../views/imageSearch.html',
                         controller: 'imageSearchController',
                         controllerAs: 'vm',
+                    },
+                    'header': {
+                        templateUrl: '../views/partials/header.html',
+                        controller: 'headerController',
+                        controllerAs: 'controller',
                     },
                 },
             })
@@ -34,7 +39,12 @@
                         templateUrl: '../views/partials/login.html',
                         controller: 'loginController',
                         controllerAs: 'controller'
-                    }
+                    },
+                    'header': {
+                        templateUrl: '../views/partials/header.html',
+                        controller: 'headerController',
+                        controllerAs: 'controller',
+                    },
                 },
             })
             .state('register', {
@@ -44,7 +54,12 @@
                         templateUrl: '../views/partials/register.html',
                         controller: 'registerController',
                         controllerAs: 'controller'
-                    }
+                    },
+                    'header': {
+                        templateUrl: '../views/partials/header.html',
+                        controller: 'headerController',
+                        controllerAs: 'controller',
+                    },
                 },
             });
 
