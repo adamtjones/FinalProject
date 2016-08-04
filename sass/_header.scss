@@ -55,11 +55,18 @@
 				}
 			}			
 		}
-		h4 {
-			margin-top: -14px;
-			float: right;
-			margin-right: 20px;
-		}
+		.welcome {
+			h4, {
+				margin-top: -14px;
+				float: right;
+				margin-right: 20px;
+			}
+			a {
+				float: right;
+				margin-right: -20px;
+
+			}
+		}	
 		h3 {
 			text-align: right;
 			font-family: $titleFont;
@@ -72,14 +79,6 @@
 				}
 
 			}
-		}
-	button {
-			float: right;
-			margin-right: 0px;
-			margin-top: 28px;
-			border: 1px solid $gray;
-			background-color: $offWhite;
-			color:#333;
 		}
 
 	}
