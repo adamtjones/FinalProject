@@ -3,7 +3,7 @@
     
     angular
     .module('flowers')
-    .controller('textController', function($state, textAPI,clipboard, API) {
+    .controller('textController', function($state, textAPI,clipboard, API, back) {
         
         var vm = this;
 
@@ -22,13 +22,25 @@
 		vm.form.checkbox.loremInput = false;
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
-		vm.form.checkbox.baconInput = false;        
+		vm.form.checkbox.baconInput = false;      
 
         //shows slightly different features when user is logged in
         var loggedIn = false;
     	if(API.getToken() !== null) {
         	vm.loggedIn = true;
        	}
+
+       	//saves custom text arrays to backand database
+       	vm.saveTextArray = function(){
+        var saveArray = back.saveArray(vm.form);
+       
+        saveArray.then(function(response) {
+			// alert("saved!");
+			$('.modalSave').modal('hide');
+			var containerArray = [];
+			console.log(response);
+        })
+       }
 
 		//clipboard function so users can copy text
 		vm.supported = false;
@@ -134,6 +146,7 @@
 		vm.reset = function() {
 			$state.reload();
 		};
+
 		$('#modal').on('hidden.bs.modal', function (e) {
  			vm.reset();
 		})

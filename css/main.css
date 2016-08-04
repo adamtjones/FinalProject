@@ -6,19 +6,6 @@
     float: right;
     margin-top: 5px;
     cursor: pointer; }
-  .rowText .enterSelectText .modalSave .modal-content {
-    padding: 20px;
-    background-color: #fefbf7; }
-    .rowText .enterSelectText .modalSave .modal-content .modal-header button {
-      color: #444444; }
-    .rowText .enterSelectText .modalSave .modal-content .modal-header h2 {
-      text-align: center; }
-    .rowText .enterSelectText .modalSave .modal-content .textArrayName {
-      border: 1px solid #444444;
-      background-color: #fefbf7; }
-    .rowText .enterSelectText .modalSave .modal-content button {
-      border: 1px solid #444444;
-      background-color: #fefbf7; }
   .rowText .enterSelectText textarea {
     border: 1px solid #444444;
     background-color: #fefbf7; }
@@ -50,6 +37,19 @@
     margin-top: 20px;
     border: 1px solid #444444;
     background-color: #fefbf7; }
+  .rowText .modalSave .modal-content {
+    padding: 20px;
+    background-color: #fefbf7; }
+    .rowText .modalSave .modal-content .modal-header button {
+      color: #444444; }
+    .rowText .modalSave .modal-content .modal-header h2 {
+      text-align: center; }
+    .rowText .modalSave .modal-content input, .rowText .modalSave .modal-content textarea {
+      border: 1px solid #444444;
+      background-color: #fefbf7; }
+    .rowText .modalSave .modal-content button {
+      border: 1px solid #444444;
+      background-color: #fefbf7; }
 
 .rowImageSearch {
   min-height: 1150px;

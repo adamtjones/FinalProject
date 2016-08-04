@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('flowers')
-        .factory('back', function($http, Backand) {
+        .factory('back', function($http, Backand, API) {
 
             var login = function(data) {
 
@@ -57,11 +57,25 @@
                 });
             }
 
+            var saveArray = function(data){
+                data.dateTime = new Date();
+                data.author = parseInt(API.getUserId());
+                var data = {
+                    textArrayName: data.textArrayName,
+                }
+                return $http ({
+                  method: 'POST',
+                  data:data,
+                  url: Backand.getApiUrl() + '/1/objects/items',
+                });
+            }
+
 
             return {
-                registerUser,
-                login,
-                getUserInfo,
+                registerUser: registerUser,
+                login: login,
+                getUserInfo: getUserInfo,
+                saveArray: saveArray,
             }
 
         });
