@@ -174,6 +174,8 @@
   .rowLogin input {
     border: 1px solid #444444;
     background-color: #fefbf7; }
+  .rowLogin a {
+    font-size: 15px; }
   .rowLogin button {
     float: right;
     margin-left: 5px;
@@ -192,6 +194,8 @@
   .rowRegister input {
     border: 1px solid #444444;
     background-color: #fefbf7; }
+  .rowRegister a {
+    font-size: 15px; }
   .rowRegister button {
     float: right;
     margin-left: 5px;

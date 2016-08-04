@@ -37,7 +37,6 @@
         saveArray.then(function(response) {
 			// alert("saved!");
 			$('.modalSave').modal('hide');
-			var containerArray = [];
 			console.log(response);
         })
        }
