@@ -9,16 +9,16 @@
 					<div class="modal-dialog modal-sm">
 				    	<div class="modal-content">
 				    	    <div class="modal-header">
-                        		<button type="button" class="close" data-dismiss="modal">&times;</button>
-                         		<h2 class="modal-title">Save your Stuff</h2>
+                        		<div class="close" data-dismiss="modal">&times;</div>
+                         		<h2 class="modal-title">Save</h2>
                    			</div>
 				    		<form>
 				    			<div class = "form-group">
 				    				<label for= "textArrayName">Name</label>
-				    				<input type="text" class="form-control" id="textArrayName"  tabindex="1" ng-model= "controller.form.textArrayName">
+				    				<input type="text" class="form-control m-b-10 textArrayName" id="textArrayName"  tabindex="1" ng-model= "controller.form.textArrayName" >
 				    				<label for= "textInputSaved">Your Words</label>
-				    				<textarea class="form-control" tabindex="2" id = "textInputSaved" ng-model= "controller.form.textInput">{{controller.form.textInput}}</textarea>
-				    				<button class = btn btn-default" tabindex="3">Save</button>
+				    				<textarea class="form-control m-b-10" tabindex="2" id = "textInputSaved" ng-model= "controller.form.textInput">{{controller.form.textInput}}</textarea>
+				    				<button class = btn btn-default buttonSave" tabindex="3">Save</button>
 				    			</div>	
 				    		</form>
 				    	</div>
