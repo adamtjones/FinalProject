@@ -157,6 +157,13 @@
       color: #ef143c; }
       .rowHeader .rightColumn h3 span .fa-heart {
         font-size: 28px; }
+  .rowHeader .rightColumn button {
+    float: right;
+    margin-right: 0px;
+    margin-top: 28px;
+    border: 1px solid #444444;
+    background-color: #fefbf7;
+    color: #333; }
 
 .rowLogin {
   width: 50%;
