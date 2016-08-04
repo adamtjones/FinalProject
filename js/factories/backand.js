@@ -62,6 +62,9 @@
                 data.author = parseInt(API.getUserId());
                 var data = {
                     textArrayName: data.textArrayName,
+                    textArray: data.textInput,
+                    dateTime: data.dateTime,
+                    author: data.author,
                 }
                 return $http ({
                   method: 'POST',

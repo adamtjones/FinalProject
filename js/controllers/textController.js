@@ -32,14 +32,13 @@
 
        	//saves custom text arrays to backand database
        	vm.saveTextArray = function(){
-        var saveArray = back.saveArray(vm.form);
+        	var saveArray = back.saveArray(vm.form);
        
-        saveArray.then(function(response) {
-			// alert("saved!");
-			$('.modalSave').modal('hide');
-			console.log(response);
-        })
-       }
+	        saveArray.then(function(response) {
+				alert("saved!");
+				$('.modalSave').modal('hide');
+	        })
+       	}
 
 		//clipboard function so users can copy text
 		vm.supported = false;
