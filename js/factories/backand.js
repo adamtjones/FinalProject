@@ -60,9 +60,11 @@
             var saveArray = function(data){
                 data.dateTime = new Date();
                 data.author = parseInt(API.getUserId());
+                var textInput = data.textInput.toLowerCase();
+                data.textArray = textInput.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
                 var data = {
                     textArrayName: data.textArrayName,
-                    textArray: data.textInput,
+                    textArray: data.textArray,
                     dateTime: data.dateTime,
                     author: data.author,
                 }

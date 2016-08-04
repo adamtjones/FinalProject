@@ -37,6 +37,7 @@
 	        saveArray.then(function(response) {
 				alert("saved!");
 				$('.modalSave').modal('hide');
+
 	        })
        	}
 
@@ -149,7 +150,7 @@
  			vm.reset();
 		})
 
-		vm.random = function() {
+		vm.random = function() { 
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
 			  this.percentage = percentage;
