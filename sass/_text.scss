@@ -8,6 +8,29 @@
 			margin-top: 5px;
 			cursor: pointer;
 		}
+		.modalSave {
+			.modal-content {
+				padding: 20px;
+				background-color: $offWhite;
+				.modal-header {
+					button {
+						color: $gray;
+					}
+					h2 {
+						text-align: center;
+					}
+				}
+				.textArrayName {
+					border: 1px solid $gray;
+					background-color: $offWhite;
+				}
+				button {
+					border: 1px solid $gray;
+					background-color: $offWhite;
+				}	
+			}	
+
+		}
 		textarea {
 			border: 1px solid $gray;
 			background-color: $offWhite;
