@@ -127,7 +127,8 @@
     font-size: 25px;
     float: right;
     margin-top: -15px;
-    color: #444444; }
+    color: #444444;
+    cursor: pointer; }
   .rowHeader .rightColumn .menuList {
     animation: 2s fadeIn;
     float: right;
@@ -147,10 +148,10 @@
   .rowHeader .rightColumn .welcome h4 {
     margin-top: -14px;
     float: right;
-    margin-right: 20px; }
-  .rowHeader .rightColumn .welcome a {
-    float: right;
-    margin-right: -20px; }
+    margin-right: 15px; }
+    .rowHeader .rightColumn .welcome h4 i {
+      margin-left: 5px;
+      cursor: pointer; }
   .rowHeader .rightColumn h3 {
     text-align: right;
     font-family: "Rochester", cursive;
