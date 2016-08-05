@@ -67,6 +67,7 @@
                     textArray: data.textArray,
                     dateTime: data.dateTime,
                     author: data.author,
+                    isTextArrayPrivate: data.isTextArrayPrivate,
                 }
                 return $http ({
                   method: 'POST',
@@ -74,7 +75,6 @@
                   url: Backand.getApiUrl() + '/1/objects/items',
                 });
             }
-
 
             return {
                 registerUser: registerUser,

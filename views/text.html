@@ -1,5 +1,6 @@
 <div class = "row rowText">
 	<form>
+		<!-- LEFT COLUMN -->
 		<div class = "col-xs-3 enterSelectText">
 
 			<div class="form-group">
@@ -28,8 +29,9 @@
 			    	<label for = "bacon" class = "checkboxLabel">Bacon</label>
 			  	</div>
 			  </div>	
-
 		</div>
+		
+		<!-- CENTER COLUMN -->
 		<div class = "col-xs-3 enterPercentage">
 			<label>How much do you want?</label>
 			 	<div class="form-group">
@@ -72,6 +74,13 @@
 			    <button class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Random</button>
 			    <button class="btn btn-default" ng-click = "controller.reset()">Reset</button>			    	
 		</div>
+
+		<!-- RIGHT COLUMN -->
+		<div class = "col-xs-6 selectUserText">
+		</div>
+
+
+		<!-- TEXT MODAL -->
 		<div id="modal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">          
@@ -87,6 +96,9 @@
             </div>
         </div>
 	</form>
+
+
+	<!-- SAVE MODAL -->
 	<div class="modal modalSave" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
@@ -101,6 +113,10 @@
 				    	<label for= "textInputSaved">Your Words</label>
 				    	<textarea class="form-control m-b-10" tabindex="2" id = "textInputSaved" readonly>{{controller.form.textInput}}</textarea>
 				    	<button class = "btn btn-default buttonSave" tabindex="3" ng-click = "controller.saveTextArray()">Save</button>
+				    	<div class="checkboxPrivate">
+					    	<label for = "makePrivate" class = "checkboxLabelPrivate">make private</label>
+					    	<input type="checkbox" ng-model= "controller.form.isTextArrayPrivate" id = "makePrivate"> 
+					    </div>
 				    </div>	
 				</form>
 			</div>

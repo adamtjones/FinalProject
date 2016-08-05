@@ -44,12 +44,18 @@
       color: #444444; }
     .rowText .modalSave .modal-content .modal-header h2 {
       text-align: center; }
-    .rowText .modalSave .modal-content input, .rowText .modalSave .modal-content textarea {
+    .rowText .modalSave .modal-content .form-group {
+      padding-top: 10px; }
+    .rowText .modalSave .modal-content input, .rowText .modalSave .modal-content textarea, .rowText .modalSave .modal-content button {
       border: 1px solid #444444;
       background-color: #fefbf7; }
-    .rowText .modalSave .modal-content button {
-      border: 1px solid #444444;
-      background-color: #fefbf7; }
+    .rowText .modalSave .modal-content .checkboxPrivate {
+      display: inline-block;
+      font-size: 15px;
+      float: right; }
+      .rowText .modalSave .modal-content .checkboxPrivate input {
+        border: 1px solid #444444 !important;
+        background-color: #fefbf7 !important; }
 
 .rowImageSearch {
   min-height: 1150px;
@@ -162,41 +168,21 @@
       .rowHeader .rightColumn h3 span .fa-heart {
         font-size: 28px; }
 
-.rowLogin {
+.rowRegister, .rowLogin {
   width: 50%;
   margin: 0px auto;
   margin-top: 20px;
   background-color: #fefbf7;
   padding: 20px; }
-  .rowLogin h2 {
+  .rowRegister h2, .rowLogin h2 {
     text-align: center;
     margin-bottom: 20px; }
-  .rowLogin input {
+  .rowRegister input, .rowLogin input {
     border: 1px solid #444444;
     background-color: #fefbf7; }
-  .rowLogin a {
+  .rowRegister a, .rowLogin a {
     font-size: 15px; }
-  .rowLogin button {
-    float: right;
-    margin-left: 5px;
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
-
-.rowRegister {
-  width: 50%;
-  margin: 0px auto;
-  margin-top: 20px;
-  background-color: #fefbf7;
-  padding: 20px; }
-  .rowRegister h2 {
-    text-align: center;
-    margin-bottom: 20px; }
-  .rowRegister input {
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
-  .rowRegister a {
-    font-size: 15px; }
-  .rowRegister button {
+  .rowRegister button, .rowLogin button {
     float: right;
     margin-left: 5px;
     border: 1px solid #444444;

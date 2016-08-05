@@ -2,6 +2,7 @@
 	padding-top: 50px;
 	margin-top: 20px;
 	background-color: $offWhite;	
+	// LEFT COLUMN
 	.enterSelectText {
 		.saveButton {
 			float: right;
@@ -21,7 +22,6 @@
   		.checkboxLabel:hover {
   			color: $red;
   			cursor: pointer;
-  
 			/* transitions and animations */
 			-webkit-transition: color .5s ease;
 			-moz-transition: color .5s ease;
@@ -29,13 +29,12 @@
 			-o-transition: color .5s ease;
 			transition: color .5s ease;
 		}
-
 		.checkbox {
 			margin-top: 0px;
 			margin-left: -20px;
 		}
-
 	}
+	// CENTER COLUMN
 	.enterPercentage {
 		label {
 			text-align: left;
@@ -45,7 +44,6 @@
 			border: 1px solid $gray;
 			background-color: $offWhite;
 		}
-
 		button {
 			float: right;
 			margin-right: 15px;
@@ -54,7 +52,9 @@
 			background-color: $offWhite;
 		}
 	}
-			.modalSave {
+
+		// SAVE MODAL
+		.modalSave {
 			.modal-content {
 				padding: 20px;
 				background-color: $offWhite;
@@ -66,16 +66,23 @@
 						text-align: center;
 					}
 				}
-				input, textarea {
+				.form-group {
+					padding-top: 10px;
+				}	
+				input, textarea, button {
 					border: 1px solid $gray;
 					background-color: $offWhite;
 				}
-				button {
-					border: 1px solid $gray;
-					background-color: $offWhite;
+				.checkboxPrivate {
+					display: inline-block;
+					font-size: 15px;
+					float: right;
+					input {
+						border: 1px solid $gray !important;
+						background-color: $offWhite !important;	
+					}
 				}	
 			}	
 
 		}	
-	
 }
