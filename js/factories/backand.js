@@ -82,12 +82,25 @@
                 });
             }
 
+            var textVotes = function(id, textVotes) {
+                console.log("COSOLE",parseInt(textVotes)+1);
+                var data = {
+                    'textVotes': parseInt(textVotes)+1,
+                };
+                return $http ({
+                    method: 'PUT',
+                    data:data,
+                    url: 'https://api.backand.com:443/1/objects/items/'+ id,
+                });
+            }
+
             return {
                 registerUser: registerUser,
                 login: login,
                 getUserInfo: getUserInfo,
                 saveArray: saveArray,
                 getArrays: getArrays,
+                textVotes: textVotes,
             }
 
         });

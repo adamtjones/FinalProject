@@ -35,7 +35,25 @@
        		getTextArrays.then(function(results){
           	var arrays = results.data;
           	vm.arrays = arrays;
-        }) 
+          	vm.arrays.forEach(function(obj){
+          		if (obj.textVotes === null) {
+          			obj.textVotes = 0;
+          		}
+          	})
+        })
+
+        //saves vote(favorited) counter to backand database
+        vm.textVotes = function(arrays) {
+        	// console.log(arrays);
+        	arrays.textVotes ++;
+        	var vote = back.textVotes(arrays.id, arrays.textVotes);
+        	
+        	vote.then(function(response) {
+        		console.log(response);
+        		arrays.textVotes ++;
+
+          });
+        };  
 
        	//saves custom text arrays to backand database
        	vm.saveTextArray = function(){

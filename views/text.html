@@ -77,14 +77,14 @@
 
 		<!-- RIGHT COLUMN -->
 		<div class = "col-xs-6 selectUserText">
-		    <li ng-repeat = "array in controller.arrays | filter:isTextArrayPrivate == true">
+		    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true">
 
                 <article>
-                    <span>{{array.textArrayName}}</span>
-                    <span>by: {{array.author_obj.userName}}</span>
-                    <span>{{array.textArray}}</span>
-                    <span>Favorited: {{array.textVotes}}</span>
-                    <!-- <span class='vote' ng-click="VOTE FUNCTION"><i class="fa fa-heart" aria-hidden="true"></i></span> -->
+                    <span>{{arrays.textArrayName}}</span>
+                    <span>by: {{arrays.author_obj.userName}}</span>
+                    <span>{{arrays.textArray}}</span>
+                    <span>Favorited: {{arrays.textVotes}}</span>
+                    <span class='vote' ng-click="controller.textVotes(arrays)"><i class="fa fa-heart" aria-hidden="true"></i></span>
                	</article>
             </li>
 		</div>
