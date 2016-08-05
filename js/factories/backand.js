@@ -5,7 +5,6 @@
         .factory('back', function($http, Backand, API) {
 
             var login = function(data) {
-
                 var array = [{
                     "fieldName": "email",
                     "operator": "equals",
@@ -15,7 +14,6 @@
                     "operator": "equals",
                     "value": data.password,
                 }]
-
                 return $http({
                     method: 'GET',
                     data: data,
@@ -36,6 +34,7 @@
                     url: Backand.getApiUrl() + '/1/objects/users',
                 });
             }
+
             function randomString(length, chars) {
                 var result = '';
                 for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
@@ -60,8 +59,7 @@
             var saveArray = function(data){
                 data.dateTime = new Date();
                 data.author = parseInt(API.getUserId());
-                var textInput = data.textInput.toLowerCase();
-                data.textArray = textInput.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
+                data.textArray = data.textInput.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
                 var data = {
                     textArrayName: data.textArrayName,
                     textArray: data.textArray,
@@ -75,12 +73,21 @@
                   url: Backand.getApiUrl() + '/1/objects/items',
                 });
             }
+            
+            var getArrays = function() {
+                return $http ({
+                  method: 'GET',
+                  url: Backand.getApiUrl() + '/1/objects/action/items/15?name=getAll',
+                  params: {}
+                });
+            }
 
             return {
                 registerUser: registerUser,
                 login: login,
                 getUserInfo: getUserInfo,
                 saveArray: saveArray,
+                getArrays: getArrays,
             }
 
         });

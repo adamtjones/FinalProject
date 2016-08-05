@@ -5,7 +5,7 @@
     .module('flowers')
     .controller('textController', function($state, textAPI,clipboard, API, back) {
         
-        var vm = this;
+        var vm = this;       
 
         // empty container arrays to be populated by writeTextArray()
         var finalArray = [];
@@ -30,6 +30,13 @@
         	vm.loggedIn = true;
        	}
 
+       	//gets text arrays from backand database
+       	var getTextArrays = back.getArrays();
+       		getTextArrays.then(function(results){
+          	var arrays = results.data;
+          	vm.arrays = arrays;
+        }) 
+
        	//saves custom text arrays to backand database
        	vm.saveTextArray = function(){
         	var saveArray = back.saveArray(vm.form);
@@ -37,7 +44,6 @@
 	        saveArray.then(function(response) {
 				alert("saved!");
 				$('.modalSave').modal('hide');
-
 	        })
        	}
 
