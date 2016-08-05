@@ -45,7 +45,6 @@
         //saves vote(favorited) counter to backand database
         vm.textVotes = function(arrays) {
         	// console.log(arrays);
-        	arrays.textVotes ++;
         	var vote = back.textVotes(arrays.id, arrays.textVotes);
         	
         	vote.then(function(response) {
