@@ -76,15 +76,17 @@
 		</div>
 
 		<!-- RIGHT COLUMN -->
-		<div class = "col-xs-6 selectUserText">
-		    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true">
-
+		<div class = "col-xs-6 userArrays">
+		    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true" class = "publicArrays">
                 <article>
-                    <span>{{arrays.textArrayName}}</span>
-                    <span>by: {{arrays.author_obj.userName}}</span>
-                    <span>{{arrays.textArray}}</span>
-                    <span>Favorited: {{arrays.textVotes}}</span>
-                    <span class='vote' ng-click="controller.textVotes(arrays)"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <h3 class = "textArrayName">{{arrays.textArrayName}}
+                    	<span ng-click = "controller.textVotes(arrays)" class = "heart">
+							<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
+							<span class = "heartNo">{{arrays.textVotes}}</span>	
+						</span>
+						<span class = "userName">by: {{arrays.author_obj.userName}}</span>	
+                    </h3>
+                    <p class = "textArray">{{arrays.textArray}}</p>
                	</article>
             </li>
 		</div>

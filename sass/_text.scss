@@ -52,37 +52,78 @@
 			background-color: $offWhite;
 		}
 	}
-
-		// SAVE MODAL
-		.modalSave {
-			.modal-content {
-				padding: 20px;
-				background-color: $offWhite;
-				.modal-header {
-					button {
-						color: $gray;
-					}
-					h2 {
-						text-align: center;
-					}
-				}
-				.form-group {
-					padding-top: 10px;
-				}	
-				input, textarea, button {
-					border: 1px solid $gray;
-					background-color: $offWhite;
-				}
-				.checkboxPrivate {
-					display: inline-block;
-					font-size: 15px;
+	//RIGHT COLUMN
+	.userArrays {
+		.publicArrays {
+			list-style-type: none;
+			.textArrayName {
+				font-size: 18px;
+				color: $offWhite;
+				background-color: $gray;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-bottom: 10px;
+				padding-top: 10px;
+				.userName {
 					float: right;
-					input {
-						border: 1px solid $gray !important;
-						background-color: $offWhite !important;	
+					padding-right: 10px;
+				}
+				.heart {
+					color: $red;
+					cursor: pointer;
+					float: right;
+					.heartNo {
+						color: $offWhite;
+						font-size: 15px;
+						z-index: 1000;
+						position: absolute;
+						margin-top: -23px;
+						left: 556px; 					
+					}
+					.heartIcon {
+						font-size: 30px;
+						margin-top: -5px;
+						x-index: 999;
+						position: inherit;
 					}
 				}	
-			}	
 
+			}
+			.textArray {
+				font-style: italic;
+			}
+		}
+	}	
+
+	// SAVE MODAL
+	.modalSave {
+		.modal-content {
+			padding: 20px;
+			background-color: $offWhite;
+			.modal-header {
+				button {
+					color: $gray;
+				}
+				h2 {
+					text-align: center;
+				}
+			}
+			.form-group {
+				padding-top: 10px;
+			}	
+			input, textarea, button {
+				border: 1px solid $gray;
+				background-color: $offWhite;
+			}
+			.checkboxPrivate {
+				display: inline-block;
+				font-size: 15px;
+				float: right;
+				input {
+					border: 1px solid $gray !important;
+					background-color: $offWhite !important;	
+				}
+			}	
 		}	
+	}	
 }
