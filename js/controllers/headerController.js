@@ -18,7 +18,7 @@
 
             vm.logout = function() {
                 API.logout();
-                $state.go('login');
+                $state.reload();
             };
 
         });

@@ -19,12 +19,11 @@
 			<ul class = "menuList" ng-show="vis" ng-animate="{show: 'menu-show', hide: 'menu-hide'}">
 				<li><a ui-sref="home">Home</a></li>
 				<li><a ui-sref="login">Login</a></li>
-				<li><a ui-sref="register">Register</a></li>
+				<li><a ui-sref="register">Sign Up</a></li>
 			</ul>
-			<h1> HEY!</h1>
 			<div class = "welcome" ng-show = "controller.loggedIn">
-				<h4 >oh hey <a href =#>{{controller.user.userName}}</a>!</h4>
-				<a href = "#"><span ng-click="controller.logout()">logout</span></a>
+				<h4 >oh hey <a href =#>{{controller.user.userName}}</a>! <i class="fa fa-sign-out" ng-click="controller.logout()"aria-hidden="true"></i></h4>
+		
 			</div>	
 			<h3>fill that empty place in your <span><i class="fa fa-heart" aria-hidden="true"></i></span></h3>
 		</div>

@@ -5,7 +5,7 @@
     .module('flowers')
     .controller('textController', function($state, textAPI,clipboard, API, back) {
         
-        var vm = this;
+        var vm = this;       
 
         // empty container arrays to be populated by writeTextArray()
         var finalArray = [];
@@ -30,17 +30,39 @@
         	vm.loggedIn = true;
        	}
 
+       	//gets text arrays from backand database
+       	var getTextArrays = back.getArrays();
+       		getTextArrays.then(function(results){
+          	var arrays = results.data;
+          	vm.arrays = arrays;
+          	vm.arrays.forEach(function(obj){
+          		if (obj.textVotes === null) {
+          			obj.textVotes = 0;
+          		}
+          	})
+        })
+
+        //saves vote(favorited) counter to backand database
+        vm.textVotes = function(arrays) {
+        	// console.log(arrays);
+        	var vote = back.textVotes(arrays.id, arrays.textVotes);
+        	
+        	vote.then(function(response) {
+        		console.log(response);
+        		arrays.textVotes ++;
+
+          });
+        };  
+
        	//saves custom text arrays to backand database
        	vm.saveTextArray = function(){
-        var saveArray = back.saveArray(vm.form);
+        	var saveArray = back.saveArray(vm.form);
        
-        saveArray.then(function(response) {
-			// alert("saved!");
-			$('.modalSave').modal('hide');
-			var containerArray = [];
-			console.log(response);
-        })
-       }
+	        saveArray.then(function(response) {
+				alert("saved!");
+				$('.modalSave').modal('hide');
+	        })
+       	}
 
 		//clipboard function so users can copy text
 		vm.supported = false;
@@ -151,7 +173,7 @@
  			vm.reset();
 		})
 
-		vm.random = function() {
+		vm.random = function() { 
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
 			  this.percentage = percentage;

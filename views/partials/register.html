@@ -1,14 +1,14 @@
 <div class = "row rowRegister">
 	<div class = "col-xs-12">
-		<h2>Register</h2>
+		<h2>Sign Up</h2>
 		<form ng-submit="controller.submit()">
 			<input class="form-control m-b-10" type="text" placeholder="First Name" ng-model="controller.form.firstName">
 			<input class="form-control m-b-10" type="text" placeholder="Last Name" ng-model="controller.form.lastName">
 			<input class="form-control m-b-10" type="text" placeholder="Email Address" ng-model="controller.form.email">
 			<input class="form-control m-b-10" type="text" placeholder="User Name" ng-model="controller.form.userName">
 			<input class="form-control m-b-10" type="password" placeholder="Password" ng-model="controller.form.password">
-			<button class = "btn btn-default" ui-sref="login" type="submit">Login</button>
-			<button class = "btn btn-default" type="submit">Register</button>
+			<a ui-sref="login">Already joined?</a>
+			<button class = "btn btn-default" type="submit">Sign Up</button>
 		</form>
 	</div>
 </div>	
