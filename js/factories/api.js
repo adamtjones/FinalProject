@@ -4,7 +4,6 @@
         .module('flowers')
         .factory('API', function($http) {
 
-            /*removed 'size' and put 'height' and 'width'*/
             var getInfo = function(image, height, width) {
 
                 var call = $http({
