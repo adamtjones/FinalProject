@@ -52,7 +52,10 @@
   .rowText .userArrays .publicArrays .textArrayName {
     font-size: 18px;
     color: #fefbf7;
-    background-color: #444444; }
+    background-color: #444444;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px; }
     .rowText .userArrays .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label {
       color: #ef143c; }
     .rowText .userArrays .publicArrays .textArrayName .userName {
