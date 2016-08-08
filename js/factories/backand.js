@@ -82,7 +82,7 @@
                 });
             }
 
-<<<<<<< HEAD
+
             var saveImage = function(image){
                 var gettingData = $http({
                     method: 'PUT',
@@ -90,9 +90,9 @@
                     url: "https://api.backand.com:443/1/objects/items/userImages",
                 });
                 return gettingData;
-=======
+            }    
+
             var textVotes = function(id, textVotes) {
-                console.log("COSOLE",parseInt(textVotes)+1);
                 var data = {
                     'textVotes': parseInt(textVotes)+1,
                 };
@@ -101,7 +101,6 @@
                     data:data,
                     url: 'https://api.backand.com:443/1/objects/items/'+ id,
                 });
->>>>>>> c584265273e6d5558986e39be385299249355f04
             }
 
             return {
@@ -109,12 +108,9 @@
                 login: login,
                 getUserInfo: getUserInfo,
                 saveArray: saveArray,
-<<<<<<< HEAD
                 saveImage,
-=======
                 getArrays: getArrays,
                 textVotes: textVotes,
->>>>>>> c584265273e6d5558986e39be385299249355f04
             }
 
         });
