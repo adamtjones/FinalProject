@@ -39,14 +39,14 @@
           		if (obj.textVotes === null) {
           			obj.textVotes = 0;
           		}
+          		obj.textArray = obj.textArray.split(" ");
+          		obj.textArray = obj.textArray.join(', ');
           	})
         })
 
         //saves vote(favorited) counter to backand database
         vm.textVotes = function(arrays) {
-        	// console.log(arrays);
         	var vote = back.textVotes(arrays.id, arrays.textVotes);
-        	
         	vote.then(function(response) {
         		console.log(response);
         		arrays.textVotes ++;
@@ -165,14 +165,17 @@
 			vm.form.textOutput = finalArray.join(" ");
 		};
 
+		//performs a soft reload when the reset function is called
 		vm.reset = function() {
 			$state.reload();
 		};
 
+		//calls the reset function when the text modal is closed
 		$('#modal').on('hidden.bs.modal', function (e) {
  			vm.reset();
 		})
 
+		//gets random text based with word count when the random button is clicked
 		vm.random = function() { 
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
