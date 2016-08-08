@@ -9,6 +9,8 @@
   .rowText .enterSelectText textarea {
     border: 1px solid #444444;
     background-color: #fefbf7; }
+  .rowText .enterSelectText span i {
+    color: #1D9E74; }
   .rowText .enterSelectText input[type="checkbox"] {
     display: none; }
   .rowText .enterSelectText input[type="checkbox"]:checked + label {
@@ -25,6 +27,17 @@
   .rowText .enterSelectText .checkbox {
     margin-top: 0px;
     margin-left: -20px; }
+  .rowText .enterSelectText button {
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #444444;
+    background-color: #fefbf7; }
+  .rowText .enterSelectText .wordTotal input {
+    width: 25%;
+    display: inline-block;
+    margin-left: 5px;
+    border: 1px solid #444444;
+    background-color: #fefbf7; }
   .rowText .enterPercentage label {
     text-align: left; }
   .rowText .enterPercentage input {
@@ -60,7 +73,9 @@
           z-index: 1000;
           position: absolute;
           margin-top: -23px;
-          left: 556px; }
+          left: 548px;
+          width: 30px;
+          text-align: center; }
         .rowText .userArrays .publicArrays .textArrayName .heart .heartIcon {
           font-size: 30px;
           margin-top: -5px;

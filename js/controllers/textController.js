@@ -39,14 +39,16 @@
           		if (obj.textVotes === null) {
           			obj.textVotes = 0;
           		}
+          		if (obj.textArray != null){
+	          		obj.textArray = obj.textArray.split(" ");
+	          		obj.textArray = obj.textArray.join(', ');
+	          	}	
           	})
         })
 
         //saves vote(favorited) counter to backand database
         vm.textVotes = function(arrays) {
-        	// console.log(arrays);
         	var vote = back.textVotes(arrays.id, arrays.textVotes);
-        	
         	vote.then(function(response) {
         		console.log(response);
         		arrays.textVotes ++;
@@ -75,6 +77,23 @@
         vm.fail = function (err) {
             console.error('Error!', err);
         };
+
+        //changes showPercentages to true when item is selected
+	    vm.percentageShower = function () {    
+	        vm.showPercentage = false;
+	        if (vm.form.checkbox.loremInput === true){
+				vm.showPercentage = true;
+			}
+			if (vm.form.checkbox.gibberishInput === true){
+				vm.showPercentage = true;
+			}
+			if (vm.form.checkbox.hipsterInput === true){
+				vm.showPercentage = true;
+			}
+			if (vm.form.checkbox.baconInput === true){
+				vm.showPercentage = true;	
+			}
+		}	
 
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()
@@ -165,14 +184,17 @@
 			vm.form.textOutput = finalArray.join(" ");
 		};
 
+		//performs a soft reload when the reset function is called
 		vm.reset = function() {
 			$state.reload();
 		};
 
+		//calls the reset function when the text modal is closed
 		$('#modal').on('hidden.bs.modal', function (e) {
  			vm.reset();
 		})
 
+		//gets random text based with word count when the random button is clicked
 		vm.random = function() { 
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;

@@ -1,38 +1,78 @@
 <div class = "row rowText">
 	<form>
 		<!-- LEFT COLUMN -->
-		<div class = "col-xs-3 enterSelectText">
+		<div class = "col-xs-6 enterSelectText">
 
 			<div class="form-group">
 		    	<label for="textInput">Enter your text</label>
 		    	<i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i>
-
 		    	<textarea class="form-control" id = "textInput" rows="5" ng-model= "controller.form.textInput"></textarea>
 		  	</div>
-		  	<div class="form-group">
-		    	<label for="checkbox">I also want</label>
 
-			  	<div class="checkbox">
-			    	<input type="checkbox" ng-model= "controller.form.checkbox.loremInput" id = "lorem"> 
-			    	<label for = "lorem" class = "checkboxLabel">Traditional Lorem Ipsum</label>
-			    </div>	
-			    <div class = "checkbox">
-			    	<input type="checkbox" ng-model= "controller.form.checkbox.gibberishInput" id = "gibberish"> 
-			    	<label for = "gibberish" class = "checkboxLabel">Gibberish</label>
-			    </div>
-			    <div class = "checkbox">
-			    	<input type="checkbox" ng-model= "controller.form.checkbox.hipsterInput" id = "hipster"> 
-			    	<label for = "hipster" class = "checkboxLabel" >Hipster</label>
-			    </div>
-			    <div class = "checkbox">	
-			    	<input type="checkbox" ng-model= "controller.form.checkbox.baconInput" id = "bacon"> 
-			    	<label for = "bacon" class = "checkboxLabel">Bacon</label>
-			  	</div>
-			  </div>	
+			  <div class="form-group col-xs-6">
+			   	<h4>I also want</h4>
+					<div class="checkbox">
+					   <input type="checkbox" ng-click = "controller.percentageShower()" ng-model= "controller.form.checkbox.loremInput" id = "lorem"> 
+					   <label for = "lorem" class = "checkboxLabel">Traditional Lorem Ipsum</label>
+					   <span ng-show = "controller.form.checkbox.loremInput">
+					    	<i class="fa fa-check" aria-hidden="true"></i>
+					   </span>	
+				   	</div>	
+				   	<div class = "checkbox">
+				    	<input type="checkbox" ng-model= "controller.form.checkbox.gibberishInput" ng-click = "controller.percentageShower()" id = "gibberish"> 
+				    	<label for = "gibberish" class = "checkboxLabel">Gibberish</label>
+				    	<span ng-show = "controller.form.checkbox.gibberishInput">
+				    		<i class="fa fa-check" aria-hidden="true"></i>
+				    	</span>
+				    </div>
+				    <div class = "checkbox">
+				    	<input type="checkbox" ng-model= "controller.form.checkbox.hipsterInput" ng-click = "controller.percentageShower()" id = "hipster"> 
+				    	<label for = "hipster" class = "checkboxLabel">Hipster</label>
+				    	<span ng-show = "controller.form.checkbox.hipsterInput">
+				    		<i class="fa fa-check" aria-hidden="true"></i>
+				    	</span>
+				    </div>
+				    <div class = "checkbox">	
+				    	<input type="checkbox" ng-model= "controller.form.checkbox.baconInput" ng-click = "controller.percentageShower()" id = "bacon"> 
+				    	<label for = "bacon" class = "checkboxLabel">Bacon</label>
+				    	<span ng-show = "controller.form.checkbox.baconInput">
+				    		<i class="fa fa-check" aria-hidden="true"></i>
+				    	</span>
+				  	</div>
+				</div>
+
+				<div class = "col-xs-6" ng-show = "controller.showPercentage">
+					<h4>How much %</h4>
+					
+					<div class="" ng-style = "{'opacity': controller.form.checkbox.loremInput ? '100' : '0'}">
+					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.loremInput">
+			    	</div>
+					<div class="" ng-style = "{'opacity': controller.form.checkbox.gibberishInput ? '100' : '0'}">
+					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.gibberishInput">
+			    	</div>
+					<div class="" ng-style = "{'opacity': controller.form.checkbox.hipsterInput ? '100' : '0'}">
+					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.hipsterInput">
+			    	</div>
+					<div class="" ng-style = "{'opacity': controller.form.checkbox.baconInput ? '100' : '0'}">
+					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.baconInput">
+			    	</div>			    				    				    	
+				</div>
+
+<!-- 			<div class = "row rowBottom">	 -->
+				<div class = "wordTotalSubmit col-xs-12">
+					<div class="form-group wordTotal">
+					    <label for="wordTotal" class="control-label">Word Total:</label>
+							<input type="number" class="form-control" id="wordTotal" placeholder="200" ng-model= "controller.form.wordTotal">		    
+					</div>
+					<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.submit()">Submit</button>
+					<button class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Random</button>
+					<button class="btn btn-default" ng-click = "controller.reset()">Reset</button>
+				</div>
+<!-- 			</div>	 -->			
 		</div>
 		
 		<!-- CENTER COLUMN -->
-		<div class = "col-xs-3 enterPercentage">
+<!-- 		<div class = "col-xs-3 enterPercentage">
 			<label>How much do you want?</label>
 			 	<div class="form-group">
 			    	<label for="textPercentInput" class="col-xs-7 control-label">Your text %</label>
@@ -64,16 +104,9 @@
 					      <input type="number" class="form-control" id="baconPercentInput" placeholder="0" ng-model= "controller.form.percentage.baconInput">
 				    </div>
 			    </div>
-			 	<div class="form-group wordTotal">
-			    	<label for="wordTotal" class="col-xs-7 control-label">Word Total:</label>
-				    <div class="col-xs-5">
-					      <input type="number" class="form-control" id="wordTotal" placeholder="200" ng-model= "controller.form.wordTotal">
-				    </div>			    
-			    </div>			    
-			    <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.submit()">Submit</button>
-			    <button class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Random</button>
-			    <button class="btn btn-default" ng-click = "controller.reset()">Reset</button>			    	
-		</div>
+			    
+		    	
+		</div> -->
 
 		<!-- RIGHT COLUMN -->
 		<div class = "col-xs-6 userArrays">

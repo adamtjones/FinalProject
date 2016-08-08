@@ -13,6 +13,11 @@
 			border: 1px solid $gray;
 			background-color: $offWhite;
 		} 
+		span {
+			i {
+				color: $green;
+			}
+		}
 		input[type="checkbox"] {
   			display: none;
 		}
@@ -33,6 +38,23 @@
 			margin-top: 0px;
 			margin-left: -20px;
 		}
+		button {
+			float: left;
+			margin-right: 15px;
+			border: 1px solid $gray;
+			background-color: $offWhite;
+		}
+
+		.wordTotal {
+			input {
+				width: 25%;
+				display: inline-block;
+				margin-left: 5px;
+				border: 1px solid $gray;
+				background-color: $offWhite;
+			}
+		}
+
 	}
 	// CENTER COLUMN
 	.enterPercentage {
@@ -78,7 +100,9 @@
 						z-index: 1000;
 						position: absolute;
 						margin-top: -23px;
-						left: 556px; 					
+						left: 548px; 
+						width: 30px;
+						text-align: center;					
 					}
 					.heartIcon {
 						font-size: 30px;
