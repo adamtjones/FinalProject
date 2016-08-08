@@ -88,7 +88,8 @@
                     data: image,
                     url: "https://api.backand.com:443/1/objects/items/",
                 });
-            };
+                return gettingData;
+            }    
 
             var textVotes = function(id, textVotes) {
                 var data = {
