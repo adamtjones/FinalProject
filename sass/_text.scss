@@ -4,76 +4,72 @@
 	background-color: $offWhite;	
 	// LEFT COLUMN
 	.enterSelectText {
-		.saveButton {
-			float: right;
-			margin-top: 5px;
-			cursor: pointer;
-		}
-		textarea {
-			border: 1px solid $gray;
-			background-color: $offWhite;
-		} 
-		span {
-			i {
-				color: $green;
+		.userText {
+			.userTextLabel {
+				display: inline !important;
+				span {
+					display: inline !important;
+				}	
+				input {
+					display: inline !important;
+				}
+			}
+			.saveButton {
+				float: right;
+				margin-top: 5px;
+				cursor: pointer;
+			}
+		}	
+		.standardLorems {
+			span {
+				i {
+					color: $green;
+				}
+			}
+			label {
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+			input[type="checkbox"] {
+	  			display: none;
+			}
+			input[type="checkbox"]:checked + label {
+	  			color: $red;
+	  		}
+	  		.checkboxLabel:hover {
+	  			color: $red;
+	  			cursor: pointer;
+				/* transitions and animations */
+				-webkit-transition: color .5s ease;
+				-moz-transition: color .5s ease;
+				-ms-transition: color .5s ease;
+				-o-transition: color .5s ease;
+				transition: color .5s ease;
+			}
+			.checkbox {
+				margin-top: 0px;
+				margin-left: -20px;
 			}
 		}
-		input[type="checkbox"] {
-  			display: none;
-		}
-		input[type="checkbox"]:checked + label {
-  			color: $red;
-  		}
-  		.checkboxLabel:hover {
-  			color: $red;
-  			cursor: pointer;
-			/* transitions and animations */
-			-webkit-transition: color .5s ease;
-			-moz-transition: color .5s ease;
-			-ms-transition: color .5s ease;
-			-o-transition: color .5s ease;
-			transition: color .5s ease;
-		}
-		.checkbox {
-			margin-top: 0px;
-			margin-left: -20px;
-		}
+		.standardLoremPercentages {
+			input {
+				margin-bottom: 5px;
+			}
+		}	
 		button {
-			float: left;
-			margin-right: 15px;
-			border: 1px solid $gray;
-			background-color: $offWhite;
+			margin-right: 10px;
 		}
+
 
 		.wordTotal {
 			input {
 				width: 25%;
 				display: inline-block;
 				margin-left: 5px;
-				border: 1px solid $gray;
-				background-color: $offWhite;
 			}
 		}
+	}
 
-	}
-	// CENTER COLUMN
-	.enterPercentage {
-		label {
-			text-align: left;
-		}
-		input {
-			margin-bottom: 5px;
-			border: 1px solid $gray;
-			background-color: $offWhite;
-		}
-		button {
-			float: right;
-			margin-right: 15px;
-			margin-top: 20px;
-			border: 1px solid $gray;
-			background-color: $offWhite;
-		}
-	}
 	//RIGHT COLUMN
 	.userArrays {
 		.publicArrays {

@@ -2,20 +2,26 @@
   padding-top: 50px;
   margin-top: 20px;
   background-color: #fefbf7; }
-  .rowText .enterSelectText .saveButton {
+  .rowText .enterSelectText .userText .userTextLabel {
+    display: inline !important; }
+    .rowText .enterSelectText .userText .userTextLabel span {
+      display: inline !important; }
+    .rowText .enterSelectText .userText .userTextLabel input {
+      display: inline !important; }
+  .rowText .enterSelectText .userText .saveButton {
     float: right;
     margin-top: 5px;
     cursor: pointer; }
-  .rowText .enterSelectText textarea {
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
-  .rowText .enterSelectText span i {
+  .rowText .enterSelectText .standardLorems span i {
     color: #1D9E74; }
-  .rowText .enterSelectText input[type="checkbox"] {
+  .rowText .enterSelectText .standardLorems label {
+    padding-top: 2px;
+    padding-bottom: 2px; }
+  .rowText .enterSelectText .standardLorems input[type="checkbox"] {
     display: none; }
-  .rowText .enterSelectText input[type="checkbox"]:checked + label {
+  .rowText .enterSelectText .standardLorems input[type="checkbox"]:checked + label {
     color: #ef143c; }
-  .rowText .enterSelectText .checkboxLabel:hover {
+  .rowText .enterSelectText .standardLorems .checkboxLabel:hover {
     color: #ef143c;
     cursor: pointer;
     /* transitions and animations */
@@ -24,32 +30,17 @@
     -ms-transition: color .5s ease;
     -o-transition: color .5s ease;
     transition: color .5s ease; }
-  .rowText .enterSelectText .checkbox {
+  .rowText .enterSelectText .standardLorems .checkbox {
     margin-top: 0px;
     margin-left: -20px; }
+  .rowText .enterSelectText .standardLoremPercentages input {
+    margin-bottom: 5px; }
   .rowText .enterSelectText button {
-    float: left;
-    margin-right: 15px;
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
+    margin-right: 10px; }
   .rowText .enterSelectText .wordTotal input {
     width: 25%;
     display: inline-block;
-    margin-left: 5px;
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
-  .rowText .enterPercentage label {
-    text-align: left; }
-  .rowText .enterPercentage input {
-    margin-bottom: 5px;
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
-  .rowText .enterPercentage button {
-    float: right;
-    margin-right: 15px;
-    margin-top: 20px;
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
+    margin-left: 5px; }
   .rowText .userArrays .publicArrays {
     list-style-type: none; }
     .rowText .userArrays .publicArrays .textArrayName {
@@ -111,13 +102,9 @@
   .rowImageSearch form {
     padding-bottom: 20px; }
     .rowImageSearch form .searchBox {
-      width: 14%;
-      border: 1px solid #444444;
-      background-color: #fefbf7; }
+      width: 14%; }
     .rowImageSearch form button {
-      margin-top: 20px;
-      border: 1px solid #444444;
-      background-color: #fefbf7; }
+      margin-top: 20px; }
   .rowImageSearch .results {
     padding: 0px; }
     .rowImageSearch .results img {
@@ -236,16 +223,11 @@ label {
   .rowRegister h2, .rowLogin h2 {
     text-align: center;
     margin-bottom: 20px; }
-  .rowRegister input, .rowLogin input {
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
   .rowRegister a, .rowLogin a {
     font-size: 15px; }
   .rowRegister button, .rowLogin button {
     float: right;
-    margin-left: 5px;
-    border: 1px solid #444444;
-    background-color: #fefbf7; }
+    margin-left: 5px; }
 
 body {
   background-color: #ef143c;
@@ -254,6 +236,8 @@ body {
   color: #444444; }
   body .container-fluid {
     width: 95%; }
-
-.m-b-10 {
-  margin-bottom: 10px; }
+  body .m-b-10 {
+    margin-bottom: 10px; }
+  body input, body button, body textarea {
+    border: 1px solid #444444 !important;
+    background-color: #fefbf7 !important; }

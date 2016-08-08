@@ -19,8 +19,11 @@ body {
 	.container-fluid {
 		width: 95%;
 	}
-}
-
-.m-b-10 {
-	margin-bottom: 10px;
+	.m-b-10 {
+		margin-bottom: 10px;
+	}
+	input, button, textarea {
+		border: 1px solid $gray !important;
+		background-color: $offWhite !important;
+	}
 }
