@@ -1,44 +1,68 @@
 <div class="row rowImageSearch">
 	<form class="col-xs-12 form-inline" ng-submit="vm.search()">
-		<div class = "form-group">
-			<input type="text" class="form-control searchBox" placeholder="Image Search" ng-model="vm.getInfo"></input>
+		<div class = "form-group col-lg-12">
+			<input type="text" class="form-control searchBox col-lg-2" placeholder="Image Search" ng-model="vm.getInfo"></input>
+		</div>
+		<div class="col-md-12">
+			<div class="row image-fields">
+				<div class="col-lg-3"><label>Image 1</label>
+					<input value="" ng-model="vm.image1.height"></input><p>x</p>
+					<input value="" ng-model="vm.image1.width"></input>
+				</div>
+				<div class="col-lg-3"><label>Image 2</label>
+					<input value="" ng-model="vm.image2.height"></input><p>x</p>
+					<input value="" ng-model="vm.image2.width"></input>
+				</div>
+				<div class="col-lg-3"><label>Image 3</label>
+					<input value="" ng-model="vm.image3.height"></input><p>x</p>
+					<input value="" ng-model="vm.image3.width"></input>
+				</div>
+				<div class="col-lg-3"><label>Image 4</label>
+					<input value="" ng-model="vm.image4.height"></input><p>x</p>
+					<input value="" ng-model="vm.image4.width"></input>
+				</div>
+				<div class="col-md-12">
+					<button class="btn btn-default" type="submit" ng-click = "searchResults = true">Search</button>
+				</div>
+			</div>
 		</div>	
-		<button class="btn btn-default" type="submit" ng-click = "searchResults = true">Search</button>		
 	</form>
 	<div class="results">
 		
 		<div class = "col-lg-3 col-md-12" ng-hide="searchResults">
 			<img src="http://placehold.it/125x125">
-		</div>		
+		</div>
 		<div class = "col-lg-3 col-md-12" ng-show="searchResults">
-			<img src="{{vm.data.contentUrl}}">
+			<img src="{{vm.data.contentUrl}}" ng-click="vis1 = !vis1">
+			<div ng-show="vis1"><p>Save to profile?</p></div>
 			<figcaption>125x125</figcaption>
-		</div>	
-
-		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">	
+		</div>
+		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
 			<img src="http://placehold.it/250x250">
-		</div>	
-		<div class = "col-lg-4 col-md-12" ng-show="searchResults">	
-			<img src="{{vm.data1.contentUrl}}">
+			
+		</div>
+		<div class = "col-lg-4 col-md-12" ng-show="searchResults">
+			<img src="{{vm.data1.contentUrl}}" ng-click="vis2 = !vis2">
+			<div ng-show="vis2"><p>Save to profile?</p></div>
 			<figcaption>250x250</figcaption>
-		</div>	
-
+		</div>
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
 			<img src="http://placehold.it/400x400">
+			
 		</div>
-		<div class = "col-lg-4 col-md-12" ng-show="searchResults">	
-			<img src="{{vm.data2.contentUrl}}">
+		<div class = "col-lg-4 col-md-12" ng-show="searchResults">
+			<img src="{{vm.data2.contentUrl}}" ng-click="vis3 = !vis3">
+			<div ng-show="vis3"><p>Save to profile?</p></div>
 			<figcaption>400x400</figcaption>
-		</div>	
-
+		</div>
 		<div class = "col-xs-12 check-element" ng-hide="searchResults">
 			<img src="http://placehold.it/600x600">
-		</div>	
-		<div class = "col-xs-12 check-element" ng-show="searchResults">	
-			<img src="{{vm.data3.contentUrl}}">
-			<figcaption>600x600</figcaption>			
+			
 		</div>
-
+		<div class = "col-xs-12 check-element" ng-show="searchResults">
+			<img src="{{vm.data3.contentUrl}}" ng-click="vis4 = !vis4">
+			<div ng-show="vis4"><p>Save to profile?</p></div>
+			<figcaption>600x600</figcaption>
+		</div>
 	</div>
 </div>
-

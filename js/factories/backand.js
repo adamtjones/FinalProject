@@ -70,12 +70,21 @@
                 });
             }
 
+            var saveImage = function(image){
+                var gettingData = $http({
+                    method: 'PUT',
+                    image: image,
+                    url: "https://api.backand.com:443/1/objects/items/userImages",
+                });
+                return gettingData;
+            }
 
             return {
                 registerUser: registerUser,
                 login: login,
                 getUserInfo: getUserInfo,
                 saveArray: saveArray,
+                saveImage,
             }
 
         });
