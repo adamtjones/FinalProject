@@ -229,6 +229,9 @@ label {
     float: right;
     margin-left: 5px; }
 
+.loginError {
+  text-align: center; }
+
 body {
   background-color: #ef143c;
   font-family: "Reem Kufi", sans-serif;

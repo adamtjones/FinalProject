@@ -1,13 +1,15 @@
 <div class = "row rowLogin">	
 	<div class=" col-xs-12 login">
 		<div ng-show="controller.showAlert" class="alert alert-warning alert-dismissible" role="alert">
-			<p>Login information incorrect. Please try again.</p>
+			<p class="loginError">Login information incorrect. Please try again.</p>
 		</div>
 		<form ng-submit="controller.submit()">
 			<div class="form-group">
+				
+
 				<h2>Login</h2>
-				<input class="form-control m-b-10" type="text" placeholder="Email Address" ng-model="controller.form.email">
-				<input class ="form-control m-b-10" type="password" placeholder="Password" ng-model="controller.form.password">
+					<input class="form-control m-b-10" type="text" placeholder="Email Address" ng-model="controller.form.email" required>
+					<input class ="form-control m-b-10" type="password" placeholder="Password" ng-model="controller.form.password" required>
 				<a ui-sref="register">Need to sign up?</a>
 				<button class = "btn btn-default" type="submit">Login</button>
 			</div>	
