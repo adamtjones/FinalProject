@@ -111,8 +111,6 @@
                 getArrays: getArrays,
                 textVotes: textVotes,
             }
-
-       
-})})
-();
+        })        
+})();
 
