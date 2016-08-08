@@ -82,15 +82,22 @@
                 });
             }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 454402b92801914bf21d26c1c135362ae9b14704
             var saveImage = function(image){
                 var gettingData = $http({
-                    method: 'PUT',
-                    image: image,
-                    url: "https://api.backand.com:443/1/objects/items/userImages",
+                    method: 'POST',
+                    data: image,
+                    url: "https://api.backand.com:443/1/objects/items/",
                 });
                 return gettingData;
+<<<<<<< HEAD
+            };
+=======
             }    
+>>>>>>> 454402b92801914bf21d26c1c135362ae9b14704
 
             var textVotes = function(id, textVotes) {
                 var data = {
@@ -101,6 +108,10 @@
                     data:data,
                     url: 'https://api.backand.com:443/1/objects/items/'+ id,
                 });
+<<<<<<< HEAD
+                
+=======
+>>>>>>> 454402b92801914bf21d26c1c135362ae9b14704
             }
 
             return {
@@ -113,5 +124,7 @@
                 textVotes: textVotes,
             }
 
-        });
-})();
+       
+})})
+();
+
