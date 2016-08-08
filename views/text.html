@@ -7,6 +7,7 @@
 		    		<span>Enter your text</span>
 			    	<div class="" ng-show = "controller.form.textInput">
 						<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput">
+						<span>How much %</span>
 				    </div>
 		    		<span>
 		    			<i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i>
@@ -78,7 +79,17 @@
 		<!-- RIGHT COLUMN -->
 		<div class = "col-xs-6 userArrays">
 		    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true" class = "publicArrays">
-                <article>
+<!--                 <article>
+                    <h3 class = "textArrayName">
+	                    <div class = "checkbox">	
+	                    	<label for = "thisID" class = "checkboxLabel">{{arrays.textArrayName}} <i class="fa fa-check" aria-hidden="true"></i></label>
+					    	<input type="checkbox" id = "thisID">
+					  	</div>
+						<span class = "userName">by: {{arrays.author_obj.userName}}</span>	
+                    </h3>
+                    <p class = "textArray">{{arrays.textArray}}</p>
+               	</article> -->
+               	<article>
                     <h3 class = "textArrayName">{{arrays.textArrayName}}
                     	<span ng-click = "controller.textVotes(arrays)" class = "heart">
 							<i class="fa fa-heart heartIcon" aria-hidden="true"></i>

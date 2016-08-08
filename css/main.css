@@ -2,78 +2,82 @@
   padding-top: 50px;
   margin-top: 20px;
   background-color: #fefbf7; }
-  .rowText .enterSelectText .userText .userTextLabel {
-    display: inline !important; }
-    .rowText .enterSelectText .userText .userTextLabel span {
+  .rowText .enterSelectText {
+    margin-top: 20px; }
+    .rowText .enterSelectText .userText .userTextLabel {
       display: inline !important; }
-    .rowText .enterSelectText .userText .userTextLabel input {
-      display: inline !important; }
-  .rowText .enterSelectText .userText .saveButton {
-    float: right;
-    margin-top: 5px;
-    cursor: pointer; }
-  .rowText .enterSelectText .standardLorems span i {
-    color: #1D9E74; }
-  .rowText .enterSelectText .standardLorems label {
-    padding-top: 2px;
-    padding-bottom: 2px; }
-  .rowText .enterSelectText .standardLorems input[type="checkbox"] {
-    display: none; }
-  .rowText .enterSelectText .standardLorems input[type="checkbox"]:checked + label {
-    color: #ef143c; }
-  .rowText .enterSelectText .standardLorems .checkboxLabel:hover {
-    color: #ef143c;
-    cursor: pointer;
-    /* transitions and animations */
-    -webkit-transition: color .5s ease;
-    -moz-transition: color .5s ease;
-    -ms-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease; }
-  .rowText .enterSelectText .standardLorems .checkbox {
-    margin-top: 0px;
-    margin-left: -20px; }
-  .rowText .enterSelectText .standardLoremPercentages input {
-    margin-bottom: 5px; }
-  .rowText .enterSelectText button {
-    margin-right: 10px; }
-  .rowText .enterSelectText .wordTotal input {
-    width: 25%;
-    display: inline-block;
-    margin-left: 5px; }
-  .rowText .userArrays .publicArrays {
-    list-style-type: none; }
-    .rowText .userArrays .publicArrays .textArrayName {
-      font-size: 18px;
-      color: #fefbf7;
-      background-color: #444444;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-bottom: 10px;
-      padding-top: 10px; }
-      .rowText .userArrays .publicArrays .textArrayName .userName {
-        float: right;
-        padding-right: 10px; }
-      .rowText .userArrays .publicArrays .textArrayName .heart {
-        color: #ef143c;
-        cursor: pointer;
-        float: right; }
-        .rowText .userArrays .publicArrays .textArrayName .heart .heartNo {
-          color: #fefbf7;
-          font-size: 15px;
-          z-index: 1000;
-          position: absolute;
-          margin-top: -23px;
-          left: 548px;
-          width: 30px;
-          text-align: center; }
-        .rowText .userArrays .publicArrays .textArrayName .heart .heartIcon {
-          font-size: 30px;
-          margin-top: -5px;
-          x-index: 999;
-          position: inherit; }
-    .rowText .userArrays .publicArrays .textArray {
-      font-style: italic; }
+      .rowText .enterSelectText .userText .userTextLabel div {
+        display: inline; }
+        .rowText .enterSelectText .userText .userTextLabel div span {
+          float: right;
+          font-size: 16px; }
+        .rowText .enterSelectText .userText .userTextLabel div input {
+          display: inline !important;
+          width: 15%;
+          margin-bottom: 2px;
+          float: right;
+          margin-left: 10px; }
+    .rowText .enterSelectText .userText .saveButton {
+      cursor: pointer;
+      margin-left: 10px; }
+    .rowText .enterSelectText .standardLorems span i {
+      color: #1D9E74; }
+    .rowText .enterSelectText .standardLorems label {
+      padding-top: 2px;
+      padding-bottom: 2px; }
+    .rowText .enterSelectText .standardLorems input[type="checkbox"] {
+      display: none; }
+    .rowText .enterSelectText .standardLorems input[type="checkbox"]:checked + label {
+      color: #ef143c; }
+    .rowText .enterSelectText .standardLorems .checkboxLabel:hover {
+      color: #ef143c;
+      cursor: pointer;
+      /* transitions and animations */
+      -webkit-transition: color .5s ease;
+      -moz-transition: color .5s ease;
+      -ms-transition: color .5s ease;
+      -o-transition: color .5s ease;
+      transition: color .5s ease; }
+    .rowText .enterSelectText .standardLorems .checkbox {
+      margin-top: 0px;
+      margin-left: -20px; }
+    .rowText .enterSelectText .standardLoremPercentages input {
+      margin-bottom: 5px; }
+    .rowText .enterSelectText button {
+      margin-right: 10px; }
+    .rowText .enterSelectText .wordTotal input {
+      width: 25%;
+      display: inline-block;
+      margin-left: 5px; }
+  .rowText .userArrays .publicArrays .textArrayName {
+    font-size: 18px;
+    color: #fefbf7;
+    background-color: #444444; }
+    .rowText .userArrays .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label {
+      color: #ef143c; }
+    .rowText .userArrays .publicArrays .textArrayName .userName {
+      float: right;
+      padding-right: 10px; }
+    .rowText .userArrays .publicArrays .textArrayName .heart {
+      color: #ef143c;
+      cursor: pointer;
+      float: right; }
+      .rowText .userArrays .publicArrays .textArrayName .heart .heartNo {
+        color: #fefbf7;
+        font-size: 15px;
+        z-index: 1000;
+        position: absolute;
+        margin-top: -23px;
+        left: 548px;
+        width: 30px;
+        text-align: center; }
+      .rowText .userArrays .publicArrays .textArrayName .heart .heartIcon {
+        font-size: 30px;
+        margin-top: -5px;
+        x-index: 999;
+        position: inherit; }
+  .rowText .userArrays .publicArrays .textArray {
+    font-style: italic; }
   .rowText .modalSave .modal-content {
     padding: 20px;
     background-color: #fefbf7; }

@@ -4,7 +4,7 @@
     angular
     .module('flowers')
     .controller('textController', function($state, textAPI,clipboard, API, back) {
-        
+
         var vm = this;       
 
         // empty container arrays to be populated by writeTextArray()

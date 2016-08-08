@@ -4,20 +4,29 @@
 	background-color: $offWhite;	
 	// LEFT COLUMN
 	.enterSelectText {
+		margin-top: 20px;
 		.userText {
 			.userTextLabel {
 				display: inline !important;
-				span {
-					display: inline !important;
+				div {
+					display: inline;
+					span {
+						float: right;
+						font-size: 16px;
+					}	
+					input {
+						display: inline !important;
+						width: 15%;
+						margin-bottom: 2px;
+						float: right;
+						// margin-top: -5px;
+						margin-left: 10px;
+					}
 				}	
-				input {
-					display: inline !important;
-				}
 			}
 			.saveButton {
-				float: right;
-				margin-top: 5px;
 				cursor: pointer;
+				margin-left: 10px;
 			}
 		}	
 		.standardLorems {
@@ -73,15 +82,33 @@
 	//RIGHT COLUMN
 	.userArrays {
 		.publicArrays {
-			list-style-type: none;
 			.textArrayName {
 				font-size: 18px;
 				color: $offWhite;
 				background-color: $gray;
-				padding-left: 10px;
-				padding-right: 10px;
-				padding-bottom: 10px;
-				padding-top: 10px;
+				// padding-left: 10px;
+				// padding-right: 10px;
+				// padding-bottom: 10px;
+				// padding-top: 10px;
+
+				.checkbox {
+					input[type="checkbox"] {
+			  			// display: none;
+					}
+					input[type="checkbox"]:checked + label {
+			  			color: $red;
+			  		}
+			  // 		.checkboxLabel:hover {
+			  // 			color: $red;
+			  // 			cursor: pointer;
+					// 	/* transitions and animations */
+					// 	-webkit-transition: color .5s ease;
+					// 	-moz-transition: color .5s ease;
+					// 	-ms-transition: color .5s ease;
+					// 	-o-transition: color .5s ease;
+					// 	transition: color .5s ease;
+					// }
+				}
 				.userName {
 					float: right;
 					padding-right: 10px;
@@ -107,7 +134,6 @@
 						position: inherit;
 					}
 				}	
-
 			}
 			.textArray {
 				font-style: italic;
