@@ -2,14 +2,20 @@
 	<form>
 		<!-- LEFT COLUMN -->
 		<div class = "col-xs-6 enterSelectText">
-
-			<div class="form-group">
-		    	<label for="textInput">Enter your text</label>
-		    	<i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i>
+			<div class="form-group userText">
+		    	<label class = "userTextLabel" for="textInput">
+		    		<span>Enter your text</span>
+			    	<div class="" ng-show = "controller.form.textInput">
+						<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput">
+				    </div>
+		    		<span>
+		    			<i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i>
+		    		</span>	
+		    	</label>	
 		    	<textarea class="form-control" id = "textInput" rows="5" ng-model= "controller.form.textInput"></textarea>
 		  	</div>
 
-			  <div class="form-group col-xs-6">
+			<div class="form-group col-xs-6 standardLorems">
 			   	<h4>I also want</h4>
 					<div class="checkbox">
 					   <input type="checkbox" ng-click = "controller.percentageShower()" ng-model= "controller.form.checkbox.loremInput" id = "lorem"> 
@@ -39,74 +45,35 @@
 				    		<i class="fa fa-check" aria-hidden="true"></i>
 				    	</span>
 				  	</div>
-				</div>
+			</div>
 
-				<div class = "col-xs-6" ng-show = "controller.showPercentage">
-					<h4>How much %</h4>
+			<div class = "col-xs-6 standardLoremPercentages" ng-show = "controller.showPercentage">
+				<h4>How much %</h4>
 					
-					<div class="" ng-style = "{'opacity': controller.form.checkbox.loremInput ? '100' : '0'}">
-					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.loremInput">
-			    	</div>
-					<div class="" ng-style = "{'opacity': controller.form.checkbox.gibberishInput ? '100' : '0'}">
-					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.gibberishInput">
-			    	</div>
-					<div class="" ng-style = "{'opacity': controller.form.checkbox.hipsterInput ? '100' : '0'}">
-					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.hipsterInput">
-			    	</div>
-					<div class="" ng-style = "{'opacity': controller.form.checkbox.baconInput ? '100' : '0'}">
-					    <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.baconInput">
-			    	</div>			    				    				    	
-				</div>
+				<div class="" ng-style = "{'opacity': controller.form.checkbox.loremInput ? '100' : '0'}">
+					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.loremInput">
+			    </div>
+				<div class="" ng-style = "{'opacity': controller.form.checkbox.gibberishInput ? '100' : '0'}">
+					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.gibberishInput">
+			    </div>
+				<div class="" ng-style = "{'opacity': controller.form.checkbox.hipsterInput ? '100' : '0'}">
+					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.hipsterInput">
+			    </div>
+				<div class="" ng-style = "{'opacity': controller.form.checkbox.baconInput ? '100' : '0'}">
+					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.baconInput">
+			    </div>			    				    				    	
+			</div>
 
-<!-- 			<div class = "row rowBottom">	 -->
-				<div class = "wordTotalSubmit col-xs-12">
-					<div class="form-group wordTotal">
-					    <label for="wordTotal" class="control-label">Word Total:</label>
-							<input type="number" class="form-control" id="wordTotal" placeholder="200" ng-model= "controller.form.wordTotal">		    
-					</div>
-					<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.submit()">Submit</button>
-					<button class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Random</button>
-					<button class="btn btn-default" ng-click = "controller.reset()">Reset</button>
+			<div class = "wordTotalSubmit col-xs-12">
+				<div class="form-group wordTotal">
+				    <label for="wordTotal" class="control-label">Word Total:</label>
+					<input type="number" class="form-control" id="wordTotal" placeholder="200" ng-model= "controller.form.wordTotal">	    
 				</div>
-<!-- 			</div>	 -->			
+				<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.submit()">Submit</button>
+				<button class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Random</button>
+				<button class="btn btn-default" ng-click = "controller.reset()">Reset</button>
+			</div>
 		</div>
-		
-		<!-- CENTER COLUMN -->
-<!-- 		<div class = "col-xs-3 enterPercentage">
-			<label>How much do you want?</label>
-			 	<div class="form-group">
-			    	<label for="textPercentInput" class="col-xs-7 control-label">Your text %</label>
-				    <div class="col-xs-5">
-					      <input type="number" class="form-control" id="yourPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput">
-				    </div>
-			    </div>
-			 	<div class="form-group">
-			    	<label for="loremPercentInput" class="col-xs-7 control-label">Lorem Ipsum %</label>
-				    <div class="col-xs-5">
-					      <input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.loremInput">
-				    </div>
-			    </div>
-			 	<div class="form-group">
-			    	<label for="gibberishPercentInput" class="col-xs-7 control-label">Gibberish %</label>
-				    <div class="col-xs-5">
-					      <input type="number" class="form-control" id="gibberishPercentInput" placeholder="0" ng-model= "controller.form.percentage.gibberishInput">
-				    </div>
-			    </div>
-			 	<div class="form-group">
-			    	<label for="hipsterPercentInput" class="col-xs-7 control-label">Hipster %</label>
-				    <div class="col-xs-5">
-					      <input type="number" class="form-control" id="hipsterPercentInput" placeholder="0" ng-model= "controller.form.percentage.hipsterInput">
-				    </div>
-			    </div>
-			 	<div class="form-group">
-			    	<label for="baconPercentInput" class="col-xs-7 control-label">Bacon %</label>
-				    <div class="col-xs-5">
-					      <input type="number" class="form-control" id="baconPercentInput" placeholder="0" ng-model= "controller.form.percentage.baconInput">
-				    </div>
-			    </div>
-			    
-		    	
-		</div> -->
 
 		<!-- RIGHT COLUMN -->
 		<div class = "col-xs-6 userArrays">
@@ -124,7 +91,6 @@
             </li>
 		</div>
 
-
 		<!-- TEXT MODAL -->
 		<div id="modal" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -141,7 +107,6 @@
             </div>
         </div>
 	</form>
-
 
 	<!-- SAVE MODAL -->
 	<div class="modal modalSave" tabindex="-1" role="dialog" aria-hidden="true">
