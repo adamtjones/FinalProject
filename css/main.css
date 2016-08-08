@@ -27,6 +27,17 @@
   .rowText .enterSelectText .checkbox {
     margin-top: 0px;
     margin-left: -20px; }
+  .rowText .enterSelectText button {
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #444444;
+    background-color: #fefbf7; }
+  .rowText .enterSelectText .wordTotal input {
+    width: 25%;
+    display: inline-block;
+    margin-left: 5px;
+    border: 1px solid #444444;
+    background-color: #fefbf7; }
   .rowText .enterPercentage label {
     text-align: left; }
   .rowText .enterPercentage input {

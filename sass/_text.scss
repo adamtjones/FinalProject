@@ -38,6 +38,22 @@
 			margin-top: 0px;
 			margin-left: -20px;
 		}
+		button {
+			float: left;
+			margin-right: 15px;
+			border: 1px solid $gray;
+			background-color: $offWhite;
+		}
+
+		.wordTotal {
+			input {
+				width: 25%;
+				display: inline-block;
+				margin-left: 5px;
+				border: 1px solid $gray;
+				background-color: $offWhite;
+			}
+		}
 
 	}
 	// CENTER COLUMN

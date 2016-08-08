@@ -39,8 +39,10 @@
           		if (obj.textVotes === null) {
           			obj.textVotes = 0;
           		}
-          		obj.textArray = obj.textArray.split(" ");
-          		obj.textArray = obj.textArray.join(', ');
+          		if (obj.textArray != null){
+	          		obj.textArray = obj.textArray.split(" ");
+	          		obj.textArray = obj.textArray.join(', ');
+	          	}	
           	})
         })
 
@@ -75,6 +77,23 @@
         vm.fail = function (err) {
             console.error('Error!', err);
         };
+
+        //changes showPercentages to true when item is selected
+	    vm.percentageShower = function () {    
+	        vm.showPercentage = false;
+	        if (vm.form.checkbox.loremInput === true){
+				vm.showPercentage = true;
+			}
+			if (vm.form.checkbox.gibberishInput === true){
+				vm.showPercentage = true;
+			}
+			if (vm.form.checkbox.hipsterInput === true){
+				vm.showPercentage = true;
+			}
+			if (vm.form.checkbox.baconInput === true){
+				vm.showPercentage = true;	
+			}
+		}	
 
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()

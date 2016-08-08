@@ -108,7 +108,7 @@
                 login: login,
                 getUserInfo: getUserInfo,
                 saveArray: saveArray,
-                saveImage,
+                saveImage: saveImage,
                 getArrays: getArrays,
                 textVotes: textVotes,
             }
