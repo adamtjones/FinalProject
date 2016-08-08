@@ -100,10 +100,11 @@
   .rowImageSearch form {
     padding-bottom: 20px; }
     .rowImageSearch form .searchBox {
-      width: 100%;
+      width: 14%;
       border: 1px solid #444444;
       background-color: #fefbf7; }
     .rowImageSearch form button {
+      margin-top: 20px;
       border: 1px solid #444444;
       background-color: #fefbf7; }
   .rowImageSearch .results {
@@ -111,6 +112,18 @@
     .rowImageSearch .results img {
       margin: 0px auto;
       padding-bottom: 20px; }
+
+label {
+  font-weight: 400; }
+
+.customSize {
+  padding-top: 20px; }
+
+.form-group {
+  padding-bottom: 20px; }
+
+.image-fields label {
+  width: 100%; }
 
 @keyframes fadeIn {
   0% {

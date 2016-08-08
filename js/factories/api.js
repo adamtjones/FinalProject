@@ -4,14 +4,15 @@
         .module('flowers')
         .factory('API', function($http) {
 
-            var getInfo = function(image,size) {
+            /*removed 'size' and put 'height' and 'width'*/
+            var getInfo = function(image, height, width) {
 
                 var call = $http({
                     headers: {
                         "Ocp-Apim-Subscription-Key": "da6b094ff8914d0597d301ebb935eefd",
                     },
                     method: 'GET',
-                    url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + image + "&height="+size+"&width="+size,
+                    url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + image + "&height=" + height + "&width=" + width,
                 });
 
                 return call;

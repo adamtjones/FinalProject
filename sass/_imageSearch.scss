@@ -6,11 +6,12 @@
 	form {
 		padding-bottom: 20px;
 		.searchBox {
-			width: 100%;
+			width: 14%;
 			border: 1px solid $gray;
 			background-color: $offWhite;
 		}
 		button {
+			margin-top:20px;
 			border: 1px solid $gray;
 			background-color: $offWhite;
 		}
@@ -22,6 +23,22 @@
 			padding-bottom: 20px;
 		}
 	}
-}	
+}
+label {
+	font-weight:400;
+}
+.customSize {
+	padding-top: 20px;
+}
+.form-group {
+	padding-bottom:20px;
+}
+.image-fields {
+	label {
+		width:100%;
+	}
+}
+
+	
 
 
