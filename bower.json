@@ -1,0 +1,20 @@
+{
+  "name": "countryapp",
+  "homepage": "https://github.com/adamtjones/CountryApp",
+  "authors": [
+    "Adam Jones <adamjns802@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}
