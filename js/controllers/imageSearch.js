@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('imageSearchController', function(API, $location, $stateParams) {
+        .controller('imageSearchController', function(API, $location, $stateParams, back) {
             var vm = this;
             vm.image1 = [];
             vm.image2 = [];
@@ -47,5 +47,22 @@
                     vm.data3 = response.data.value[0];
                 });
             };
+
+            vm.savePhotos = function() {
+
+                var savedPhotos = {
+                    author: API.getUserId(),
+                    savedImage1: vm.data.contentUrl,
+                    savedImage2: vm.data1.contentUrl,
+                    savedImage3: vm.data2.contentUrl,
+                    savedImage4: vm.data3.contentUrl,
+                       
+                }
+                 
+                var save = back.saveImage(savedPhotos);
+                save.then(function(response) {
+                    console.log(response);
+                })
+            }
         });
 })();
