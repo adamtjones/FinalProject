@@ -5,6 +5,7 @@
         .module('flowers')
         .controller('imageSearchController', function(API, $location, $stateParams, back) {
             var vm = this;
+
             vm.image1 = [];
             vm.image2 = [];
             vm.image3 = [];
@@ -21,6 +22,12 @@
 
             vm.image4.width = 600;
             vm.image4.height = 600;
+
+            //shows slightly different features when user is logged in
+            var loggedIn = false;
+                if(API.getToken() !== null) {
+                    vm.loggedIn = true;
+            }
 
             vm.search = function() {
 
@@ -56,6 +63,7 @@
                     savedImage2: vm.data1.contentUrl,
                     savedImage3: vm.data2.contentUrl,
                     savedImage4: vm.data3.contentUrl,
+                    isImage: true,
                        
                 }
                  

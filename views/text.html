@@ -16,8 +16,8 @@
 		    	<textarea class="form-control" id = "textInput" rows="5" ng-model= "controller.form.textInput"></textarea>
 		  	</div>
 
-			<div class="form-group col-xs-6 standardLorems">
-			   	<h4>I also want</h4>
+			<div class="col-xs-6 standardLorems">
+			   	<h4>I also want:</h4>
 					<div class="checkbox">
 					   <input type="checkbox" ng-click = "controller.percentageShower()" ng-model= "controller.form.checkbox.loremInput" id = "lorem"> 
 					   <label for = "lorem" class = "checkboxLabel">Traditional Lorem Ipsum</label>
@@ -51,16 +51,16 @@
 			<div class = "col-xs-6 standardLoremPercentages" ng-show = "controller.showPercentage">
 				<h4>How much %</h4>
 					
-				<div class="" ng-style = "{'opacity': controller.form.checkbox.loremInput ? '100' : '0'}">
+				<div class="" ng-style = "{'visibility': controller.form.checkbox.loremInput ? 'visible' : 'hidden'}">
 					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.loremInput">
 			    </div>
-				<div class="" ng-style = "{'opacity': controller.form.checkbox.gibberishInput ? '100' : '0'}">
+				<div class="" ng-style = "{'visibility': controller.form.checkbox.gibberishInput ? 'visible' : 'hidden'}">
 					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.gibberishInput">
 			    </div>
-				<div class="" ng-style = "{'opacity': controller.form.checkbox.hipsterInput ? '100' : '0'}">
+				<div class="" ng-style = "{'visibility': controller.form.checkbox.hipsterInput ? 'visible' : 'hidden'}">
 					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.hipsterInput">
 			    </div>
-				<div class="" ng-style = "{'opacity': controller.form.checkbox.baconInput ? '100' : '0'}">
+				<div class="" ng-style = "{'visibility': controller.form.checkbox.baconInput ? 'visible' : 'hidden'}">
 					<input type="number" class="form-control" id="loremPercentInput" placeholder="0" ng-model= "controller.form.percentage.baconInput">
 			    </div>			    				    				    	
 			</div>
@@ -78,28 +78,81 @@
 
 		<!-- RIGHT COLUMN -->
 		<div class = "col-xs-6 userArrays">
-		    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true" class = "publicArrays">
-<!--                 <article>
-                    <h3 class = "textArrayName">
-	                    <div class = "checkbox">	
-	                    	<label for = "thisID" class = "checkboxLabel">{{arrays.textArrayName}} <i class="fa fa-check" aria-hidden="true"></i></label>
-					    	<input type="checkbox" id = "thisID">
-					  	</div>
-						<span class = "userName">by: {{arrays.author_obj.userName}}</span>	
-                    </h3>
-                    <p class = "textArray">{{arrays.textArray}}</p>
-               	</article> -->
-               	<article>
-                    <h3 class = "textArrayName">{{arrays.textArrayName}}
-                    	<span ng-click = "controller.textVotes(arrays)" class = "heart">
-							<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
-							<span class = "heartNo">{{arrays.textVotes}}</span>	
-						</span>
-						<span class = "userName">by: {{arrays.author_obj.userName}}</span>	
-                    </h3>
-                    <p class = "textArray">{{arrays.textArray}}</p>
-               	</article>
-            </li>
+		    <div class = "navLinks" ng-style = "{'visibility': controller.loggedIn ? 'visible' : 'hidden'}">
+		    	<ul>
+		    		<li ng-class = "{active: controller.showMine}" ng-click="controller.showMine = !controller.showMine; controller.showAll = false">Mine</li>
+		    		<span> | </span>
+		    		<li ng-class = "{active: controller.showAll}" ng-click="controller.showAll = !controller.showAll; controller.showMine = false">All</li>
+		    	</ul>
+		    </div>
+			
+			<!-- SHOW USER'S TEXT ARRAYS -->		    
+		    <ul ng-show = "controller.showMine">    
+				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | orderBy:'-dateTime'" class = "publicArrays">
+	               	<article>
+	                    <h3 class = "textArrayName">
+	                    	<div class = "checkbox">
+	                    		<input type="checkbox" id = "thisID" ng-model = "controller.form.checkbox.thisID">	
+		                    	<label for = "thisID" class = "checkboxLabel">			{{arrays.textArrayName}} 
+		                    		<i class="fa fa-check" aria-hidden="true"></i>
+		                    	</label>
+						  	</div>
+						  	<div class="userPecentage" ng-show = "controller.form.checkbox.thisID">
+								<span>How much %</span>
+								<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.thisID">
+				    		</div>
+	                    	<span ng-click = "controller.textVotes(arrays)">
+								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
+								<span class = "heartNo">{{arrays.textVotes}}</span>	
+							</span>	
+	                    </h3>
+		                    <p class = "textArray">
+		                    	{{arrays.textArray}}
+		                    </p>	
+		                    <span class = "userNameGroup">	
+			                   	<span class = "userName">
+			                   		<span class = "userNameBy"> by:</span>
+			                   		{{arrays.author_obj.userName}}
+			                   	</span>	
+			                </span>		                    	
+	               	</article>
+	        	</li>
+			</ul>
+
+			<!-- SHOW ALL TEXT ARRAYS -->
+			<ul ng-show = "controller.showAll">
+			    <li dir-paginate = "arrays in controller.arrays | filter:isTextArrayPrivate == true | orderBy:'-textVotes'| itemsPerPage: '3' | filter:q" current-page="controller.currentPage" class = "publicArrays">
+	               	<article>	
+	                    <h3 class = "textArrayName">
+	                    	<div class = "checkbox">
+	                    		<input type="checkbox" id = "thisID" ng-model = "controller.form.checkbox.thisID">	
+		                    	<label for = "thisID" class = "checkboxLabel">			{{arrays.textArrayName}} 
+		                    		<i class="fa fa-check" aria-hidden="true"></i>
+		                    	</label>
+						  	</div>
+						  	<div class="userPecentage" ng-show = "controller.form.checkbox.thisID">
+								<span>How much %</span>
+								<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.thisID">
+				    		</div>
+	                    	<span ng-click = "controller.textVotes(arrays)">
+								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
+								<span class = "heartNo">{{arrays.textVotes}}</span>	
+							</span>	
+	                    </h3>
+		                    <p class = "textArray">
+		                    	{{arrays.textArray}}
+		                    </p>	
+		                    <span class = "userNameGroup">	
+			                   	<span class = "userName">
+			                   		<span class = "userNameBy"> by:</span>
+			                   		{{arrays.author_obj.userName}}
+			                   	</span>	
+			                </span>		                    	
+	               	</article>
+	            </li>
+	           	<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html"></dir-pagination-controls> 	            
+	        </ul>
+   
 		</div>
 
 		<!-- TEXT MODAL -->
@@ -107,12 +160,12 @@
             <div class="modal-dialog">
                 <div class="modal-content">          
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="close" data-dismiss="modal">&times;</div>
                          <h2 class="modal-title">Here's your custom text:</h2>
                     </div>
                     <div class="modal-body"> 
-                     <button class = btn btn-default" clipboard supported="controller.supported" text="textToCopy" on-copied="controller.success()" on-error="controller.fail(err)">Copy</button>
-					<textarea class="form-control" id = "textOutput" rows="20" readonly ng-model= "controller.form.textOutput" ng-model="textToCopy">{{controller.form.textOutput}}</textarea>   
+                     	<i class="fa fa-files-o" aria-hidden="true" clipboard supported="controller.supported" text="textToCopy" on-copied="controller.success()" on-error="controller.fail(err)"></i>
+						<textarea class="form-control" id = "textOutput" rows="20" readonly ng-model= "controller.form.textOutput" ng-model="textToCopy">{{controller.form.textOutput}}</textarea>   
                     </div>
                 </div>
             </div>
@@ -143,7 +196,5 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>
 

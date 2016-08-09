@@ -66,6 +66,7 @@
                     dateTime: data.dateTime,
                     author: data.author,
                     isTextArrayPrivate: data.isTextArrayPrivate,
+                    isImage: false,
                 }
                 return $http ({
                   method: 'POST',
@@ -76,9 +77,9 @@
             
             var getArrays = function() {
                 return $http ({
-                  method: 'GET',
-                  url: Backand.getApiUrl() + '/1/objects/action/items/15?name=getAll',
-                  params: {}
+                    method: 'GET',
+                    url: Backand.getApiUrl() + '/1/objects/action/items/15?name=getAll',
+                    params: {}
                 });
             }
 

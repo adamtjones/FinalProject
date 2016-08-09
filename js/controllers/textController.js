@@ -5,7 +5,7 @@
     .module('flowers')
     .controller('textController', function($state, textAPI,clipboard, API, back) {
 
-        var vm = this;       
+        var vm = this;      
 
         // empty container arrays to be populated by writeTextArray()
         var finalArray = [];
@@ -16,33 +16,46 @@
         var gibberishArray = [];
         var hipsterArray = [];
         var userArray = [];
+
         // defining form variables
 		vm.form =[];
 		vm.form.checkbox = [];
 		vm.form.checkbox.loremInput = false;
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
-		vm.form.checkbox.baconInput = false;      
+		vm.form.checkbox.baconInput = false;  
+		vm.currentPage = 1;   
 
         //shows slightly different features when user is logged in
         var loggedIn = false;
     	if(API.getToken() !== null) {
         	vm.loggedIn = true;
+        	vm.userId = API.getUserId();
+        	vm.showMine = true;
+        	vm.showAll = false
        	}
+       	else {
+       		vm.showAll = true;
+       		vm.showMine = false;
+       	} 	
 
        	//gets text arrays from backand database
        	var getTextArrays = back.getArrays();
        		getTextArrays.then(function(results){
           	var arrays = results.data;
-          	vm.arrays = arrays;
-          	vm.arrays.forEach(function(obj){
+          	vm.arrays = arrays; 
+          	vm.arrays.forEach(function(obj) {
           		if (obj.textVotes === null) {
           			obj.textVotes = 0;
           		}
-          		if (obj.textArray != null){
+          		if (obj.textArray != null) {
 	          		obj.textArray = obj.textArray.split(" ");
 	          		obj.textArray = obj.textArray.join(', ');
-	          	}	
+	          	}
+	          	if (obj.author !== null) {
+	          		obj.author = parseInt(obj.author);
+	          		obj.placeholder = parseInt(vm.userId);
+	          	}
           	})
         })
 

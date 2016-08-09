@@ -1,15 +1,17 @@
 .rowImageSearch {
 	min-height: 1150px;
-	margin-top: 20px;
 	background-color: $offWhite;
-	padding:20px;
+	padding-top: 50px;
+	margin-top: 20px;
 	form {
 		padding-bottom: 20px;
+		padding-left: 0px;
 		.searchBox {
 			width: 14%;
 		}
 		button {
 			margin-top:20px;
+			margin-right: 5px;
 		}
 	}		
 	.results {
