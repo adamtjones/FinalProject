@@ -30,20 +30,20 @@
         	vm.loggedIn = true;
         	vm.userId = API.getUserId();
         	vm.showMine = true;
+        	vm.showAll = false
        	}
        	else {
        		vm.showAll = true;
+       		vm.showMine = false;
        	}
 
-     //   	//toggles what arrays are shown in the right column when clicked
-	    // vm.toggleArrayViews = function () {   	
-	    //    	if (vm.showAll = true) {
-	    //    		vm.showMine = false;
-	    //    	}
-	    //    	if (vm.showMine = true) {
-	    //    		vm.showAll = false;
-	    //    	}
-	    // }   	
+	 	// //toggles what arrays are shown in the right column when clicked 	
+	  //   if (vm.showAll == true) {
+	  //      	vm.showMine = false;
+	  //   }
+	  //   if (vm.showMine == true) {
+	  //      	vm.showAll = false;
+	  //   }  	
 
        	//gets text arrays from backand database
        	var getTextArrays = back.getArrays();

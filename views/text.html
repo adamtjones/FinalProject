@@ -80,15 +80,15 @@
 		<div class = "col-xs-6 userArrays">
 		    <div class = "navLinks" ng-style = "{'opacity': controller.loggedIn ? '100' : '0'}">
 		    	<ul>
-		    		<li ng-class = "{active: controller.showMine}" ng-click = "controller.showMine = true">Mine</li>
+		    		<li ng-class = "{active: controller.showMine}" ng-click="controller.showMine = !controller.showMine; controller.showAll = false">Mine</li>
 		    		<span> | </span>
-		    		<li ng-class = "{active: controller.showAll}" ng-click = "controller.showMine = true">All</li>
+		    		<li ng-class = "{active: controller.showAll}" ng-click="controller.showAll = !controller.showAll; controller.showMine = false">All</li>
 		    	</ul>
 		    </div>
 			
 			<!-- SHOW USER'S TEXT ARRAYS -->		    
-		    <ul ng-show = "controller.showMine" ng-hide = "controller.showAll">    
-				<li ng-repeat = "arrays in controller.arrays | filter: author !== 3| filter:isTextArrayPrivate !== undefined | orderBy:'-dateTime'" class = "publicArrays">
+		    <ul ng-show = "controller.showMine">    
+				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | filter:isTextArrayPrivate !== undefined | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
 	                    	<div class = "checkbox">
@@ -120,7 +120,7 @@
 			</ul>
 
 			<!-- SHOW ALL TEXT ARRAYS -->
-			<ul ng-show = "controller.showAll" ng-hide = "controller.showMine">
+			<ul ng-show = "controller.showAll">
 			    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true | orderBy:'-textVotes'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
