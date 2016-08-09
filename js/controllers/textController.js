@@ -24,7 +24,7 @@
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;  
-		vm.currentPage = 1;    
+		vm.currentPage = 1;   
 
         //shows slightly different features when user is logged in
         var loggedIn = false;

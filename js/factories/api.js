@@ -24,7 +24,6 @@
 
             var getUserId = function() {
                 return localStorage.getItem('userID');
-                console.log(localStorage.getItem('userID'));
             }
             var logout = function() {
                 localStorage.removeItem('userID');

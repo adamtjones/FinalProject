@@ -165,6 +165,8 @@
       margin-bottom: 10px; }
     .rowText .modalSave .modal-content .modal-body, .rowText .modal .modal-content .modal-body {
       padding-top: 10px; }
+      .rowText .modalSave .modal-content .modal-body textarea, .rowText .modal .modal-content .modal-body textarea {
+        padding: 12px; }
     .rowText .modalSave .modal-content .form-group, .rowText .modal .modal-content .form-group {
       padding-top: 10px; }
     .rowText .modalSave .modal-content .checkboxPrivate, .rowText .modal .modal-content .checkboxPrivate {

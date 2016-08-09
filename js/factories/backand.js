@@ -66,6 +66,7 @@
                     dateTime: data.dateTime,
                     author: data.author,
                     isTextArrayPrivate: data.isTextArrayPrivate,
+                    isImage: false,
                 }
                 return $http ({
                   method: 'POST',

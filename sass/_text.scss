@@ -217,7 +217,7 @@
 		}	
 	}	
 
-	// SAVE MODAL
+	// MODALS
 	.modalSave, .modal {
 		.modal-content {
 			padding: 20px;
@@ -233,6 +233,9 @@
 			}
 			.modal-body {
 				padding-top: 10px;
+				textarea {
+					padding: 12px;
+				}
 			}
 
 			.form-group {

@@ -63,6 +63,7 @@
                     savedImage2: vm.data1.contentUrl,
                     savedImage3: vm.data2.contentUrl,
                     savedImage4: vm.data3.contentUrl,
+                    isImage: true,
                        
                 }
                  
