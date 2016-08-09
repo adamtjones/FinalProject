@@ -23,17 +23,18 @@
 				</div>
 				<div class="col-md-12">
 					<button class="btn btn-default" type="submit" ng-click = "searchResults = true">Search</button>
+					<button class="btn btn-default" ng-show = "vm.loggedIn">Save Images to Profile</button>
 				</div>
 			</div>
 				
 		</div>	
 	</form>
 
-	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
+<!-- 	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
 		<div class="form-group col-lg-12">
-			<button class="btn btn-default" type="submit">Save Images to Profile</button>
+			<button class="btn btn-default" ng-show = "vm.loggedIn">Save Images to Profile</button>
 		</div>
-	</form>
+	</form> -->
 
 	<div class="results">
 		

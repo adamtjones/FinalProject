@@ -151,15 +151,17 @@
 
 .rowImageSearch {
   min-height: 1150px;
-  margin-top: 20px;
   background-color: #fefbf7;
-  padding: 20px; }
+  padding-top: 50px;
+  margin-top: 20px; }
   .rowImageSearch form {
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    padding-left: 0px; }
     .rowImageSearch form .searchBox {
       width: 14%; }
     .rowImageSearch form button {
-      margin-top: 20px; }
+      margin-top: 20px;
+      margin-right: 5px; }
   .rowImageSearch .results {
     padding: 0px; }
     .rowImageSearch .results img {
