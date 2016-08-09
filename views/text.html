@@ -88,7 +88,7 @@
 			
 			<!-- SHOW USER'S TEXT ARRAYS -->		    
 		    <ul ng-show = "controller.showMine">    
-				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | orderBy:'-dateTime'" class = "publicArrays">
+				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | filter:isImage == true | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
 	                    	<div class = "checkbox">
@@ -121,8 +121,8 @@
 
 			<!-- SHOW ALL TEXT ARRAYS -->
 			<ul ng-show = "controller.showAll">
-			    <li dir-paginate = "arrays in controller.arrays | filter:isTextArrayPrivate == true | orderBy:'-textVotes'| itemsPerPage: '3' | filter:q" current-page="controller.currentPage" class = "publicArrays">
-	               	<article>	
+			    <li dir-paginate = "arrays in controller.arrays | filter: isImage == true | filter: isTextArrayPrivate == true  | orderBy:'-textVotes'| itemsPerPage: '3'" current-page="controller.currentPage" class = "publicArrays">
+	               	<article>
 	                    <h3 class = "textArrayName">
 	                    	<div class = "checkbox">
 	                    		<input type="checkbox" id = "thisID" ng-model = "controller.form.checkbox.thisID">	
