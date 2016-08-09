@@ -4,22 +4,27 @@
   background-color: #fefbf7; }
   .rowText .enterSelectText {
     margin-top: 20px; }
-    .rowText .enterSelectText .userText .userTextLabel {
-      display: inline !important; }
-      .rowText .enterSelectText .userText .userTextLabel div {
-        display: inline; }
-        .rowText .enterSelectText .userText .userTextLabel div span {
-          float: right;
-          font-size: 16px; }
-        .rowText .enterSelectText .userText .userTextLabel div input {
-          display: inline !important;
-          width: 15%;
-          margin-bottom: 2px;
-          float: right;
-          margin-left: 10px; }
-    .rowText .enterSelectText .userText .saveButton {
-      cursor: pointer;
-      margin-left: 10px; }
+    .rowText .enterSelectText .userText {
+      margin-bottom: 0px;
+      padding-bottom: 0px; }
+      .rowText .enterSelectText .userText .userTextLabel {
+        display: inline !important; }
+        .rowText .enterSelectText .userText .userTextLabel div {
+          display: inline; }
+          .rowText .enterSelectText .userText .userTextLabel div span {
+            float: right;
+            font-size: 16px; }
+          .rowText .enterSelectText .userText .userTextLabel div input {
+            display: inline !important;
+            width: 15%;
+            margin-bottom: 2px;
+            float: right;
+            margin-left: 10px; }
+      .rowText .enterSelectText .userText .saveButton {
+        cursor: pointer;
+        margin-left: 10px; }
+    .rowText .enterSelectText .standardLorems h4 {
+      margin-left: -15px; }
     .rowText .enterSelectText .standardLorems span i {
       color: #1D9E74; }
     .rowText .enterSelectText .standardLorems label {
@@ -40,64 +45,107 @@
       transition: color .5s ease; }
     .rowText .enterSelectText .standardLorems .checkbox {
       margin-top: 0px;
-      margin-left: -20px; }
+      margin-left: -35px; }
     .rowText .enterSelectText .standardLoremPercentages input {
       margin-bottom: 5px; }
     .rowText .enterSelectText button {
       margin-right: 10px; }
-    .rowText .enterSelectText .wordTotal input {
-      width: 25%;
-      display: inline-block;
-      margin-left: 5px; }
-  .rowText .userArrays .publicArrays .textArrayName {
-    font-size: 18px;
-    color: #fefbf7;
-    background-color: #444444;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px; }
-    .rowText .userArrays .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label {
-      color: #ef143c; }
-    .rowText .userArrays .publicArrays .textArrayName .userName {
-      float: right;
-      padding-right: 10px; }
-    .rowText .userArrays .publicArrays .textArrayName .heart {
-      color: #ef143c;
-      cursor: pointer;
-      float: right; }
-      .rowText .userArrays .publicArrays .textArrayName .heart .heartNo {
+    .rowText .enterSelectText .wordTotalSubmit {
+      margin-left: -15px; }
+      .rowText .enterSelectText .wordTotalSubmit .wordTotal input {
+        width: 25%;
+        display: inline-block;
+        margin-left: 5px; }
+  .rowText .userArrays ul {
+    list-style-type: none; }
+    .rowText .userArrays ul .publicArrays {
+      display: inline; }
+      .rowText .userArrays ul .publicArrays .textArrayName {
+        font-size: 18px;
+        color: #fefbf7;
+        background-color: #444444;
+        padding: 10px;
+        margin-bottom: 10px; }
+        .rowText .userArrays ul .publicArrays .textArrayName .checkbox {
+          display: inline;
+          margin-left: -20px; }
+          .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"] {
+            display: none; }
+          .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label {
+            color: #ef143c; }
+            .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label i {
+              color: #1D9E74; }
+          .rowText .userArrays ul .publicArrays .textArrayName .checkbox .checkboxLabel:hover {
+            color: #ef143c;
+            cursor: pointer;
+            /* transitions and animations */
+            -webkit-transition: color .5s ease;
+            -moz-transition: color .5s ease;
+            -ms-transition: color .5s ease;
+            -o-transition: color .5s ease;
+            transition: color .5s ease; }
+            .rowText .userArrays ul .publicArrays .textArrayName .checkbox .checkboxLabel:hover i {
+              color: #1D9E74;
+              cursor: pointer;
+              /* transitions and animations */
+              -webkit-transition: color .5s ease;
+              -moz-transition: color .5s ease;
+              -ms-transition: color .5s ease;
+              -o-transition: color .5s ease;
+              transition: color .5s ease; }
+        .rowText .userArrays ul .publicArrays .textArrayName .userPecentage {
+          display: inline;
+          margin-left: 20px; }
+          .rowText .userArrays ul .publicArrays .textArrayName .userPecentage input {
+            display: inline;
+            width: 80px;
+            height: 25px; }
+          .rowText .userArrays ul .publicArrays .textArrayName .userPecentage span {
+            display: inline;
+            padding-right: 5px; }
+      .rowText .userArrays ul .publicArrays .heartIcon {
+        color: #ef143c;
+        cursor: pointer;
+        font-size: 32px;
+        x-index: 999;
+        position: inherit;
+        float: right;
+        margin-top: -6px; }
+      .rowText .userArrays ul .publicArrays .heartNo {
         color: #fefbf7;
         font-size: 15px;
-        z-index: 1000;
+        float: right;
+        width: 32px;
+        text-align: center;
+        x-index: 1000;
         position: absolute;
-        margin-top: -23px;
-        left: 548px;
-        width: 30px;
-        text-align: center; }
-      .rowText .userArrays .publicArrays .textArrayName .heart .heartIcon {
-        font-size: 30px;
-        margin-top: -5px;
-        x-index: 999;
-        position: inherit; }
-  .rowText .userArrays .publicArrays .textArray {
-    font-style: italic; }
-  .rowText .modalSave .modal-content {
+        right: 25px; }
+      .rowText .userArrays ul .publicArrays .textArray {
+        font-style: italic;
+        margin-bottom: 0px; }
+      .rowText .userArrays ul .publicArrays .userNameGroup {
+        font-style: normal; }
+        .rowText .userArrays ul .publicArrays .userNameGroup .userName {
+          color: #ef143c; }
+          .rowText .userArrays ul .publicArrays .userNameGroup .userName .userNameBy {
+            color: #444444; }
+  .rowText .modalSave .modal-content, .rowText .modal .modal-content {
     padding: 20px;
     background-color: #fefbf7; }
-    .rowText .modalSave .modal-content .modal-header button {
-      color: #444444; }
-    .rowText .modalSave .modal-content .modal-header h2 {
+    .rowText .modalSave .modal-content .modal-header h2, .rowText .modal .modal-content .modal-header h2 {
       text-align: center; }
-    .rowText .modalSave .modal-content .form-group {
+    .rowText .modalSave .modal-content i, .rowText .modal .modal-content i {
+      float: right;
+      margin-bottom: 10px; }
+    .rowText .modalSave .modal-content .modal-body, .rowText .modal .modal-content .modal-body {
       padding-top: 10px; }
-    .rowText .modalSave .modal-content input, .rowText .modalSave .modal-content textarea, .rowText .modalSave .modal-content button {
-      border: 1px solid #444444;
-      background-color: #fefbf7; }
-    .rowText .modalSave .modal-content .checkboxPrivate {
+    .rowText .modalSave .modal-content .form-group, .rowText .modal .modal-content .form-group {
+      padding-top: 10px; }
+    .rowText .modalSave .modal-content .checkboxPrivate, .rowText .modal .modal-content .checkboxPrivate {
       display: inline-block;
       font-size: 15px;
       float: right; }
-      .rowText .modalSave .modal-content .checkboxPrivate input {
+      .rowText .modalSave .modal-content .checkboxPrivate input, .rowText .modal .modal-content .checkboxPrivate input {
         border: 1px solid #444444 !important;
         background-color: #fefbf7 !important; }
 

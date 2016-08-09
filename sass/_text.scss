@@ -2,10 +2,13 @@
 	padding-top: 50px;
 	margin-top: 20px;
 	background-color: $offWhite;	
+	
 	// LEFT COLUMN
 	.enterSelectText {
 		margin-top: 20px;
 		.userText {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
 			.userTextLabel {
 				display: inline !important;
 				div {
@@ -30,6 +33,9 @@
 			}
 		}	
 		.standardLorems {
+			h4 {
+				margin-left: -15px;
+			}
 			span {
 				i {
 					color: $green;
@@ -57,7 +63,7 @@
 			}
 			.checkbox {
 				margin-top: 0px;
-				margin-left: -20px;
+				margin-left: -35px;
 			}
 		}
 		.standardLoremPercentages {
@@ -68,99 +74,135 @@
 		button {
 			margin-right: 10px;
 		}
-
-
-		.wordTotal {
-			input {
-				width: 25%;
-				display: inline-block;
-				margin-left: 5px;
-			}
+		.wordTotalSubmit {
+			margin-left: -15px;
+			.wordTotal {
+				input {
+					width: 25%;
+					display: inline-block;
+					margin-left: 5px;
+				}
+			}	
 		}
 	}
 
 	//RIGHT COLUMN
 	.userArrays {
-		.publicArrays {
-			.textArrayName {
-				font-size: 18px;
-				color: $offWhite;
-				background-color: $gray;
-				// padding-left: 10px;
-				padding-right: 10px;
-				padding-bottom: 10px;
-				padding-top: 10px;
-
-				.checkbox {
-					input[type="checkbox"] {
-			  			// display: none;
+		ul {
+			list-style-type: none;
+			.publicArrays {
+				display: inline;
+				.textArrayName {
+					font-size: 18px;
+					color: $offWhite;
+					background-color: $gray;
+					padding: 10px;
+					margin-bottom: 10px;
+					.checkbox {
+						display: inline;
+						margin-left: -20px;
+						input[type="checkbox"] {
+				  			display: none;
+						}
+						input[type="checkbox"]:checked + label {
+				  			color: $red;
+				  			i {
+				  				color: $green;
+				  			}
+				  		}
+				  		.checkboxLabel:hover {
+					  		color: $red;
+					  		cursor: pointer;
+							/* transitions and animations */
+							-webkit-transition: color .5s ease;
+							-moz-transition: color .5s ease;
+							-ms-transition: color .5s ease;
+							-o-transition: color .5s ease;
+							transition: color .5s ease;		
+				  			i {
+					  			color: $green;
+					  			cursor: pointer;
+								/* transitions and animations */
+								-webkit-transition: color .5s ease;
+								-moz-transition: color .5s ease;
+								-ms-transition: color .5s ease;
+								-o-transition: color .5s ease;
+								transition: color .5s ease;
+							}	
+						}
 					}
-					input[type="checkbox"]:checked + label {
-			  			color: $red;
-			  		}
-			  // 		.checkboxLabel:hover {
-			  // 			color: $red;
-			  // 			cursor: pointer;
-					// 	/* transitions and animations */
-					// 	-webkit-transition: color .5s ease;
-					// 	-moz-transition: color .5s ease;
-					// 	-ms-transition: color .5s ease;
-					// 	-o-transition: color .5s ease;
-					// 	transition: color .5s ease;
-					// }
+					.userPecentage {
+						display: inline;
+						margin-left: 20px;
+						input {
+							display: inline;
+							width: 80px;
+							height: 25px;
+						}
+						span {
+							display: inline;
+							padding-right: 5px;
+						}
+					}
 				}
-				.userName {
-					float: right;
-					padding-right: 10px;
-				}
-				.heart {
+				.heartIcon {
 					color: $red;
 					cursor: pointer;
+					font-size: 32px;
+					x-index: 999;
+					position: inherit;
 					float: right;
-					.heartNo {
-						color: $offWhite;
-						font-size: 15px;
-						z-index: 1000;
-						position: absolute;
-						margin-top: -23px;
-						left: 548px; 
-						width: 30px;
-						text-align: center;					
-					}
-					.heartIcon {
-						font-size: 30px;
-						margin-top: -5px;
-						x-index: 999;
-						position: inherit;
-					}
+					margin-top: -6px;
+				}
+				.heartNo {
+					color: $offWhite;
+					font-size: 15px;
+					float: right;
+					width: 32px;
+					text-align: center;
+					x-index: 1000;
+					position: absolute;
+					right: 25px;
+
 				}	
+				.textArray {
+					font-style: italic;
+					margin-bottom: 0px;	
+				}
+				.userNameGroup {
+				font-style: normal;
+					.userName {
+						color: $red;
+						.userNameBy {
+							color: $gray;
+						}
+					}
+				}
 			}
-			.textArray {
-				font-style: italic;
-			}
-		}
+		}	
 	}	
 
 	// SAVE MODAL
-	.modalSave {
+	.modalSave, .modal {
 		.modal-content {
 			padding: 20px;
 			background-color: $offWhite;
 			.modal-header {
-				button {
-					color: $gray;
-				}
 				h2 {
 					text-align: center;
 				}
 			}
+			i {
+				float: right;
+				margin-bottom: 10px;
+			}
+			.modal-body {
+				padding-top: 10px;
+			}
+
 			.form-group {
 				padding-top: 10px;
 			}	
-			input, textarea, button {
-				border: 1px solid $gray;
-				background-color: $offWhite;
-			}
 			.checkboxPrivate {
 				display: inline-block;
 				font-size: 15px;
