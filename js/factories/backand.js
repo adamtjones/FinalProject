@@ -76,9 +76,9 @@
             
             var getArrays = function() {
                 return $http ({
-                  method: 'GET',
-                  url: Backand.getApiUrl() + '/1/objects/action/items/15?name=getAll',
-                  params: {}
+                    method: 'GET',
+                    url: Backand.getApiUrl() + '/1/objects/action/items/15?name=getAll',
+                    params: {}
                 });
             }
 

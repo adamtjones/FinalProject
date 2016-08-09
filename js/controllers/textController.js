@@ -16,13 +16,15 @@
         var gibberishArray = [];
         var hipsterArray = [];
         var userArray = [];
+
         // defining form variables
 		vm.form =[];
 		vm.form.checkbox = [];
 		vm.form.checkbox.loremInput = false;
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
-		vm.form.checkbox.baconInput = false;      
+		vm.form.checkbox.baconInput = false;  
+		vm.currentPage = 1;    
 
         //shows slightly different features when user is logged in
         var loggedIn = false;
@@ -35,15 +37,7 @@
        	else {
        		vm.showAll = true;
        		vm.showMine = false;
-       	}
-
-	 	// //toggles what arrays are shown in the right column when clicked 	
-	  //   if (vm.showAll == true) {
-	  //      	vm.showMine = false;
-	  //   }
-	  //   if (vm.showMine == true) {
-	  //      	vm.showAll = false;
-	  //   }  	
+       	} 	
 
        	//gets text arrays from backand database
        	var getTextArrays = back.getArrays();

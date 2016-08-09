@@ -1,6 +1,7 @@
 .rowText {
   padding-top: 50px;
   margin-top: 20px;
+  padding-bottom: 20px;
   background-color: #fefbf7; }
   .rowText .enterSelectText {
     margin-top: 20px; }
@@ -60,7 +61,7 @@
   .rowText .userArrays .navLinks {
     text-align: right;
     padding-top: 15px;
-    margin-bottom: -12px; }
+    margin-bottom: -5px; }
     .rowText .userArrays .navLinks ul {
       list-style-type: none; }
       .rowText .userArrays .navLinks ul li {
@@ -73,11 +74,12 @@
     .rowText .userArrays ul .publicArrays {
       display: inline; }
       .rowText .userArrays ul .publicArrays .textArrayName {
-        font-size: 18px;
+        font-size: 16px;
         color: #fefbf7;
         background-color: #444444;
         padding: 10px;
-        margin-bottom: 10px; }
+        margin-bottom: 5px;
+        margin-top: 5px; }
         .rowText .userArrays ul .publicArrays .textArrayName .checkbox {
           display: inline;
           margin-left: -20px; }
@@ -135,13 +137,24 @@
         right: 25px; }
       .rowText .userArrays ul .publicArrays .textArray {
         font-style: italic;
-        margin-bottom: 0px; }
+        margin-bottom: 0px;
+        font-size: 16px; }
       .rowText .userArrays ul .publicArrays .userNameGroup {
-        font-style: normal; }
+        font-style: normal;
+        font-size: 16px; }
         .rowText .userArrays ul .publicArrays .userNameGroup .userName {
           color: #ef143c; }
           .rowText .userArrays ul .publicArrays .userNameGroup .userName .userNameBy {
             color: #444444; }
+  .rowText .userArrays .pagination {
+    float: right; }
+    .rowText .userArrays .pagination li a {
+      background-color: #fefbf7;
+      color: #444444;
+      border: 1px solid #444444;
+      padding: 6px;
+      padding-left: 12px;
+      padding-right: 12px; }
   .rowText .modalSave .modal-content, .rowText .modal .modal-content {
     padding: 20px;
     background-color: #fefbf7; }
