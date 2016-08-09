@@ -19,6 +19,7 @@
             width: 15%;
             margin-bottom: 2px;
             float: right;
+            height: 25px;
             margin-left: 10px; }
       .rowText .enterSelectText .userText .saveButton {
         cursor: pointer;
@@ -56,6 +57,17 @@
         width: 25%;
         display: inline-block;
         margin-left: 5px; }
+  .rowText .userArrays .navLinks {
+    text-align: right;
+    padding-top: 15px;
+    margin-bottom: -12px; }
+    .rowText .userArrays .navLinks ul {
+      list-style-type: none; }
+      .rowText .userArrays .navLinks ul li {
+        display: inline-block;
+        cursor: pointer; }
+      .rowText .userArrays .navLinks ul .active {
+        color: #ef143c; }
   .rowText .userArrays ul {
     list-style-type: none; }
     .rowText .userArrays ul .publicArrays {
@@ -102,7 +114,8 @@
             height: 25px; }
           .rowText .userArrays ul .publicArrays .textArrayName .userPecentage span {
             display: inline;
-            padding-right: 5px; }
+            padding-right: 5px;
+            font-size: 16px; }
       .rowText .userArrays ul .publicArrays .heartIcon {
         color: #ef143c;
         cursor: pointer;

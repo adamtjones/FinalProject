@@ -78,7 +78,49 @@
 
 		<!-- RIGHT COLUMN -->
 		<div class = "col-xs-6 userArrays">
-		    <ul>
+		    <div class = "navLinks" ng-style = "{'opacity': controller.loggedIn ? '100' : '0'}">
+		    	<ul>
+		    		<li ng-class = "{active: controller.showMine}" ng-click = "controller.showMine = true">Mine</li>
+		    		<span> | </span>
+		    		<li ng-class = "{active: controller.showAll}" ng-click = "controller.showMine = true">All</li>
+		    	</ul>
+		    </div>
+			
+			<!-- SHOW USER'S TEXT ARRAYS -->		    
+		    <ul ng-show = "controller.showMine" ng-hide = "controller.showAll">    
+				<li ng-repeat = "arrays in controller.arrays | filter: author !== 3| filter:isTextArrayPrivate !== undefined | orderBy:'-dateTime'" class = "publicArrays">
+	               	<article>
+	                    <h3 class = "textArrayName">
+	                    	<div class = "checkbox">
+	                    		<input type="checkbox" id = "thisID" ng-model = "controller.form.checkbox.thisID">	
+		                    	<label for = "thisID" class = "checkboxLabel">			{{arrays.textArrayName}} 
+		                    		<i class="fa fa-check" aria-hidden="true"></i>
+		                    	</label>
+						  	</div>
+						  	<div class="userPecentage" ng-show = "controller.form.checkbox.thisID">
+								<span>How much %</span>
+								<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.thisID">
+				    		</div>
+	                    	<span ng-click = "controller.textVotes(arrays)">
+								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
+								<span class = "heartNo">{{arrays.textVotes}}</span>	
+							</span>	
+	                    </h3>
+		                    <p class = "textArray">
+		                    	{{arrays.textArray}}
+		                    </p>	
+		                    <span class = "userNameGroup">	
+			                   	<span class = "userName">
+			                   		<span class = "userNameBy"> by:</span>
+			                   		{{arrays.author_obj.userName}}
+			                   	</span>	
+			                </span>		                    	
+	               	</article>
+	        	</li>
+			</ul>
+
+			<!-- SHOW ALL TEXT ARRAYS -->
+			<ul ng-show = "controller.showAll" ng-hide = "controller.showMine">
 			    <li ng-repeat = "arrays in controller.arrays | filter:isTextArrayPrivate == true | orderBy:'-textVotes'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
@@ -107,7 +149,7 @@
 			                   	</span>	
 			                </span>		                    	
 	               	</article>
-	            </li>
+	            </li>	            
 	        </ul>    
 		</div>
 

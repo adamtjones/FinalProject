@@ -5,7 +5,7 @@
     .module('flowers')
     .controller('textController', function($state, textAPI,clipboard, API, back) {
 
-        var vm = this;       
+        var vm = this;      
 
         // empty container arrays to be populated by writeTextArray()
         var finalArray = [];
@@ -28,21 +28,40 @@
         var loggedIn = false;
     	if(API.getToken() !== null) {
         	vm.loggedIn = true;
+        	vm.userId = API.getUserId();
+        	vm.showMine = true;
        	}
+       	else {
+       		vm.showAll = true;
+       	}
+
+     //   	//toggles what arrays are shown in the right column when clicked
+	    // vm.toggleArrayViews = function () {   	
+	    //    	if (vm.showAll = true) {
+	    //    		vm.showMine = false;
+	    //    	}
+	    //    	if (vm.showMine = true) {
+	    //    		vm.showAll = false;
+	    //    	}
+	    // }   	
 
        	//gets text arrays from backand database
        	var getTextArrays = back.getArrays();
        		getTextArrays.then(function(results){
           	var arrays = results.data;
-          	vm.arrays = arrays;
-          	vm.arrays.forEach(function(obj){
+          	vm.arrays = arrays; 
+          	vm.arrays.forEach(function(obj) {
           		if (obj.textVotes === null) {
           			obj.textVotes = 0;
           		}
-          		if (obj.textArray != null){
+          		if (obj.textArray != null) {
 	          		obj.textArray = obj.textArray.split(" ");
 	          		obj.textArray = obj.textArray.join(', ');
-	          	}	
+	          	}
+	          	if (obj.author !== null) {
+	          		obj.author = parseInt(obj.author);
+	          		obj.placeholder = parseInt(vm.userId);
+	          	}
           	})
         })
 
