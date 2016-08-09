@@ -90,6 +90,17 @@
                     url: "https://api.backand.com:443/1/objects/items/",
                 });
                 return gettingData;
+            }
+
+            var getSavedPhotos = function(){
+                var author = API.getUserId()*1;
+                var gettingData = $http({
+                    method: 'GET',
+                    //data: image,
+                    url: "https://api.backand.com:443/1/objects/items?filter=%5B%20%7B%20%20%20%20%22fieldName%22%3A%20%22author%22%2C%20%20%20%20%22operator%22%3A%20%22in%22%2C%20%20%20%20%22value%22%3A%20"+author+"%20%20%7D%5D",
+
+                });
+                return gettingData;
             }    
 
             var textVotes = function(id, textVotes) {
@@ -111,6 +122,7 @@
                 saveImage: saveImage,
                 getArrays: getArrays,
                 textVotes: textVotes,
+                getSavedPhotos: getSavedPhotos,
             }
         })        
 })();

@@ -23,7 +23,7 @@
                     'imageSearch': {
                         templateUrl: '../views/imageSearch.html',
                         controller: 'imageSearchController',
-                        controllerAs: 'vm',
+                        controllerAs: 'vm',  
                     },
                     'header': {
                         templateUrl: '../views/partials/header.html',
@@ -31,6 +31,22 @@
                         controllerAs: 'controller',
                     },
                 },
+            })
+            .state('savedPhotos', {
+                url:'/savedPhotos',
+                views: {
+                    'main': {
+                        templateUrl: '../views/partials/savedPhotos.html',
+                        controller: 'savedPhotosController',
+                        controllerAs: 'controller'
+                    },
+                    'header': {
+                        templateUrl: '../views/partials/header.html',
+                        controller: 'headerController',
+                        controllerAs: 'controller',
+                    },
+                },
+
             })
             .state('login', {
                 url: '/login',

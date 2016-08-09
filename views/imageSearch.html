@@ -6,19 +6,27 @@
 		<div class="col-md-12">
 			<div class="row image-fields">
 				<div class="col-lg-3"><label>Image 1</label>
-					<input class="form-control" value="" ng-model="vm.image1.height"></input><p>x</p>
+					<h6>height</h6>
+					<input class="form-control" value="" ng-model="vm.image1.height" ></input><p>x</p>
+					<h6>width</h6>
 					<input class="form-control" value="" ng-model="vm.image1.width"></input>
 				</div>
 				<div class="col-lg-3"><label>Image 2</label>
+					<h6>height</h6>
 					<input class="form-control" value="" ng-model="vm.image2.height"></input><p>x</p>
+					<h6>width</h6>
 					<input class="form-control" value="" ng-model="vm.image2.width"></input>
 				</div>
 				<div class="col-lg-3"><label>Image 3</label>
+					<h6>height</h6>
 					<input class="form-control" value="" ng-model="vm.image3.height"></input><p>x</p>
+					<h6>width</h6>
 					<input class="form-control" value="" ng-model="vm.image3.width"></input>
 				</div>
 				<div class="col-lg-3"><label>Image 4</label>
+					<h6>height</h6>
 					<input class="form-control" value="" ng-model="vm.image4.height"></input><p>x</p>
+					<h6>width</h6>
 					<input class="form-control" value="" ng-model="vm.image4.width"></input>
 				</div>
 				<div class="col-md-12">
@@ -32,8 +40,15 @@
 
 
 	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
+<div class="form-group col-lg-6">
+			<button class="btn btn-default" type="submit">Save Images to Profile</button>
+
 		<div class="form-group col-lg-12">
 			<button class="btn btn-default" ng-show = "vm.loggedIn">Save Images to Profile</button>
+
+		</div>
+		<div class="form-group col-lg-6">
+			<ul><li><a ui-sref="savedPhotos">My Saved Photos</a></li></ul>
 		</div>
 	</form>
 
