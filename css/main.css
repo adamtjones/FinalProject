@@ -180,9 +180,8 @@
     padding-left: 0px; }
     .rowImageSearch form .searchBox {
       width: 14%; }
-    .rowImageSearch form button {
-      margin-top: 20px;
-      margin-right: 5px; }
+    .rowImageSearch form .custom {
+      margin-top: 20px; }
   .rowImageSearch .results {
     padding: 0px; }
     .rowImageSearch .results img {

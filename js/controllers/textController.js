@@ -119,7 +119,7 @@
 		// fades alert boxes after 5 seconds
 		vm.alertFade = function () {
 			$timeout(function() {
-	   		 	$(".alertFade").fadeTo(500, 0)
+				$(".alertFade").fadeTo(500, 0)
 			}, 500);
 			$timeout(function() {
 	   		 	vm.selected = false;
