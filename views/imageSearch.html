@@ -2,9 +2,10 @@
 	<form class="col-xs-12 form-inline burrito" ng-submit="vm.search()">
 		<div class = "form-group col-lg-12">
 			<input type="text" class="form-control searchBox col-lg-2" placeholder="Image Search" ng-model="vm.getInfo"></input>
+			<button class="btn btn-default" ng-click="vis = !vis">I want custom pixel sizes</button>
 		</div>
 		<div class="col-md-12">
-			<div class="row image-fields">
+			<div class="row image-fields" ng-show="vis">
 				<div class="col-lg-3"><label>Image 1</label>
 					<h6>height in px</h6>
 					<input class="form-control" value="" ng-model="vm.image1.height" ></input><p>x</p>
@@ -29,11 +30,12 @@
 					<h6>width in px</h6>
 					<input class="form-control" value="" ng-model="vm.image4.width"></input>
 				</div>
+			</div>
 				<div class="col-md-12">
 					<button class="btn btn-default" type="submit" ng-click = "searchResults = true">Search</button>
 					
 				</div>
-			</div>
+			
 				
 		</div>	
 	</form>
@@ -46,9 +48,7 @@
 			<button class="btn btn-default" ng-show = "vm.loggedIn">Save Images to Profile</button>
 
 		</div>
-		<div class="form-group col-lg-6">
-			<ul><li class="bullet"><a ui-sref="savedPhotos">My Profile</a></li></ul>
-		</div>
+		
 	</form>
 
 	<div class="results">
