@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-    .module('flowers', ['ui.router', 'backand', 'angular-clipboard', 'angularUtils.directives.dirPagination', 'ngAnimate'])
+    .module('flowers', ['ui.router', 'backand', 'angular-clipboard', 'angularUtils.directives.dirPagination'])
 
     .config(function(BackandProvider,$stateProvider, $urlRouterProvider) {
 
