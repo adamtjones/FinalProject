@@ -1,5 +1,5 @@
 <div class="row rowImageSearch">
-	<form class="col-xs-12 form-inline" ng-submit="vm.search()">
+	<form class="col-xs-12 form-inline burrito" ng-submit="vm.search()">
 		<div class = "form-group col-lg-12">
 			<input type="text" class="form-control searchBox col-lg-2" placeholder="Image Search" ng-model="vm.getInfo"></input>
 		</div>
@@ -40,15 +40,14 @@
 
 
 	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
-<div class="form-group col-lg-6">
-			<button class="btn btn-default" type="submit">Save Images to Profile</button>
+
 
 		<div class="form-group col-lg-12">
 			<button class="btn btn-default" ng-show = "vm.loggedIn">Save Images to Profile</button>
 
 		</div>
 		<div class="form-group col-lg-6">
-			<ul><li><a ui-sref="savedPhotos">My Saved Photos</a></li></ul>
+			<ul><li class="bullet"><a ui-sref="savedPhotos">My Profile</a></li></ul>
 		</div>
 	</form>
 
@@ -61,6 +60,7 @@
 			<img src="{{vm.data.contentUrl}}">
 			<figcaption>{{vm.image1.height}}x{{vm.image1.width}}</figcaption>
 		</div>
+		
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
 			<img src="http://placehold.it/250x250">
 			
@@ -69,6 +69,7 @@
 			<img src="{{vm.data1.contentUrl}}">
 			<figcaption>{{vm.image2.height}}x{{vm.image2.width}}</figcaption>
 		</div>
+
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
 			<img src="http://placehold.it/400x400">
 			
