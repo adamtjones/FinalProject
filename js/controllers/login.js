@@ -8,10 +8,6 @@
 
             vm.showAlert = false;
 
-            // if (API.getToken() !== null) {
-            //     $state.go('admin');
-            // }
-
             vm.submit = function() {
 
                 var login = back.login(vm.form);

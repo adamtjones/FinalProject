@@ -3,7 +3,7 @@
     
     angular
     .module('flowers')
-    .controller('textController', function($state, textAPI,clipboard, API, back) {
+    .controller('textController', function($state, textAPI,clipboard, API, back, $timeout) {
 
         var vm = this;      
 
@@ -25,13 +25,6 @@
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;  
 		vm.currentPage = 1;  
-
-		vm.clickedBox = function(text){
-			var newText = vm.form.textInput;
-			var newerText = newText + " " +  text;
-			// var newerText = text;
-			vm.form.textInput = newerText;
-	} 
 
         //shows slightly different features when user is logged in
         var loggedIn = false;
@@ -111,10 +104,28 @@
 			if (vm.form.checkbox.baconInput === true){
 				vm.showPercentage = true;	
 			}
-		}	
+		}
 
 		//puts saved arrays into the your text array textarea
+		// shows notice, calls alertFade		
+		vm.clickedBox = function(text){
+			var newText = vm.form.textInput;
+			var newerText = newText + " " +  text;
+			vm.form.textInput = newerText;
+			vm.selected = true;
+			vm.alertFade();
 
+		} 
+		// fades alert boxes after 5 seconds
+		vm.alertFade = function () {
+			$timeout(function() {
+	   		 	$(".alertFade").fadeTo(500, 0)
+			}, 500);
+			$timeout(function() {
+	   		 	vm.selected = false;
+	   		 	$(".alertFade").fadeTo(0, 500)
+			}, 1000);
+		}
 
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()

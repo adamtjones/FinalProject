@@ -82,7 +82,7 @@
         margin-top: 5px; }
         .rowText .userArrays ul .publicArrays .textArrayName .check {
           display: inline; }
-          .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover, .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:active {
+          .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover {
             color: #ef143c;
             cursor: pointer;
             /* transitions and animations */
@@ -91,7 +91,7 @@
             -ms-transition: color .5s ease;
             -o-transition: color .5s ease;
             transition: color .5s ease; }
-            .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover i, .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:active i {
+            .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover i {
               color: #1D9E74;
               cursor: pointer;
               /* transitions and animations */
@@ -340,3 +340,22 @@ body {
   body input, body button, body textarea {
     border: 1px solid #444444 !important;
     background-color: #fefbf7 !important; }
+
+.alertFade {
+  background-color: #fefbf7;
+  border: 2px solid #ef143c;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  color: #ef143c;
+  width: 150px;
+  height: 150px;
+  z-index: 900;
+  position: fixed;
+  text-align: center;
+  left: 888px;
+  top: 200px; }
+  .alertFade .alertFadeText {
+    z-index: 1000;
+    position: absolute;
+    top: 109px;
+    left: 44px; }
