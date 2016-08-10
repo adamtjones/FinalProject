@@ -204,6 +204,18 @@ label {
 .bullet {
   list-style-type: none; }
 
+.imageButtons {
+  display: inline-block; }
+
+#custom {
+  margin-top: 0px;
+  border: 2px solid red;
+  margin-left: 10px;
+  margin-right: 0px; }
+
+#save {
+  margin-top: 0px; }
+
 @keyframes fadeIn {
   0% {
     transform: scale(0);
