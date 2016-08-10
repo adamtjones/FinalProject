@@ -13,11 +13,9 @@
                 var projects = response.data.data;
                 vm.projects = projects;
 
-                vm.projects.forEach(function(projects){
-                    console.log("taco");
                 })
 
 
             });
-        });
+       
 })();
