@@ -208,6 +208,9 @@ label {
 .image-fields label {
   width: 100%; }
 
+.bullet {
+  list-style-type: none; }
+
 @keyframes fadeIn {
   0% {
     transform: scale(0);
