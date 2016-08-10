@@ -20,10 +20,14 @@
 				<li><a ui-sref="home">Home</a></li>
 				<li><a ui-sref="login">Log In</a></li>
 				<li><a ui-sref="register">Sign Up</a></li>
+<<<<<<< HEAD
 				<li ng-show = "controller.loggedIn"><a ui-sref="savedPhotos">Profile</a></li>
+=======
+				<li><a ui-sref="profile">Profile</a></li>
+>>>>>>> af4c0eb759aeaf5192e486720c84c6f7309eb5f6
 			</ul>
 			<div class = "welcome" ng-show = "controller.loggedIn">
-				<h4 >oh hey <a href =#>{{controller.user.userName}}</a>! <i class="fa fa-sign-out" ng-click="controller.logout()"aria-hidden="true"></i></h4>
+				<h4 >oh hey <a ui-sref="profile">{{controller.user.userName}}</a>! <i class="fa fa-sign-out" ng-click="controller.logout()"aria-hidden="true"></i></h4>
 		
 			</div>	
 			<h3>fill that empty place in your <span><i class="fa fa-heart" aria-hidden="true"></i></span></h3>

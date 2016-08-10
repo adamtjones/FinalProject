@@ -85,19 +85,16 @@
 		    		<li ng-class = "{active: controller.showAll}" ng-click="controller.showAll = !controller.showAll; controller.showMine = false">All</li>
 		    	</ul>
 		    </div>
-
-		    <button ng-click="controller.click()">Test</button>
 			
 			<!-- SHOW USER'S TEXT ARRAYS -->		    
 		    <ul ng-show = "controller.showMine">    
-				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | filter:isImage == true | orderBy:'-dateTime'" class = "publicArrays">
+				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | filter:isPrivate !== undefined | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
-	                    <h3 class = "textArrayName" ng-click="controller.clickedBox(arrays.textArray)">
-	                    	<div class = "checkbox">
-	                    		<input type="checkbox" id = "thisID">	
-		                    	<label for = "thisID" class = "checkboxLabel">			{{arrays.textArrayName}} 
+	                    <h3 class = "textArrayName">
+	                    	<div class = "check">
+		                    	<span class = "checkSpan" ng-click="controller.clickedBox(arrays.textArray)">			{{arrays.textArrayName}} 
 		                    		<i class="fa fa-check" aria-hidden="true"></i>
-		                    	</label>
+		                    	</span>
 						  	</div>
 	                    	<span ng-click = "controller.textVotes(arrays)">
 								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
@@ -119,16 +116,14 @@
 
 			<!-- SHOW ALL TEXT ARRAYS -->
 			<ul ng-show = "controller.showAll">
-			    <li dir-paginate = "arrays in controller.arrays | filter: isImage == true | filter: isTextArrayPrivate == true  | orderBy:'-textVotes'| itemsPerPage: '3'" current-page="controller.currentPage" class = "publicArrays">
+			    <li dir-paginate = "arrays in controller.arrays | filter: isPrivate == true  | orderBy:'-textVotes'| itemsPerPage: '3'" current-page="controller.currentPage" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
-	                    	<div class = "checkbox">
-	                    		<input type="checkbox" id = "thisID" ng-model = "controller.form.checkbox.thisID">	
-		                    	<label for = "thisID" class = "checkboxLabel">			{{arrays.textArrayName}} 
+	                    	<div class = "check">
+		                    	<span class = "checkSpan" ng-click="controller.clickedBox(arrays.textArray)">			{{arrays.textArrayName}} 
 		                    		<i class="fa fa-check" aria-hidden="true"></i>
-		                    	</label>
+		                    	</span>
 						  	</div>
-
 	                    	<span ng-click = "controller.textVotes(arrays)">
 								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
 								<span class = "heartNo">{{arrays.textVotes}}</span>	
@@ -184,7 +179,7 @@
 				    	<button class = "btn btn-default buttonSave" tabindex="3" ng-click = "controller.saveTextArray()">Save</button>
 				    	<div class="checkboxPrivate">
 					    	<label for = "makePrivate" class = "checkboxLabelPrivate">make private</label>
-					    	<input type="checkbox" ng-model= "controller.form.isTextArrayPrivate" id = "makePrivate"> 
+					    	<input type="checkbox" ng-model= "controller.form.isPrivate" id = "makePrivate"> 
 					    </div>
 				    </div>	
 				</form>

@@ -80,16 +80,9 @@
         padding: 10px;
         margin-bottom: 5px;
         margin-top: 5px; }
-        .rowText .userArrays ul .publicArrays .textArrayName .checkbox {
-          display: inline;
-          margin-left: -20px; }
-          .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"] {
-            display: none; }
-          .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label {
-            color: #ef143c; }
-            .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label i {
-              color: #1D9E74; }
-          .rowText .userArrays ul .publicArrays .textArrayName .checkbox .checkboxLabel:hover {
+        .rowText .userArrays ul .publicArrays .textArrayName .check {
+          display: inline; }
+          .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover, .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:active {
             color: #ef143c;
             cursor: pointer;
             /* transitions and animations */
@@ -98,7 +91,7 @@
             -ms-transition: color .5s ease;
             -o-transition: color .5s ease;
             transition: color .5s ease; }
-            .rowText .userArrays ul .publicArrays .textArrayName .checkbox .checkboxLabel:hover i {
+            .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover i, .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:active i {
               color: #1D9E74;
               cursor: pointer;
               /* transitions and animations */
@@ -308,6 +301,10 @@ label {
   margin-top: 20px;
   background-color: #fefbf7;
   padding: 20px; }
+  .rowRegister .loginError, .rowLogin .loginError {
+    border: 1px solid #515151;
+    color: #444444;
+    text-align: center; }
   .rowRegister h2, .rowLogin h2 {
     text-align: center;
     margin-bottom: 20px; }
@@ -317,8 +314,19 @@ label {
     float: right;
     margin-left: 5px; }
 
-.loginError {
-  text-align: center; }
+.rowProfile {
+  padding-top: 50px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fefbf7; }
+  .rowProfile h2 {
+    text-align: center;
+    margin-bottom: 20px; }
+  .rowProfile a {
+    font-size: 15px; }
+  .rowProfile button {
+    float: right;
+    margin-left: 5px; }
 
 body {
   background-color: #ef143c;

@@ -32,8 +32,8 @@
                     },
                 },
             })
-            .state('savedPhotos', {
-                url:'/savedPhotos',
+            .state('profile', {
+                url:'/profile',
                 views: {
                     'main': {
                         templateUrl: '../views/partials/savedPhotos.html',
