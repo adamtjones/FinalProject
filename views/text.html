@@ -85,22 +85,20 @@
 		    		<li ng-class = "{active: controller.showAll}" ng-click="controller.showAll = !controller.showAll; controller.showMine = false">All</li>
 		    	</ul>
 		    </div>
+
+		    <button ng-click="controller.click()">Test</button>
 			
 			<!-- SHOW USER'S TEXT ARRAYS -->		    
 		    <ul ng-show = "controller.showMine">    
 				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | filter:isImage == true | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
-	                    <h3 class = "textArrayName">
+	                    <h3 class = "textArrayName" ng-click="controller.clickedBox(arrays.textArray)">
 	                    	<div class = "checkbox">
-	                    		<input type="checkbox" id = "thisID" ng-model = "controller.form.checkbox.thisID">	
+	                    		<input type="checkbox" id = "thisID">	
 		                    	<label for = "thisID" class = "checkboxLabel">			{{arrays.textArrayName}} 
 		                    		<i class="fa fa-check" aria-hidden="true"></i>
 		                    	</label>
 						  	</div>
-						  	<div class="userPecentage" ng-show = "controller.form.checkbox.thisID">
-								<span>How much %</span>
-								<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.thisID">
-				    		</div>
 	                    	<span ng-click = "controller.textVotes(arrays)">
 								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
 								<span class = "heartNo">{{arrays.textVotes}}</span>	
@@ -130,10 +128,7 @@
 		                    		<i class="fa fa-check" aria-hidden="true"></i>
 		                    	</label>
 						  	</div>
-						  	<div class="userPecentage" ng-show = "controller.form.checkbox.thisID">
-								<span>How much %</span>
-								<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.thisID">
-				    		</div>
+
 	                    	<span ng-click = "controller.textVotes(arrays)">
 								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
 								<span class = "heartNo">{{arrays.textVotes}}</span>	

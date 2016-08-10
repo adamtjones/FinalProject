@@ -24,7 +24,14 @@
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;  
-		vm.currentPage = 1;   
+		vm.currentPage = 1;  
+
+		vm.clickedBox = function(text){
+			var newText = vm.form.textInput;
+			var newerText = newText + " " +  text;
+			// var newerText = text;
+			vm.form.textInput = newerText;
+	} 
 
         //shows slightly different features when user is logged in
         var loggedIn = false;
@@ -54,7 +61,6 @@
 	          	}
 	          	if (obj.author !== null) {
 	          		obj.author = parseInt(obj.author);
-	          		obj.placeholder = parseInt(vm.userId);
 	          	}
           	})
         })
@@ -107,6 +113,9 @@
 				vm.showPercentage = true;	
 			}
 		}	
+
+		//puts saved arrays into the your text array textarea
+
 
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()
