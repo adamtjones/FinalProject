@@ -301,6 +301,10 @@ label {
   margin-top: 20px;
   background-color: #fefbf7;
   padding: 20px; }
+  .rowRegister .loginError, .rowLogin .loginError {
+    border: 1px solid #515151;
+    color: #444444;
+    text-align: center; }
   .rowRegister h2, .rowLogin h2 {
     text-align: center;
     margin-bottom: 20px; }
@@ -310,8 +314,19 @@ label {
     float: right;
     margin-left: 5px; }
 
-.loginError {
-  text-align: center; }
+.rowProfile {
+  padding-top: 50px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fefbf7; }
+  .rowProfile h2 {
+    text-align: center;
+    margin-bottom: 20px; }
+  .rowProfile a {
+    font-size: 15px; }
+  .rowProfile button {
+    float: right;
+    margin-left: 5px; }
 
 body {
   background-color: #ef143c;

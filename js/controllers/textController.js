@@ -71,7 +71,6 @@
         	vote.then(function(response) {
         		console.log(response);
         		arrays.textVotes ++;
-
           });
         };  
 
