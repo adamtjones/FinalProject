@@ -116,19 +116,9 @@
 					padding: 10px;
 					margin-bottom: 5px;
 					margin-top: 5px;
-					.checkbox {
+					.check {
 						display: inline;
-						margin-left: -20px;
-						input[type="checkbox"] {
-				  			display: none;
-						}
-						input[type="checkbox"]:checked + label {
-				  			color: $red;
-				  			i {
-				  				color: $green;
-				  			}
-				  		}
-				  		.checkboxLabel:hover {
+				  		.checkSpan:hover, .checkSpan:active {
 					  		color: $red;
 					  		cursor: pointer;
 							/* transitions and animations */

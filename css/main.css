@@ -80,16 +80,9 @@
         padding: 10px;
         margin-bottom: 5px;
         margin-top: 5px; }
-        .rowText .userArrays ul .publicArrays .textArrayName .checkbox {
-          display: inline;
-          margin-left: -20px; }
-          .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"] {
-            display: none; }
-          .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label {
-            color: #ef143c; }
-            .rowText .userArrays ul .publicArrays .textArrayName .checkbox input[type="checkbox"]:checked + label i {
-              color: #1D9E74; }
-          .rowText .userArrays ul .publicArrays .textArrayName .checkbox .checkboxLabel:hover {
+        .rowText .userArrays ul .publicArrays .textArrayName .check {
+          display: inline; }
+          .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover, .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:active {
             color: #ef143c;
             cursor: pointer;
             /* transitions and animations */
@@ -98,7 +91,7 @@
             -ms-transition: color .5s ease;
             -o-transition: color .5s ease;
             transition: color .5s ease; }
-            .rowText .userArrays ul .publicArrays .textArrayName .checkbox .checkboxLabel:hover i {
+            .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:hover i, .rowText .userArrays ul .publicArrays .textArrayName .check .checkSpan:active i {
               color: #1D9E74;
               cursor: pointer;
               /* transitions and animations */
