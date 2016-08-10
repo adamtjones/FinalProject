@@ -1,13 +1,9 @@
 
-<div class="results">
-
-	
-	
-	<h3 class = "taco">{{projects.textArrayName}}</h3>
-	<h3 class = "taco">{{projects.textArray}}</h3>
-	<img src="{{projects.savedImage1"}}>
-	<img src="{{projects.savedImage2"}}>
-	<img src="{{projects.savedImage3"}}>
-	<img src="{{projects.savedImage4"}}>
-	
+<div class="results" ng-repeat="projects in controller.projects">
+	<h3 class="taco">{{projects.textArrayName}}</h3>
+	<h3 class="taco">{{projects.textArray}}</h3>
+	<img src="{{projects.savedImage1}}">
+	<img src="{{projects.savedImage2}}">
+	<img src="{{projects.savedImage3}}">
+	<img src="{{projects.savedImage4}}">
 </div>
