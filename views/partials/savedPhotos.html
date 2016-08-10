@@ -1,13 +1,11 @@
 <div class = "row rowProfile">
-	<div class="col-xs-12 profile" ng-repeat="projects in controller.projects | filter: savedImage1 !== null">
-		<h4 class="taco">{{projects.textArrayName}}</h4>
-		<p class="taco">{{projects.textArray}}</p>
-	<!--</div>
-	<div ng-repeat="projects in controller.projects">-->
-		<img src="{{projects.savedImage1}}">
-		<img src="{{projects.savedImage2}}">
-		<img src="{{projects.savedImage3}}">
-		<img src="{{projects.savedImage4}}">
+	<div class="col-xs-12 profile" ng-repeat="projects in controller.projects">
+		<h4 ng-show="projects.textArrayName" class="taco">{{projects.textArrayName}}</h4>
+		<p ng-show="projects.textArray" class="taco">{{projects.textArray}}</p>
+		<img ng-show="projects.savedImage1" src="{{projects.savedImage1}}">
+		<img ng-show="projects.savedImage2" src="{{projects.savedImage2}}">
+		<img ng-show="projects.savedImage3" src="{{projects.savedImage3}}">
+		<img ng-show="projects.savedImage4" src="{{projects.savedImage4}}">
 	</div>
 </div>
 	
