@@ -1,4 +1,5 @@
 <div class = "row rowProfile">
+<<<<<<< HEAD
 	<div class="col-xs-12 profile" ng-repeat="projects in controller.projects">
 		<h4 ng-show="projects.textArrayName" class="taco">{{projects.textArrayName}}</h4>
 		<p ng-show="projects.textArray" class="taco">{{projects.textArray}}</p>
@@ -7,6 +8,64 @@
 		<img ng-show="projects.savedImage3" src="{{projects.savedImage3}}">
 		<img ng-show="projects.savedImage4" src="{{projects.savedImage4}}">
 	</div>
+=======
+	<div class="col-xs-12 profile">
+		<div class = "textArrays">
+			<ul> 
+				<li ng-repeat = "projects in controller.projects | filter: savedImage1 === null">
+		            <article>
+		                <h3 class = "textArrayName">
+		                   	<div class = "check">
+			                    <span class = "checkSpan" ng-click="controller.clickedBox(arrays.textArray)">
+			                    	{{projects.textArrayName}} 
+			                    	<i class="fa fa-check" aria-hidden="true"></i>
+				                </span>
+							</div>
+			                <span ng-click = "controller.textVotes(arrays)">
+								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
+								<span class = "heartNo">{{projects.textVotes}}</span>	
+							</span>	
+			            </h3>
+				        <p class = "textArray">
+				            {{projects.textArray}}
+				        </p>		                    	
+			        </article>
+				</li>
+			</ul>
+		</div>
+		<div class = "photoArrays">
+			<div ng-show = "projects.savedImage1" ng-repeat = "projects in controller.projects">
+				<h3 class = "photoSearchName">
+					{{projects.searchTerm}}
+				</h3>
+				<div class = "image1">
+					<img src="{{projects.savedImage1}}">
+					<p>URL: <a href = "{{projects.savedImage1}}">{{projects.savedImage1}}</a></p>
+					<p>Image Tag: &lt;img src = "{{projects.savedImage1}}"&gt;</p>
+					<p>{{projects.savedImage1Width}}x{{projects.savedImage1Height}}</p>
+				</div>
+				<div class = "image2">	
+					<img src="{{projects.savedImage2}}">
+					<p>URL: <a href = "{{projects.savedImage2}}">{{projects.savedImage2}}</a></p>
+					<p>Image Tag: &lt;img src = "{{projects.savedImage2}}"&gt;</p>
+					<p>{{projects.savedImage2Width}}x{{projects.savedImage2Height}}</p>
+				</div>
+				<div class = "image3">	
+					<img src="{{projects.savedImage3}}">
+					<p>URL: <a href = "{{projects.savedImage3}}">{{projects.savedImage3}}</a></p>
+					<p>Image Tag: &lt;img src = "{{projects.savedImage3}}"&gt;</p>
+					<p>{{projects.savedImage3Width}}x{{projects.savedImage3Height}}</p>
+				</div>
+				<div class = "image4">	
+					<img src="{{projects.savedImage4}}">
+					<p>URL: <a href = "{{projects.savedImage4}}">{{projects.savedImage4}}</a></p>
+					<p>Image Tag: &lt;img src = "{{projects.savedImage4}}"&gt;</p>
+					<p>{{projects.savedImage4Width}}x{{projects.savedImage4Height}}</p>
+				</div>	
+			</div>		
+		</div>		
+	</div>		
+>>>>>>> 351fcd4e09bdc66b473d93fad5d18a652c0cf550
 </div>
 	
 

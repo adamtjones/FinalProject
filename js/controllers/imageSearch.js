@@ -56,14 +56,24 @@
             };
 
             vm.savePhotos = function() {
+                dateTime = new Date();
 
                 var savedPhotos = {
                     author: API.getUserId(),
+                    dateTime: dateTime
                     savedImage1: vm.data.contentUrl,
                     savedImage2: vm.data1.contentUrl,
                     savedImage3: vm.data2.contentUrl,
                     savedImage4: vm.data3.contentUrl,
-                    isImage: true,
+                    searchTerm: vm.getInfo,
+                    savedImage1Width: vm.image1.width,
+                    savedImage1Height: vm.image1.height,
+                    savedImage2Width: vm.image2.width,
+                    savedImage2Height: vm.image2.height,
+                    savedImage3Width: vm.image3.width,
+                    savedImage3Height: vm.image3.height,
+                    savedImage4Width: vm.image3.width,
+                    savedImage4Height: vm.image4.height,
                        
                 }
                  

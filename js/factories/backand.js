@@ -60,13 +60,15 @@
                 data.dateTime = new Date();
                 data.author = parseInt(API.getUserId());
                 data.textArray = data.textInput.replace(/\.|!|,|<[^>]*>|(&amp;)|(\r\n|\n|\r)|\s\s/gm, "");
+                if (data.isPrivate == null) {
+                    data.isPrivate = false;
+                }
                 var data = {
                     textArrayName: data.textArrayName,
                     textArray: data.textArray,
                     dateTime: data.dateTime,
                     author: data.author,
-                    isTextArrayPrivate: data.isTextArrayPrivate,
-                    isImage: false,
+                    isPrivate: data.isPrivate,
                 }
                 return $http ({
                   method: 'POST',
