@@ -56,11 +56,11 @@
             };
 
             vm.savePhotos = function() {
-                dateTime = new Date();
+                var dateTime = new Date();
 
                 var savedPhotos = {
                     author: API.getUserId(),
-                    dateTime: dateTime
+                    dateTime: dateTime,
                     savedImage1: vm.data.contentUrl,
                     savedImage2: vm.data1.contentUrl,
                     savedImage3: vm.data2.contentUrl,
