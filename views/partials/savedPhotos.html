@@ -1,12 +1,40 @@
 <div class = "row rowProfile">
-	<div class="col-xs-12 profile" ng-repeat="projects in controller.projects">
-		<h4 ng-show="projects.textArrayName" class="taco">{{projects.textArrayName}}</h4>
-		<p ng-show="projects.textArray" class="taco">{{projects.textArray}}</p>
-		<img ng-show="projects.savedImage1" src="{{projects.savedImage1}}">
-		<img ng-show="projects.savedImage2" src="{{projects.savedImage2}}">
-		<img ng-show="projects.savedImage3" src="{{projects.savedImage3}}">
-		<img ng-show="projects.savedImage4" src="{{projects.savedImage4}}">
-	</div>
+	<div class="col-xs-12 profile">
+		<div class = "textArrays">
+			<ul> 
+				<li ng-repeat = "projects in controller.projects | filter: savedImage1 != null">
+		            <article>
+		                <h3 class = "textArrayName">
+		                   	<div class = "check">
+			                    <span class = "checkSpan" ng-click="controller.clickedBox(arrays.textArray)">
+			                    	{{projects.textArrayName}} 
+			                    	<i class="fa fa-check" aria-hidden="true"></i>
+				                </span>
+							</div>
+			                <span ng-click = "controller.textVotes(arrays)">
+								<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
+								<span class = "heartNo">{{projects.textVotes}}</span>	
+							</span>	
+			            </h3>
+				        <p class = "textArray">
+				            {{projects.textArray}}
+				        </p>		                    	
+			        </article>
+				</li>
+			</ul>
+		</div>
+		<div class = "photoArrays">
+			<div ng-repeat = "projects in controller.projects ">
+				<h3 class = "photoSearchName">
+					{{projects.searchTerm}}
+				</h3>
+				<img src="{{projects.savedImage1}}">
+				<img src="{{projects.savedImage2}}">
+				<img src="{{projects.savedImage3}}">
+				<img src="{{projects.savedImage4}}">
+			</div>		
+		</div>		
+	</div>		
 </div>
 	
 
