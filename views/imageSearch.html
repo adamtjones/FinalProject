@@ -17,7 +17,7 @@
 <div class="form-group col-lg-4 col-md-12">
 	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
 		
-			<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
+			<button ng-click="vm.savePhotos()" class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
 
 		</div>
 		
