@@ -1,36 +1,31 @@
 <main>
 <div class="row rowImageSearch">
-	
-
-<<<<<<< HEAD
 	<form class="form-inline" ng-submit="vm.search()">
 		<div class="theButtons">
-=======
-<div class="form-group col-lg-4 col-md-12">
-	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
-		
-			<button ng-click="vm.savePhotos()" class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
->>>>>>> dfa8fcd088bbc8e91073197380b68cdda3ecf14b
-
-		<div class = "form-group col-md-12 imageButtons">
-			<div class="col-md-3 col-sm-12">
-				<input type="text" class="form-control searchBox col-lg-2" id="custom" placeholder="Image Search" ng-model="vm.getInfo"></input>
-			</div>
+			<div class="form-group">
+				<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
+					<div class = "form-group col-md-12 imageButtons">
+						<div class="col-md-3 col-sm-12">
+							<input type="text" class="form-control searchBox col-lg-2" id="custom" placeholder="Image Search" ng-model="vm.getInfo"></input>
+						</div>
 			
-			<div class="col-md-3 col-sm-12">
-				<button class="btn btn-default submit" type="submit" id="custom" ng-click = "searchResults = true">Search</button>
-			</div>
-			<div class="col-md-3 col-sm-12">
-				<button class="form-control btn btn-default" id="custom" ng-click="vis = !vis">I want custom pixel sizes</button>
-			</div>
-		</div>
-</div>
-		<div class="form-group col-lg-4 col-md-12">
-			<form class="col-md-3 col-sm-12 form-inline" ng-submit="vm.savePhotos()">
-				<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
-		</div>
+						<div class="col-md-3 col-sm-12">
+							<button class="btn btn-default submit" type="submit" id="custom" ng-click = "searchResults = true">Search</button>
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<button class="form-control btn btn-default" id="custom" ng-click="vis = !vis">I want custom pixel sizes</button>
+						</div>
+					</div>
+				</form>
+				<div class="form-group col-lg-4 col-md-12">
+					<form class="col-md-3 col-sm-12 form-inline" ng-submit="vm.savePhotos()">
+						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
+					</form>
+				</div>
 	
-			</form>
+			</div>
+		</div>
+	</form>
 
 		<div class="col-md-12">
 			<div class="row image-fields" ng-show="vis">
