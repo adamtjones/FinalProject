@@ -24,7 +24,6 @@
 						margin-bottom: 2px;
 						float: right;
 						height: 25px;
-						// margin-top: -5px;
 						margin-left: 10px;
 					}
 				}	
@@ -35,8 +34,12 @@
 			}
 		}	
 		.standardLorems {
+			padding-left: 0px;
+			padding-right: 0px;
 			h4 {
-				margin-left: -15px;
+				color: $offWhite;
+				background-color: $gray;
+				padding: 10px;
 			}
 			span {
 				i {
@@ -44,8 +47,6 @@
 				}
 			}
 			label {
-				padding-top: 2px;
-				padding-bottom: 2px;
 			}
 			input[type="checkbox"] {
 	  			display: none;
@@ -65,25 +66,56 @@
 			}
 			.checkbox {
 				margin-top: 0px;
-				margin-left: -35px;
+				margin-left: -20px;
+			}
+			.exText {
+				font-style: italic;
+				font-size: 15px;
+				color: lighten($gray, 25);
+				margin-left: 20px;
+				margin-bottom: 2px;
 			}
 		}
 		.standardLoremPercentages {
+			padding-left: 0px;
+			padding-right: 0px;			
+			h4 {
+				color: $offWhite;
+				background-color: $gray;
+				padding: 10px;
+				text-align: right;
+				margin-bottom: 20px;
+			}
+			
 			input {
-				margin-bottom: 5px;
+				width: 55%;
+				float: right;
+			}
+			#loremPercentInput {
+				margin-bottom: 22px;
+			}
+			#gibberishPercentInput {
+				margin-bottom: 23px;
+			}
+			#hipsterPercentInput {
+				margin-bottom: 23px;
 			}
 		}	
-		button {
-			margin-right: 10px;
-		}
 		.wordTotalSubmit {
 			margin-left: -15px;
 			.wordTotal {
+				margin-top: 25px;
 				input {
-					width: 25%;
+					width: 20%;
 					display: inline-block;
 					margin-left: 5px;
 				}
+			}
+			button {
+				margin-right: 10px;
+			}
+			.random {
+				color: $red;
 			}	
 		}
 	}
@@ -241,5 +273,28 @@
 				}
 			}	
 		}	
+	}
+	
+	//ALERTS
+	.alertFade {
+		padding: 10px;
+		background-color:$offWhite;
+		border: 2px solid $red;
+		border-radius: 5px;
+		box-shadow: 0 5px 5px 0 rgba(#000000, 0.5);
+		color: $red;
+		height: 25%;
+		z-index: 900;
+		position: fixed;
+		left: 45%;
+		top: 25%;
+		img {
+			height: 100%;
+			margin: 0px auto;
+		}
+		.alertFadeText {
+			display: inline-block;
+
+		}
 	}	
 }

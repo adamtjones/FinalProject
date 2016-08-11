@@ -43,7 +43,7 @@
        	var getTextArrays = back.getArrays();
        		getTextArrays.then(function(results){
           	var arrays = results.data;
-          	vm.arrays = arrays; 
+          	vm.arrays = arrays;
           	vm.arrays.forEach(function(obj) {
           		if (obj.textVotes === null) {
           			obj.textVotes = 0;
@@ -55,6 +55,11 @@
 	          	if (obj.author !== null) {
 	          		obj.author = parseInt(obj.author);
 	          	}
+	          	// if (obj.author === vm.userId && obj.textArray === null){
+	          	// 	vm.showAll = true;
+	          	// 	vm.showMine = false;
+
+	          	// }
           	})
         })
 
@@ -72,8 +77,9 @@
         	var saveArray = back.saveArray(vm.form);
        
 	        saveArray.then(function(response) {
-				alert("saved!");
 				$('.modalSave').modal('hide');
+				vm.saved = true;
+				vm.alertFade();				
 	        })
        	}
 
@@ -83,7 +89,9 @@
 
         vm.success = function () {
         	clipboard.copyText(vm.form.textOutput);
-            alert('Copied!');
+				$('.modal').modal('hide');        	
+				vm.copied = true;
+				vm.alertFade();	
         };
         vm.fail = function (err) {
             console.error('Error!', err);
@@ -123,6 +131,8 @@
 			}, 500);
 			$timeout(function() {
 	   		 	vm.selected = false;
+	   		 	vm.saved = false;
+	   		 	vm.copied = false;
 	   		 	$(".alertFade").fadeTo(0, 500)
 			}, 1000);
 		}

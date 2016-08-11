@@ -25,39 +25,67 @@
       .rowText .enterSelectText .userText .saveButton {
         cursor: pointer;
         margin-left: 10px; }
-    .rowText .enterSelectText .standardLorems h4 {
-      margin-left: -15px; }
-    .rowText .enterSelectText .standardLorems span i {
-      color: #1D9E74; }
-    .rowText .enterSelectText .standardLorems label {
-      padding-top: 2px;
-      padding-bottom: 2px; }
-    .rowText .enterSelectText .standardLorems input[type="checkbox"] {
-      display: none; }
-    .rowText .enterSelectText .standardLorems input[type="checkbox"]:checked + label {
-      color: #ef143c; }
-    .rowText .enterSelectText .standardLorems .checkboxLabel:hover {
-      color: #ef143c;
-      cursor: pointer;
-      /* transitions and animations */
-      -webkit-transition: color .5s ease;
-      -moz-transition: color .5s ease;
-      -ms-transition: color .5s ease;
-      -o-transition: color .5s ease;
-      transition: color .5s ease; }
-    .rowText .enterSelectText .standardLorems .checkbox {
-      margin-top: 0px;
-      margin-left: -35px; }
-    .rowText .enterSelectText .standardLoremPercentages input {
-      margin-bottom: 5px; }
-    .rowText .enterSelectText button {
-      margin-right: 10px; }
+    .rowText .enterSelectText .standardLorems {
+      padding-left: 0px;
+      padding-right: 0px; }
+      .rowText .enterSelectText .standardLorems h4 {
+        color: #fefbf7;
+        background-color: #444444;
+        padding: 10px; }
+      .rowText .enterSelectText .standardLorems span i {
+        color: #1D9E74; }
+      .rowText .enterSelectText .standardLorems input[type="checkbox"] {
+        display: none; }
+      .rowText .enterSelectText .standardLorems input[type="checkbox"]:checked + label {
+        color: #ef143c; }
+      .rowText .enterSelectText .standardLorems .checkboxLabel:hover {
+        color: #ef143c;
+        cursor: pointer;
+        /* transitions and animations */
+        -webkit-transition: color .5s ease;
+        -moz-transition: color .5s ease;
+        -ms-transition: color .5s ease;
+        -o-transition: color .5s ease;
+        transition: color .5s ease; }
+      .rowText .enterSelectText .standardLorems .checkbox {
+        margin-top: 0px;
+        margin-left: -20px; }
+      .rowText .enterSelectText .standardLorems .exText {
+        font-style: italic;
+        font-size: 15px;
+        color: #848484;
+        margin-left: 20px;
+        margin-bottom: 2px; }
+    .rowText .enterSelectText .standardLoremPercentages {
+      padding-left: 0px;
+      padding-right: 0px; }
+      .rowText .enterSelectText .standardLoremPercentages h4 {
+        color: #fefbf7;
+        background-color: #444444;
+        padding: 10px;
+        text-align: right;
+        margin-bottom: 20px; }
+      .rowText .enterSelectText .standardLoremPercentages input {
+        width: 55%;
+        float: right; }
+      .rowText .enterSelectText .standardLoremPercentages #loremPercentInput {
+        margin-bottom: 22px; }
+      .rowText .enterSelectText .standardLoremPercentages #gibberishPercentInput {
+        margin-bottom: 23px; }
+      .rowText .enterSelectText .standardLoremPercentages #hipsterPercentInput {
+        margin-bottom: 23px; }
     .rowText .enterSelectText .wordTotalSubmit {
       margin-left: -15px; }
-      .rowText .enterSelectText .wordTotalSubmit .wordTotal input {
-        width: 25%;
-        display: inline-block;
-        margin-left: 5px; }
+      .rowText .enterSelectText .wordTotalSubmit .wordTotal {
+        margin-top: 25px; }
+        .rowText .enterSelectText .wordTotalSubmit .wordTotal input {
+          width: 20%;
+          display: inline-block;
+          margin-left: 5px; }
+      .rowText .enterSelectText .wordTotalSubmit button {
+        margin-right: 10px; }
+      .rowText .enterSelectText .wordTotalSubmit .random {
+        color: #ef143c; }
   .rowText .userArrays .navLinks {
     text-align: right;
     padding-top: 15px;
@@ -169,6 +197,23 @@
       .rowText .modalSave .modal-content .checkboxPrivate input, .rowText .modal .modal-content .checkboxPrivate input {
         border: 1px solid #444444 !important;
         background-color: #fefbf7 !important; }
+  .rowText .alertFade {
+    padding: 10px;
+    background-color: #fefbf7;
+    border: 2px solid #ef143c;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+    color: #ef143c;
+    height: 25%;
+    z-index: 900;
+    position: fixed;
+    left: 45%;
+    top: 25%; }
+    .rowText .alertFade img {
+      height: 100%;
+      margin: 0px auto; }
+    .rowText .alertFade .alertFadeText {
+      display: inline-block; }
 
 .rowImageSearch {
   min-height: 1150px;
@@ -351,22 +396,3 @@ body {
   body input, body button, body textarea {
     border: 1px solid #444444 !important;
     background-color: #fefbf7 !important; }
-
-.alertFade {
-  background-color: #fefbf7;
-  border: 2px solid #ef143c;
-  border-radius: 5px;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
-  color: #ef143c;
-  width: 150px;
-  height: 150px;
-  z-index: 900;
-  position: fixed;
-  text-align: center;
-  left: 888px;
-  top: 200px; }
-  .alertFade .alertFadeText {
-    z-index: 1000;
-    position: absolute;
-    top: 109px;
-    left: 44px; }

@@ -29,23 +29,3 @@ body {
 	}
 }
 
-.alertFade {
-	background-color:$offWhite;
-	border: 2px solid $red;
-	border-radius: 5px;
-	box-shadow: 0 5px 5px 0 rgba(#000000, 0.5);
-	color: $red;
-	width: 150px;
-	height: 150px;
-	z-index: 900;
-	position: fixed;
-	text-align: center;
-	left: 888px;
-	top: 200px;
-	.alertFadeText {
-		z-index: 1000;
-		position: absolute;
-		top: 109px;
-		left: 44px;
-	}
-}
