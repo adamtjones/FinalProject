@@ -1,58 +1,57 @@
+<main>
 <div class="row rowImageSearch">
-	<div class="theButtons">
-	<form class="col-xs-12 form-inline" ng-submit="vm.search()">
-		<div class = "form-group col-md-12 imageButtons">
-			<div class="col-lg-4 col-md-12">
-			<input type="text" class="form-control searchBox col-lg-2" id="custom" placeholder="Image Search" ng-model="vm.getInfo"></input>
+	<form class="form-inline" ng-submit="vm.search()">
+		<div class="theButtons">
+			<div class="form-group">
+				<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
+					<div class = "form-group col-sm-12 imageButtons">
+						<div class="col-md-3 col-sm-3 col-xs-12">
+							<input type="text" class="form-control searchBox col-lg-2" id="custom" placeholder="Image Search" ng-model="vm.getInfo"></input>
+						</div>
+			
+						<div class="col-md-3 col-sm-12">
+							<button class="btn btn-default submit" type="submit" id="custom" ng-click = "searchResults = true">Search</button>
+						</div>
+						<div class="btn-group col-md-3 col-sm-12">
+							<button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="custom" ng-click="vis = !vis">I want custom pixel sizes <span class="caret"></span></button>
+						</div>
+					</div>
+				</form>
+				<div class="form-group col-lg-4 col-md-12">
+					<form class="col-md-3 col-sm-12 form-inline" ng-submit="vm.savePhotos()">
+						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
+					</form>
+				</div>
+	
+			</div>
 		</div>
-			<div class="col-lg-4 col-md-12"
-			<button class="form-control btn btn-default" id="custom" ng-click="vis = !vis">I want custom pixel sizes</button>
-		</div>
-			<!--<div class="col-md-12">-->
-			<div class="col-lg-4 col-md-12">
-			<button class="btn btn-default submit" type="submit" id="custom" ng-click = "searchResults = true">Search</button>
-		</div>
-		</div>
-
-<div class="form-group col-lg-4 col-md-12">
-	<form class="col-xs-12 form-inline" ng-submit="vm.savePhotos()">
-		
-			<button ng-click="vm.savePhotos()" class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
-
-		</div>
-		
 	</form>
-</div>
-					
-				<!--</div>-->
-		
-		
 
 		<div class="col-md-12">
 			<div class="row image-fields" ng-show="vis">
-				<div class="col-lg-3"><label>Image 1</label>
-					<h6>height in px</h6>
-					<input class="form-control" value="" ng-model="vm.image1.height" ></input><p>x</p>
+				<div class="col-lg-3 col-md-6 col-sm-6"><label>Image 1</label>
 					<h6>width in px</h6>
-					<input class="form-control" value="" ng-model="vm.image1.width"></input>
+					<input class="form-control" value="" ng-model="vm.image1.width"></input><p>x</p>
+					<h6>height in px</h6>
+					<input class="form-control" value="" ng-model="vm.image1.height" ></input>
 				</div>
-				<div class="col-lg-3"><label>Image 2</label>
-					<h6>height in px</h6>
-					<input class="form-control" value="" ng-model="vm.image2.height"></input><p>x</p>
+				<div class="col-lg-3 col-md-6 col-sm-6"><label>Image 2</label>
 					<h6>width in px</h6>
-					<input class="form-control" value="" ng-model="vm.image2.width"></input>
+					<input class="form-control" value="" ng-model="vm.image2.width"></input><p>x</p>
+					<h6>height in px</h6>
+					<input class="form-control" value="" ng-model="vm.image2.height"></input>
 				</div>
-				<div class="col-lg-3"><label>Image 3</label>
-					<h6>height in px</h6>
-					<input class="form-control" value="" ng-model="vm.image3.height"></input><p>x</p>
+				<div class="col-lg-3 col-md-6 col-sm-6"><label>Image 3</label>
 					<h6>width in px</h6>
-					<input class="form-control" value="" ng-model="vm.image3.width"></input>
+					<input class="form-control" value="" ng-model="vm.image3.width"></input><p>x</p>
+					<h6>height in px</h6>
+					<input class="form-control" value="" ng-model="vm.image3.height"></input>					
 				</div>
-				<div class="col-lg-3"><label>Image 4</label>
-					<h6>height in px</h6>
-					<input class="form-control" value="" ng-model="vm.image4.height"></input><p>x</p>
+				<div class="col-lg-3 col-md-6 col-sm-6"><label>Image 4</label>
 					<h6>width in px</h6>
-					<input class="form-control" value="" ng-model="vm.image4.width"></input>
+					<input class="form-control" value="" ng-model="vm.image4.width"></input><p>x</p>
+					<h6>height in px</h6>
+					<input class="form-control" value="" ng-model="vm.image4.height"></input>					
 				</div>
 			</div>
 				
@@ -71,7 +70,7 @@
 		</div>
 		<div class = "col-lg-3 col-md-12" ng-show="searchResults">
 			<img src="{{vm.data.contentUrl}}">
-			<figcaption>{{vm.image1.height}}x{{vm.image1.width}}</figcaption>
+			<figcaption>{{vm.image1.width}}x{{vm.image1.height}}</figcaption>
 		</div>
 		
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
@@ -80,7 +79,7 @@
 		</div>
 		<div class = "col-lg-4 col-md-12" ng-show="searchResults">
 			<img src="{{vm.data1.contentUrl}}">
-			<figcaption>{{vm.image2.height}}x{{vm.image2.width}}</figcaption>
+			<figcaption>{{vm.image2.width}}x{{vm.image2.height}}</figcaption>
 		</div>
 
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
@@ -89,7 +88,7 @@
 		</div>
 		<div class = "col-lg-4 col-md-12" ng-show="searchResults">
 			<img src="{{vm.data2.contentUrl}}">
-			<figcaption>{{vm.image3.height}}x{{vm.image3.width}}</figcaption>
+			<figcaption>{{vm.image3.width}}x{{vm.image3.height}}</figcaption>
 		</div>
 		<div class = "col-xs-12 check-element" ng-hide="searchResults">
 			<img src="http://placehold.it/600x600">
@@ -97,7 +96,8 @@
 		</div>
 		<div class = "col-xs-12 check-element" ng-show="searchResults">
 			<img src="{{vm.data3.contentUrl}}">
-			<figcaption>{{vm.image4.height}}x{{vm.image4.width}}</figcaption>
+			<figcaption>{{vm.image4.width}}x{{vm.image4.height}}</figcaption>
 		</div>
 	</div>
 </div>
+</main>

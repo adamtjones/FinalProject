@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('headerController', function(API, back, $state) {
+        .controller('headerController', function(API, back, $state, $location) {
             var vm = this;
             var loggedIn = false;
 
@@ -18,7 +18,9 @@
 
             vm.logout = function() {
                 API.logout();
-                $state.reload();
+                $location.path('home');
+                
+                
             };
 
         });

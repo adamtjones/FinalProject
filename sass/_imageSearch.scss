@@ -22,6 +22,11 @@
 		}
 	}
 }
+.results {
+	img {
+		max-width: 100%;
+	}
+}
 label {
 	font-weight:400;
 }
@@ -40,7 +45,9 @@ label {
 	list-style-type:none;
 }
 .imageButtons {
-	display:inline-block;
+	display:block;
+	padding-left:0px;
+	margin-left:-10px;
 }
 #custom {
 	margin-top:0px;
@@ -48,6 +55,8 @@ label {
 	margin-left:10px;
 	margin-right:0px;
 	width:200px;
+	margin-bottom:5px;
+	text-align:center;
 	
 }
 #submit {
@@ -59,7 +68,9 @@ label {
 #searchBox {
 	width:200px;
 }
-
+.form-control {
+	border:2px solid red;
+}
 
 	
 

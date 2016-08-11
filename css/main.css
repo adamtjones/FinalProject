@@ -216,6 +216,9 @@
       margin: 0px auto;
       padding-bottom: 20px; }
 
+.results img {
+  max-width: 100%; }
+
 label {
   font-weight: 400; }
 
@@ -232,14 +235,18 @@ label {
   list-style-type: none; }
 
 .imageButtons {
-  display: inline-block; }
+  display: block;
+  padding-left: 0px;
+  margin-left: -10px; }
 
 #custom {
   margin-top: 0px;
   border: 2px solid black;
   margin-left: 10px;
   margin-right: 0px;
-  width: 200px; }
+  width: 200px;
+  margin-bottom: 5px;
+  text-align: center; }
 
 #submit {
   width: 100px; }
@@ -249,6 +256,9 @@ label {
 
 #searchBox {
   width: 200px; }
+
+.form-control {
+  border: 2px solid red; }
 
 @keyframes fadeIn {
   0% {
