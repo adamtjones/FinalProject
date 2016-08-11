@@ -36,8 +36,8 @@
                 url:'/profile',
                 views: {
                     'main': {
-                        templateUrl: '../views/partials/savedPhotos.html',
-                        controller: 'savedPhotosController',
+                        templateUrl: '../views/partials/profile.html',
+                        controller: 'profileController',
                         controllerAs: 'controller'
                     },
                     'header': {
