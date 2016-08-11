@@ -253,12 +253,19 @@ label {
 
 #custom {
   margin-top: 0px;
-  border: 2px solid red;
+  border: 2px solid black;
   margin-left: 10px;
-  margin-right: 0px; }
+  margin-right: 0px;
+  width: 200px; }
+
+#submit {
+  width: 100px; }
 
 #save {
   margin-top: 0px; }
+
+#searchBox {
+  width: 200px; }
 
 @keyframes fadeIn {
   0% {
