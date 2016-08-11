@@ -34,22 +34,22 @@
                 var search = vm.getInfo;
 
 
-                var data = API.getInfo(search, vm.image1.height, vm.image1.width);
+                var data = API.getInfo(search, vm.image1.width, vm.image1.height);
                 data.then(function(response) {
                     vm.data = response.data.value[0];
                 });
 
-                var data1 = API.getInfo(search, vm.image2.height, vm.image2.width);
+                var data1 = API.getInfo(search, vm.image2.width, vm.image2.height);
                 data1.then(function(response) {
                     vm.data1 = response.data.value[0];
                 });
 
-                var data2 = API.getInfo(search, vm.image3.height, vm.image3.width);
+                var data2 = API.getInfo(search, vm.image3.width, vm.image3.height);
                 data2.then(function(response) {
                     vm.data2 = response.data.value[0];
                 });
 
-                var data3 = API.getInfo(search, vm.image4.height, vm.image4.width);
+                var data3 = API.getInfo(search, vm.image4.width, vm.image4.height);
                 data3.then(function(response) {
                     vm.data3 = response.data.value[0];
                 });

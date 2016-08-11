@@ -4,7 +4,7 @@
         .module('flowers')
         .factory('API', function($http) {
 
-            var getInfo = function(image, height, width) {
+            var getInfo = function(image, width, height) {
 
                 var call = $http({
                     headers: {
