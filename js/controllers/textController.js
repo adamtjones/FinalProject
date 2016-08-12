@@ -177,6 +177,32 @@
 			writeTextArray();
 		}
 
+		//calculates the percentage of selected arrays types based on user inputs,
+		//gets called by writeTextArray
+		vm.calPercentage = function(tempArray,wordLength){
+			var tempArray = tempArray.map(function(item){
+			var percentPull = item.percentage / 100;
+			var wordPull = percentPull * wordLength;
+			var repeatTimes = wordPull / item.array.length;
+
+			if (wordLength > item.array.length && item.array.length > 0){ 
+
+				var holderArray = [];
+
+				while (holderArray.length < repeatTimes) {
+    				holderArray.push(item.array);
+				};
+				holderArray = _.flatten(holderArray);
+				return holderArray.splice(0,Math.round(wordPull));
+
+			};
+
+			return item.array.splice(0,Math.round(wordPull));
+				
+		});
+			return tempArray;
+		};
+
 		//takes containerArray and creates textOutput based on user inputs
 		var writeTextArray = function(){
 			//sets default wordTotal to 200 if none is provided by user
@@ -187,29 +213,13 @@
 				var wordLength = vm.form.wordTotal;
 			}
 
-			//calculates the percentage of selected arrays types based on user inputs,
+			//calls function calPercentage(),
 			//sets containerArray to tempArray for further changes
 			var tempArray = JSON.parse(JSON.stringify(containerArray));
-			var tempArray = tempArray.map(function(item){
-				var percentPull = item.percentage / 100;
-				var wordPull = percentPull * wordLength;
-				var repeatTimes = wordPull / item.array.length;
-
-				if (wordLength > item.array.length && item.array.length > 0){ 
-
-					var holderArray = [];
-
-					while (holderArray.length < repeatTimes) {
-	    				holderArray.push(item.array);
-					};
-					holderArray = _.flatten(holderArray);
-					return holderArray.splice(0,Math.round(wordPull));
-
-				};
-
-				return item.array.splice(0,Math.round(wordPull));
-					
-			});
+			
+			// console.log("BEFORE:",JSON.stringify(tempArray));
+			tempArray = vm.calPercentage(tempArray,wordLength);
+			// console.log("AFTER",JSON.stringify(tempArray));
 
 			//mixes up the tempArray so everything is random, makes sure wordTotal 
 			//from output is equal to user input or default, pushes tempArray to
@@ -253,7 +263,6 @@
 
 			writeTextArray();
 		}	
-
 
 		//getting text arrays from APIs
 		var loremText = textAPI.getLoremIpsum();
