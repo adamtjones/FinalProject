@@ -377,6 +377,9 @@ label {
   padding-right: 15px;
   padding-bottom: 20px;
   background-color: #fefbf7; }
+  .rowProfile .rowPhotos img {
+    width: 200px;
+    height: 200px; }
 
 .alertFade {
   padding: 10px;
