@@ -1,6 +1,19 @@
 <div class = "row rowProfile">
+
+	<!-- USER INFO -->
+	<div class = "col-xs-12">
+		<h4>Update your Info</h4>
+		<form name="myForm" ng-submit="controller.update()">
+			<input class="form-control m-b-10" type="text" ng-model="controller.form.firstName" required>
+			<input class="form-control m-b-10" type="text" ng-model="controller.form.lastName" required>
+			<input class="form-control m-b-10" type="text" ng-model="controller.form.email" required>
+			<input class="form-control m-b-10" type="text" ng-model="controller.form.userName" required>
+			<input class="form-control m-b-10" type="password" ng-model="controller.form.password" required>
+			<button class = "btn btn-default" type="submit">Update</button>
+		</form>
+	</div>
  
-<!-- 	SAVED USER TEXT --> 
+	<!--SAVED USER TEXT --> 
  	<div class = "col-xs-12 textArrays">
  		<ul> 
  			<li ng-repeat = "projects in controller.projects | filter: savedImage1 === null | orderBy:'-dateTime'">
@@ -25,7 +38,7 @@
  		</ul>
  	</div>
 
-<!--  	SAVED USER PHOTOS -->
+	<!--SAVED USER PHOTOS -->
  	<div class = "row rowPhotos">
  		<div ng-show = "projects.savedImage1" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
  			<div class = "col-xs-12">
@@ -36,43 +49,51 @@
  			<div class = "col-xs-12 images">
  				<div class = "col-xs-3 image1">
  					<img src="{{projects.savedImage1}}">
- 					<div class = "imageSize">
-	 					Actual Size: {{projects.savedImage1Width}}<span class = "x">x</span>{{projects.savedImage1Height}}
+ 					<div class = "imageSizeLink">
+	 					<a href = "{{projects.savedImage1}}" target="_blank">
+	 						{{projects.savedImage1Width}}<span class = "x">x</span>{{projects.savedImage1Height}}
+		 					<span class = "imageLink">view image</span>
+		 				</a>
 	 				</div>
-	 				<a href = "{{projects.savedImage1}}" target="_blank"><span class = "imageLink">View image</span></a>
 	 				<div class = "imgTagSpan" clipboard supported="controller.supported" on-copied="controller.success(projects.savedImage1)" on-error="controller.fail(err)">
-	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;cpy img tag&gt;
+	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;copy img tag&gt;
 	 		    	</div>
 
  				</div>
  				<div class = "col-xs-3 image2">
  					<img src="{{projects.savedImage2}}" target="_blank"">
- 					 <div class = "imageSize">
-	 					Actual Size: {{projects.savedImage2Width}}<span class = "x">x</span>{{projects.savedImage2Height}}
+ 					<div class = "imageSizeLink">
+	 					<a href = "{{projects.savedImage2}}" target="_blank">
+	 						{{projects.savedImage2Width}}<span class = "x">x</span>{{projects.savedImage2Height}}
+		 					<span class = "imageLink">view image</span>
+		 				</a>
 	 				</div>
-	 				<a href = "{{projects.savedImage2}}"><span class = "imageLink">View image</span></a>
 	 				<div class = "imgTagSpan" clipboard supported="controller.supported" on-copied="controller.success(projects.savedImage2)" on-error="controller.fail(err)">
-	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;cpy img tag&gt;
+	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;copy img tag&gt;
 	 		    	</div>
  				</div>
  				<div class = "col-xs-3 image3">
  					<img src="{{projects.savedImage3}}" target="_blank"">
- 					 <div class = "imageSize">
-	 					Actual Size: {{projects.savedImage3Width}}<span class = "x">x</span>{{projects.savedImage3Height}}
+ 					<div class = "imageSizeLink">
+	 					<a href = "{{projects.savedImage3}}" target="_blank">
+	 						{{projects.savedImage3Width}}<span class = "x">x</span>{{projects.savedImage3Height}}
+		 					<span class = "imageLink">view image</span>
+		 				</a>
 	 				</div>
-	 				<a href = "{{projects.savedImage3}}"><span class = "imageLink">View image</span></a>
 	 				<div class = "imgTagSpan" clipboard supported="controller.supported" on-copied="controller.success(projects.savedImage3)" on-error="controller.fail(err)">
-	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;cpy img tag&gt;
+	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;copy img tag&gt;
 	 		    	</div>
  				</div>					
  				<div class = "col-xs-3 image4">
  					<img src="{{projects.savedImage4}}">
- 					<div class = "imageSize">
-	 					Actual Size: {{projects.savedImage4Width}}<span class = "x">x</span>{{projects.savedImage4Height}}
+ 					<div class = "imageSizeLink">
+	 					<a href = "{{projects.savedImage4}}" target="_blank">
+	 						{{projects.savedImage4Width}}<span class = "x">x</span>{{projects.savedImage4Height}}
+		 					<span class = "imageLink">view image</span>
+		 				</a>
 	 				</div>
-	 				<a href = "{{projects.savedImage4}}" target="_blank""><span class = "imageLink">View image</span></a>
-	 				<div class = "imgTagSpan" clipboard supported="controller.supported" on-copied="controller.success(projects.savedImage4)" on-error="controller.fail(err)">
-	 		    		<i class="fa fa-files-o" aria-hidden="true"></i> &lt;cpy img tag&gt;
+	 				<div class = "imgTag" clipboard supported="controller.supported" on-copied="controller.success(projects.savedImage4)" on-error="controller.fail(err)">
+	 		    		<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
 	 		    	</div>
  				</div>
  			</div>
@@ -84,5 +105,10 @@
  	<div ng-show="controller.copied" class="copied alertFade">
  		<img src ="images/logo.svg">
    		<span class = "alertFadeText"><h4>Copied!</h4></span>
+ 	</div>
+ 	
+ 	<div ng-show="controller.updated" class="updated alertFade">
+ 		<img src ="images/logo.svg">
+   		<span class = "alertFadeText"><h4>Updated!</h4></span>
  	</div>			
  </div>

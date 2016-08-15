@@ -375,11 +375,94 @@ label {
   margin-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   background-color: #fefbf7; }
-  .rowProfile .rowPhotos img {
-    width: 200px;
-    height: 200px; }
+  .rowProfile .textArrays {
+    padding: 0px; }
+    .rowProfile .textArrays ul {
+      list-style-type: none;
+      padding-left: 0px; }
+      .rowProfile .textArrays ul li {
+        display: inline; }
+        .rowProfile .textArrays ul li .textArrayName {
+          font-size: 16px;
+          color: #fefbf7;
+          background-color: #444444;
+          padding: 10px;
+          margin-bottom: 5px;
+          margin-top: 5px; }
+          .rowProfile .textArrays ul li .textArrayName .check {
+            display: inline; }
+            .rowProfile .textArrays ul li .textArrayName .check .checkSpan:hover {
+              color: #ef143c;
+              cursor: pointer;
+              /* transitions and animations */
+              -webkit-transition: color .5s ease;
+              -moz-transition: color .5s ease;
+              -ms-transition: color .5s ease;
+              -o-transition: color .5s ease;
+              transition: color .5s ease; }
+              .rowProfile .textArrays ul li .textArrayName .check .checkSpan:hover i {
+                color: #1D9E74;
+                cursor: pointer;
+                /* transitions and animations */
+                -webkit-transition: color .5s ease;
+                -moz-transition: color .5s ease;
+                -ms-transition: color .5s ease;
+                -o-transition: color .5s ease;
+                transition: color .5s ease; }
+        .rowProfile .textArrays ul li .heartIcon {
+          color: #ef143c;
+          cursor: pointer;
+          font-size: 32px;
+          x-index: 999;
+          position: inherit;
+          float: right;
+          margin-top: -6px; }
+        .rowProfile .textArrays ul li .heartNo {
+          color: #fefbf7;
+          font-size: 15px;
+          float: right;
+          width: 32px;
+          text-align: center;
+          x-index: 1000;
+          position: absolute;
+          right: 10px; }
+        .rowProfile .textArrays ul li .textArray {
+          font-style: italic;
+          margin-bottom: 0px;
+          font-size: 16px; }
+  .rowProfile .rowPhotos .image1, .rowProfile .rowPhotos .image2, .rowProfile .rowPhotos .image3, .rowProfile .rowPhotos .image4 {
+    padding: 0px;
+    text-align: center; }
+    .rowProfile .rowPhotos .image1 img, .rowProfile .rowPhotos .image2 img, .rowProfile .rowPhotos .image3 img, .rowProfile .rowPhotos .image4 img {
+      width: 200px;
+      height: 200px;
+      margin: 0px auto;
+      display: block; }
+    .rowProfile .rowPhotos .image1 div, .rowProfile .rowPhotos .image2 div, .rowProfile .rowPhotos .image3 div, .rowProfile .rowPhotos .image4 div {
+      display: inline-block; }
+      .rowProfile .rowPhotos .image1 div :hover, .rowProfile .rowPhotos .image2 div :hover, .rowProfile .rowPhotos .image3 div :hover, .rowProfile .rowPhotos .image4 div :hover {
+        color: #ef143c;
+        /* transitions and animations */
+        -webkit-transition: color .5s ease;
+        -moz-transition: color .5s ease;
+        -ms-transition: color .5s ease;
+        -o-transition: color .5s ease;
+        transition: color .5s ease; }
+      .rowProfile .rowPhotos .image1 div a, .rowProfile .rowPhotos .image2 div a, .rowProfile .rowPhotos .image3 div a, .rowProfile .rowPhotos .image4 div a {
+        text-decoration: none;
+        color: #444444; }
+      .rowProfile .rowPhotos .image1 div .tag, .rowProfile .rowPhotos .image2 div .tag, .rowProfile .rowPhotos .image3 div .tag, .rowProfile .rowPhotos .image4 div .tag {
+        color: #444444; }
+        .rowProfile .rowPhotos .image1 div .tag :hover, .rowProfile .rowPhotos .image2 div .tag :hover, .rowProfile .rowPhotos .image3 div .tag :hover, .rowProfile .rowPhotos .image4 div .tag :hover {
+          color: #ef143c;
+          /* transitions and animations */
+          -webkit-transition: color .5s ease;
+          -moz-transition: color .5s ease;
+          -ms-transition: color .5s ease;
+          -o-transition: color .5s ease;
+          transition: color .5s ease; }
 
 .alertFade {
   padding: 10px;
@@ -403,7 +486,8 @@ body {
   background-color: #ef143c;
   font-family: "Reem Kufi", sans-serif;
   font-size: 18px;
-  color: #444444; }
+  color: #444444;
+  margin-bottom: 30px; }
   body .container-fluid {
     width: 95%; }
   body .m-b-10 {

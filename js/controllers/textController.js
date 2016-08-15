@@ -67,7 +67,6 @@
         vm.textVotes = function(arrays) {
         	var vote = back.textVotes(arrays.id, arrays.textVotes);
         	vote.then(function(response) {
-        		console.log(response);
         		arrays.textVotes ++;
           });
         };  

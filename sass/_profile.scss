@@ -3,13 +3,115 @@
 	margin-top: 20px;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-bottom: 20px;
+	padding-bottom: 50px;
 	background-color: $offWhite;
-	.rowPhotos {
-		img {
-			width: 200px;
-			height: 200px;
+
+	// SAVED USER TEXT
+	.textArrays {
+		padding: 0px;
+		ul {
+			list-style-type: none;
+			padding-left: 0px;
+			li {
+				display: inline;
+				.textArrayName {
+					font-size: 16px;
+					color: $offWhite;
+					background-color: $gray;
+					padding: 10px;
+					margin-bottom: 5px;
+					margin-top: 5px;
+					.check {
+						display: inline;
+				  		.checkSpan:hover{
+					  		color: $red;
+					  		cursor: pointer;
+							/* transitions and animations */
+							-webkit-transition: color .5s ease;
+							-moz-transition: color .5s ease;
+							-ms-transition: color .5s ease;
+							-o-transition: color .5s ease;
+							transition: color .5s ease;		
+				  			i {
+					  			color: $green;
+					  			cursor: pointer;
+								/* transitions and animations */
+								-webkit-transition: color .5s ease;
+								-moz-transition: color .5s ease;
+								-ms-transition: color .5s ease;
+								-o-transition: color .5s ease;
+								transition: color .5s ease;
+							}	
+						}
+					}
+				}
+				.heartIcon {
+					color: $red;
+					cursor: pointer;
+					font-size: 32px;
+					x-index: 999;
+					position: inherit;
+					float: right;
+					margin-top: -6px;
+				}
+				.heartNo {
+					color: $offWhite;
+					font-size: 15px;
+					float: right;
+					width: 32px;
+					text-align: center;
+					x-index: 1000;
+					position: absolute;
+					right: 10px;
+
+				}	
+				.textArray {
+					font-style: italic;
+					margin-bottom: 0px;
+					font-size: 16px;	
+				}
+			}
 		}
 	}
-
+	//SAVED USER PHOTOS
+	.rowPhotos {
+		.image1, .image2, .image3, .image4 {
+			padding: 0px;
+			text-align: center;
+			img {
+				width: 200px;
+				height: 200px;
+				margin: 0px auto;
+				display: block;
+			}
+			div {
+				display: inline-block;
+				:hover {
+					color: $red;
+					/* transitions and animations */
+					-webkit-transition: color .5s ease;
+					-moz-transition: color .5s ease;
+					-ms-transition: color .5s ease;
+					-o-transition: color .5s ease;
+					transition: color .5s ease;	
+				}
+				a {
+					text-decoration: none;
+					color: $gray;
+				}
+				.tag {
+					color: $gray;
+					:hover {
+						color: $red;
+						/* transitions and animations */
+						-webkit-transition: color .5s ease;
+						-moz-transition: color .5s ease;
+						-ms-transition: color .5s ease;
+						-o-transition: color .5s ease;
+						transition: color .5s ease;	
+					}
+				}
+			}	
+		}
+	}
 }

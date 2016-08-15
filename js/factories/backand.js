@@ -94,7 +94,7 @@
                 return gettingData;
             }
 
-            var getSavedPhotos = function(){
+            var getSavedInfo = function(){
                 var author = API.getUserId()*1;
                 var gettingData = $http({
                     method: 'GET',
@@ -115,6 +115,14 @@
                 });
             }
 
+            var updateInfo = function(id, data) {
+                return $http ({
+                    method: 'PUT',
+                    data:data,
+                    url: 'https://api.backand.com:443/1/objects/users/'+ id,
+                });
+            }
+
             return {
                 registerUser: registerUser,
                 login: login,
@@ -123,7 +131,8 @@
                 saveImage: saveImage,
                 getArrays: getArrays,
                 textVotes: textVotes,
-                getSavedPhotos: getSavedPhotos,
+                getSavedInfo: getSavedInfo,
+                updateInfo: updateInfo,
             }
         })        
 })();
