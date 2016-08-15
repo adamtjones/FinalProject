@@ -39,7 +39,23 @@
        		vm.showMine = false;
        	} 	
 
-       	//gets text arrays from backand database
+       	//gets users saved texts from backand
+            var projects = back.getSavedInfo();
+            projects.then(function(response) {
+                var projects = response.data.data;
+                vm.projects = projects;
+                vm.projects.forEach(function(obj) {
+                    if (obj.textVotes === null) {
+                        obj.textVotes = 0;
+                    }
+                    if (obj.textArray != null) {
+	          		obj.textArray = obj.textArray.split(" ");
+	          		obj.textArray = obj.textArray.join(', ');
+	          		}
+                })
+            })
+
+       	//gets all text arrays from backand database
        	var getTextArrays = back.getArrays();
        		getTextArrays.then(function(results){
           	var arrays = results.data;

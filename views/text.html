@@ -92,9 +92,8 @@
 		    </div>
 			
 			<!-- SHOW USER'S TEXT ARRAYS -->		    
-		    <ul ng-show = "controller.showMine">    
-				<li ng-repeat = "arrays in controller.arrays | filter:{author: controller.userId} | filter:isPrivate !== undefined | orderBy:'-dateTime'" class = "publicArrays">
-<!--         		<p ng-hide="controller.arrays | filter:{author: controller.userId} | filter:isPrivate !== undefined">no valS with this filter</p> -->
+		    <ul ng-show = "controller.showMine">  
+		     	<li ng-show = "arrays.textArrayName" ng-repeat = "arrays in controller.projects | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
 	                    	<div class = "check">
@@ -109,15 +108,9 @@
 	                    </h3>
 		                    <p class = "textArray">
 		                    	{{arrays.textArray}}
-		                    </p>	
-		                    <span class = "userNameGroup">	
-			                   	<span class = "userName">
-			                   		<span class = "userNameBy"> by:</span>
-			                   		{{arrays.author_obj.userName}}
-			                   	</span>	
-			                </span>		                    	
+		                    </p>		                    	
 	               	</article>
-	        	</li>
+	        	</li> 
 			</ul>
 
 			<!-- SHOW ALL TEXT ARRAYS -->

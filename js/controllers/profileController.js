@@ -16,6 +16,10 @@
                     if (obj.textVotes === null) {
                         obj.textVotes = 0;
                     }
+                    if (obj.textArray != null) {
+                        obj.textArray = obj.textArray.split(" ");
+                        obj.textArray = obj.textArray.join(', ');
+                    }
                 })
             })
 
@@ -37,6 +41,11 @@
             vm.deleteItem = function(projects) {
                 var deleteItem = back.deleteUserItems(projects.id);
                 deleteItem.then(function(response) {
+                    vm.projects = vm.projects.filter(function(item){
+                    if(item!==projects){
+                        return true;
+                    }
+                });
                     vm.deleted = true;
                     vm.alertFade();
                 })

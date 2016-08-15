@@ -17,7 +17,7 @@
  	<div class = "col-xs-12 textArrays">
  		<h4>Your saved placeholder text</h4>
  		<ul> 
- 			<li ng-repeat = "projects in controller.projects | filter: savedImage1 === null | orderBy:'-dateTime'">
+ 			<li ng-show = "projects.textArrayName" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
  		        <article>
  		     	   	<h3 class = "textArrayName">
  		            	<div class = "name">
