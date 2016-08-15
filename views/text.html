@@ -176,13 +176,13 @@
                     <div class="close" data-dismiss="modal">&times;</div>
                         <h2 class="modal-title">Save</h2>
                    	</div>
-				<form>
+				<form name="myForm">
 				   	<div class = "form-group">
 				    	<label for= "textArrayName">Name</label>
-				    	<input type="text" class="form-control m-b-10 textArrayName" id="textArrayName"  tabindex="1" ng-model= "controller.form.textArrayName" >
+				    	<input type="text" class="form-control m-b-10 textArrayName" id="textArrayName" name="textArrayName" placeholder="Name (required)" tabindex="1" ng-model= "controller.form.textArrayName" required>
 				    	<label for= "textInputSaved">Your Words</label>
 				    	<textarea class="form-control m-b-10" tabindex="2" id = "textInputSaved" readonly>{{controller.form.textInput}}</textarea>
-				    	<button class = "btn btn-default buttonSave" tabindex="3" ng-click = "controller.saveTextArray()">Save</button>
+				    	<button class = "btn btn-default buttonSave" tabindex="3" ng-click = "controller.saveTextArray()" ng-disabled="myForm.textArrayName.$invalid">Save</button>
 				    	<div class="checkboxPrivate">
 					    	<label for = "makePrivate" class = "checkboxLabelPrivate">make private</label>
 					    	<input type="checkbox" ng-model= "controller.form.isPrivate" id = "makePrivate"> 
