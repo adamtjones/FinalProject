@@ -6,9 +6,28 @@
 	padding-bottom: 50px;
 	background-color: $offWhite;
 
+	// USER INFO
+	.userInfo {
+		padding: 0px;
+		padding-bottom: 20px;
+		h4 {
+			font-family: $titleFont;
+			font-size: 35px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+	}
+
 	// SAVED USER TEXT
 	.textArrays {
 		padding: 0px;
+		padding-bottom: 20px;
+		h4 {
+			font-family: $titleFont;
+			font-size: 35px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
 		ul {
 			list-style-type: none;
 			padding-left: 0px;
@@ -21,9 +40,10 @@
 					padding: 10px;
 					margin-bottom: 5px;
 					margin-top: 5px;
-					.check {
+					.deleteItem {
 						display: inline;
-				  		.checkSpan:hover{
+						padding-left: 10px;
+				  		.name:hover{
 					  		color: $red;
 					  		cursor: pointer;
 							/* transitions and animations */
@@ -52,7 +72,7 @@
 					x-index: 999;
 					position: inherit;
 					float: right;
-					margin-top: -6px;
+					margin-top: -24px;
 				}
 				.heartNo {
 					color: $offWhite;
@@ -63,6 +83,7 @@
 					x-index: 1000;
 					position: absolute;
 					right: 10px;
+					margin-top: -17px;
 
 				}	
 				.textArray {
@@ -75,8 +96,22 @@
 	}
 	//SAVED USER PHOTOS
 	.rowPhotos {
-		.image1, .image2, .image3, .image4 {
+		h4 {
+			font-family: $titleFont;
+			font-size: 35px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			margin-left: 15px;
+		}
+		.photoSearchName {
+			margin-top: 10px;
+			.deleteItem {
+				display: inline;
+			}
+		}
+		.images {
 			padding: 0px;
+			padding-bottom: 20px;
 			text-align: center;
 			img {
 				width: 200px;
@@ -99,7 +134,7 @@
 					text-decoration: none;
 					color: $gray;
 				}
-				.tag {
+				.imgTagSpan {
 					color: $gray;
 					:hover {
 						color: $red;

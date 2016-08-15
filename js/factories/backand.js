@@ -123,6 +123,14 @@
                 });
             }
 
+            var deleteUserItems = function (id) {
+                return $http ({
+                    method: 'DELETE',
+                    url: 'https://api.backand.com:443/1/objects/items/'+ id,
+
+                })
+            }
+
             return {
                 registerUser: registerUser,
                 login: login,
@@ -133,6 +141,7 @@
                 textVotes: textVotes,
                 getSavedInfo: getSavedInfo,
                 updateInfo: updateInfo,
+                deleteUserItems: deleteUserItems
             }
         })        
 })();

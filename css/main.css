@@ -377,8 +377,22 @@ label {
   padding-right: 15px;
   padding-bottom: 50px;
   background-color: #fefbf7; }
+  .rowProfile .userInfo {
+    padding: 0px;
+    padding-bottom: 20px; }
+    .rowProfile .userInfo h4 {
+      font-family: "Rochester", cursive;
+      font-size: 35px;
+      padding-top: 20px;
+      padding-bottom: 10px; }
   .rowProfile .textArrays {
-    padding: 0px; }
+    padding: 0px;
+    padding-bottom: 20px; }
+    .rowProfile .textArrays h4 {
+      font-family: "Rochester", cursive;
+      font-size: 35px;
+      padding-top: 20px;
+      padding-bottom: 10px; }
     .rowProfile .textArrays ul {
       list-style-type: none;
       padding-left: 0px; }
@@ -391,9 +405,10 @@ label {
           padding: 10px;
           margin-bottom: 5px;
           margin-top: 5px; }
-          .rowProfile .textArrays ul li .textArrayName .check {
-            display: inline; }
-            .rowProfile .textArrays ul li .textArrayName .check .checkSpan:hover {
+          .rowProfile .textArrays ul li .textArrayName .deleteItem {
+            display: inline;
+            padding-left: 10px; }
+            .rowProfile .textArrays ul li .textArrayName .deleteItem .name:hover {
               color: #ef143c;
               cursor: pointer;
               /* transitions and animations */
@@ -402,7 +417,7 @@ label {
               -ms-transition: color .5s ease;
               -o-transition: color .5s ease;
               transition: color .5s ease; }
-              .rowProfile .textArrays ul li .textArrayName .check .checkSpan:hover i {
+              .rowProfile .textArrays ul li .textArrayName .deleteItem .name:hover i {
                 color: #1D9E74;
                 cursor: pointer;
                 /* transitions and animations */
@@ -418,7 +433,7 @@ label {
           x-index: 999;
           position: inherit;
           float: right;
-          margin-top: -6px; }
+          margin-top: -24px; }
         .rowProfile .textArrays ul li .heartNo {
           color: #fefbf7;
           font-size: 15px;
@@ -427,22 +442,34 @@ label {
           text-align: center;
           x-index: 1000;
           position: absolute;
-          right: 10px; }
+          right: 10px;
+          margin-top: -17px; }
         .rowProfile .textArrays ul li .textArray {
           font-style: italic;
           margin-bottom: 0px;
           font-size: 16px; }
-  .rowProfile .rowPhotos .image1, .rowProfile .rowPhotos .image2, .rowProfile .rowPhotos .image3, .rowProfile .rowPhotos .image4 {
+  .rowProfile .rowPhotos h4 {
+    font-family: "Rochester", cursive;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 15px; }
+  .rowProfile .rowPhotos .photoSearchName {
+    margin-top: 10px; }
+    .rowProfile .rowPhotos .photoSearchName .deleteItem {
+      display: inline; }
+  .rowProfile .rowPhotos .images {
     padding: 0px;
+    padding-bottom: 20px;
     text-align: center; }
-    .rowProfile .rowPhotos .image1 img, .rowProfile .rowPhotos .image2 img, .rowProfile .rowPhotos .image3 img, .rowProfile .rowPhotos .image4 img {
+    .rowProfile .rowPhotos .images img {
       width: 200px;
       height: 200px;
       margin: 0px auto;
       display: block; }
-    .rowProfile .rowPhotos .image1 div, .rowProfile .rowPhotos .image2 div, .rowProfile .rowPhotos .image3 div, .rowProfile .rowPhotos .image4 div {
+    .rowProfile .rowPhotos .images div {
       display: inline-block; }
-      .rowProfile .rowPhotos .image1 div :hover, .rowProfile .rowPhotos .image2 div :hover, .rowProfile .rowPhotos .image3 div :hover, .rowProfile .rowPhotos .image4 div :hover {
+      .rowProfile .rowPhotos .images div :hover {
         color: #ef143c;
         /* transitions and animations */
         -webkit-transition: color .5s ease;
@@ -450,12 +477,12 @@ label {
         -ms-transition: color .5s ease;
         -o-transition: color .5s ease;
         transition: color .5s ease; }
-      .rowProfile .rowPhotos .image1 div a, .rowProfile .rowPhotos .image2 div a, .rowProfile .rowPhotos .image3 div a, .rowProfile .rowPhotos .image4 div a {
+      .rowProfile .rowPhotos .images div a {
         text-decoration: none;
         color: #444444; }
-      .rowProfile .rowPhotos .image1 div .tag, .rowProfile .rowPhotos .image2 div .tag, .rowProfile .rowPhotos .image3 div .tag, .rowProfile .rowPhotos .image4 div .tag {
+      .rowProfile .rowPhotos .images div .imgTagSpan {
         color: #444444; }
-        .rowProfile .rowPhotos .image1 div .tag :hover, .rowProfile .rowPhotos .image2 div .tag :hover, .rowProfile .rowPhotos .image3 div .tag :hover, .rowProfile .rowPhotos .image4 div .tag :hover {
+        .rowProfile .rowPhotos .images div .imgTagSpan :hover {
           color: #ef143c;
           /* transitions and animations */
           -webkit-transition: color .5s ease;

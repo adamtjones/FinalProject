@@ -1,7 +1,7 @@
 <div class = "row rowProfile">
 
 	<!-- USER INFO -->
-	<div class = "col-xs-12">
+	<div class = "col-xs-12 userInfo">
 		<h4>Update your Info</h4>
 		<form name="myForm" ng-submit="controller.update()">
 			<input class="form-control m-b-10" type="text" ng-model="controller.form.firstName" required>
@@ -15,15 +15,16 @@
  
 	<!--SAVED USER TEXT --> 
  	<div class = "col-xs-12 textArrays">
+ 		<h4>Your saved placeholder text</h4>
  		<ul> 
  			<li ng-repeat = "projects in controller.projects | filter: savedImage1 === null | orderBy:'-dateTime'">
  		        <article>
  		     	   	<h3 class = "textArrayName">
- 		            	<div class = "check">
- 			                <span class = "checkSpan" ng-click="controller.clickedBox(arrays.textArray)">
- 			                    {{projects.textArrayName}} 
- 			                   	<i class="fa fa-check" aria-hidden="true"></i>
- 				            </span>
+ 		            	<div class = "name">
+ 			                    {{projects.textArrayName}}
+ 			              	<div class = "deleteItem" ng-click = "controller.deleteItem(projects)">
+ 								<i class="fa fa-trash-o" aria-hidden="true"></i>
+ 							</div> 
  						</div>
  			            <span>
  							<i class="fa fa-heart heartIcon" aria-hidden="true"></i>
@@ -40,10 +41,14 @@
 
 	<!--SAVED USER PHOTOS -->
  	<div class = "row rowPhotos">
+ 		<h4 class = "h4Photos">Your saved placeholder photos</h4>
  		<div ng-show = "projects.savedImage1" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
  			<div class = "col-xs-12">
  				<h3 class = "photoSearchName">
  					{{projects.searchTerm}}
+ 					<div class = "deleteItem" ng-click = "controller.deleteItem(projects)">
+ 								<i class="fa fa-trash-o" aria-hidden="true"></i>
+ 					</div>
  				</h3>
  			</div>	
  			<div class = "col-xs-12 images">
@@ -110,5 +115,10 @@
  	<div ng-show="controller.updated" class="updated alertFade">
  		<img src ="images/logo.svg">
    		<span class = "alertFadeText"><h4>Updated!</h4></span>
- 	</div>			
+ 	</div>
+
+ 	<div ng-show="controller.deleted" class="updated alertFade">
+ 		<img src ="images/logo.svg">
+   		<span class = "alertFadeText"><h4>Deleted!</h4></span>
+ 	</div>				
  </div>

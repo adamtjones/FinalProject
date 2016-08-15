@@ -7,6 +7,7 @@
             var vm = this;
             vm.userId = API.getUserId();
 
+            //gets users saved projects from backand
             var projects = back.getSavedInfo();
             projects.then(function(response) {
                 var projects = response.data.data;
@@ -18,15 +19,25 @@
                 })
             })
 
+            //gets users info from backand
             var user = back.getUserInfo(API.getToken());
             user.then(function(data) {
             vm.form = data.data.data[0];
             })
 
+            //updates users info to backand
             vm.update = function() {
                 var update = back.updateInfo(vm.userId, vm.form);
                 update.then(function(response) {
                     vm.updated = true;
+                    vm.alertFade();
+                })
+            }
+            //deletes users saved items from backand
+            vm.deleteItem = function(projects) {
+                var deleteItem = back.deleteUserItems(projects.id);
+                deleteItem.then(function(response) {
+                    vm.deleted = true;
                     vm.alertFade();
                 })
             }
@@ -38,6 +49,7 @@
                 }, 500);
                 $timeout(function() {
                     vm.updated = false;
+                    vm.deleted = false;
                     vm.copied = false;
                     $(".alertFade").fadeTo(0, 500)
                 }, 1000);
