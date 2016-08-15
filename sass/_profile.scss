@@ -120,6 +120,7 @@
 				display: block;
 			}
 			div {
+				cursor: pointer;
 				display: inline-block;
 				:hover {
 					color: $red;
@@ -134,8 +135,9 @@
 					text-decoration: none;
 					color: $gray;
 				}
-				.imgTagSpan {
+				.imgTagSpan, .tagWords {
 					color: $gray;
+					cursor: pointer;
 					:hover {
 						color: $red;
 						/* transitions and animations */

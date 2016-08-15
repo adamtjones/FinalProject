@@ -468,6 +468,7 @@ label {
       margin: 0px auto;
       display: block; }
     .rowProfile .rowPhotos .images div {
+      cursor: pointer;
       display: inline-block; }
       .rowProfile .rowPhotos .images div :hover {
         color: #ef143c;
@@ -480,9 +481,10 @@ label {
       .rowProfile .rowPhotos .images div a {
         text-decoration: none;
         color: #444444; }
-      .rowProfile .rowPhotos .images div .imgTagSpan {
-        color: #444444; }
-        .rowProfile .rowPhotos .images div .imgTagSpan :hover {
+      .rowProfile .rowPhotos .images div .imgTagSpan, .rowProfile .rowPhotos .images div .tagWords {
+        color: #444444;
+        cursor: pointer; }
+        .rowProfile .rowPhotos .images div .imgTagSpan :hover, .rowProfile .rowPhotos .images div .tagWords :hover {
           color: #ef143c;
           /* transitions and animations */
           -webkit-transition: color .5s ease;
