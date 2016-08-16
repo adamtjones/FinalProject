@@ -6,12 +6,19 @@
         .controller('profileController', function(API, $state, back, clipboard, $timeout) {
             var vm = this;
             vm.userId = API.getUserId();
+            vm.textCounter = 0;
+            vm.photoCounter = 0;
 
             //gets users saved projects from backand
             var projects = back.getSavedInfo();
             projects.then(function(response) {
-                var projects = response.data.data;
-                vm.projects = projects;
+                
+                vm.textCounter = 0;
+                vm.photoCounter = 0;
+                vm.textPresent = false;
+                vm.photoPresent = false;
+                
+                vm.projects = response.data.data;
                 vm.projects.forEach(function(obj) {
                     if (obj.textVotes === null) {
                         obj.textVotes = 0;
@@ -20,7 +27,21 @@
                         obj.textArray = obj.textArray.split(" ");
                         obj.textArray = obj.textArray.join(', ');
                     }
+                    if (obj.textArrayName !== null) {
+                        vm.textCounter ++;
+                    }
+                    if (obj.searchTerm !== null) {
+                        vm.photoCounter ++;
+                    }                     
                 })
+                //shows a message to user if they don't have any saved photo or
+                //text projects
+                if (vm.textCounter > 0) {
+                    vm.textPresent = true;
+                }    
+                if (vm.photoCounter > 0) {
+                    vm.photoPresent = true;
+                }
             })
 
             //gets users info from backand

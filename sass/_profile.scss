@@ -95,13 +95,14 @@
 		}
 	}
 	//SAVED USER PHOTOS
-	.rowPhotos {
+	.photoArrays {
+		padding: 0px;
+		padding-bottom: 20px;
 		h4 {
 			font-family: $titleFont;
 			font-size: 35px;
 			padding-top: 20px;
 			padding-bottom: 10px;
-			margin-left: 15px;
 		}
 		.photoSearchName {
 			margin-top: 10px;

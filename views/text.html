@@ -91,8 +91,11 @@
 		    	</ul>
 		    </div>
 			
-			<!-- SHOW USER'S TEXT ARRAYS -->		    
+			<!-- SHOW USER'S TEXT ARRAYS -->	    
 		    <ul ng-show = "controller.showMine">  
+		    	<div class = "nothingHere" ng-hide = "controller.textPresent">
+ 					<p>Nothing here!</p>
+ 				</div>	
 		     	<li ng-show = "arrays.textArrayName" ng-repeat = "arrays in controller.projects | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">

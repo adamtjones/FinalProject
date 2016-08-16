@@ -32,29 +32,42 @@
     	if(API.getToken() !== null) {
         	vm.loggedIn = true;
         	vm.userId = API.getUserId();
-        	vm.showMine = true;
-        	vm.showAll = false
-       	}
-       	else {
-       		vm.showAll = true;
-       		vm.showMine = false;
-       	} 	
+       	}	
 
-       	//gets users saved texts from backand
-            var projects = back.getSavedInfo();
-            projects.then(function(response) {
-                var projects = response.data.data;
-                vm.projects = projects;
-                vm.projects.forEach(function(obj) {
-                    if (obj.textVotes === null) {
-                        obj.textVotes = 0;
-                    }
-                    if (obj.textArray != null) {
-	          		obj.textArray = obj.textArray.split(" ");
-	          		obj.textArray = obj.textArray.join(', ');
-	          		}
-                })
+        //gets users saved projects from backand
+        var projects = back.getSavedInfo();
+        projects.then(function(response) {
+                
+            vm.textCounter = 0;
+            vm.textPresent = false;
+                
+            vm.projects = response.data.data;
+            vm.projects.forEach(function(obj) {
+                if (obj.textVotes === null) {
+                    obj.textVotes = 0;
+                }
+                if (obj.textArray != null) {
+                    obj.textArray = obj.textArray.split(" ");
+                    obj.textArray = obj.textArray.join(', ');
+                }
+                if (obj.textArrayName !== null) {
+                    vm.textCounter ++;
+                }                    
             })
+            if (vm.textCounter > 0) {
+                vm.textPresent = true;
+            }    
+        })
+        //if a user is loggedIn and they have textArrays show theirs,
+        //if not show all textArrays
+        if (vm.loggedIn && vm.textPresent) {
+        	vm.showMine = true;
+        	vm.showAll = false;
+        }
+        else {
+        	vm.showMine = false;
+        	vm.showAll = true;
+        }
 
        	//gets all text arrays from backand database
        	var getTextArrays = back.getArrays();
@@ -72,11 +85,6 @@
 	          	if (obj.author !== null) {
 	          		obj.author = parseInt(obj.author);
 	          	}
-	          	// if (obj.author === vm.userId && obj.textArray === null){
-	          	// 	vm.showAll = true;
-	          	// 	vm.showMine = false;
-
-	          	// }
           	})
         })
 

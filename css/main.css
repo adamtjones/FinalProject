@@ -448,43 +448,31 @@ label {
           font-style: italic;
           margin-bottom: 0px;
           font-size: 16px; }
-  .rowProfile .rowPhotos h4 {
-    font-family: "Rochester", cursive;
-    font-size: 35px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-left: 15px; }
-  .rowProfile .rowPhotos .photoSearchName {
-    margin-top: 10px; }
-    .rowProfile .rowPhotos .photoSearchName .deleteItem {
-      display: inline; }
-  .rowProfile .rowPhotos .images {
+  .rowProfile .photoArrays {
     padding: 0px;
-    padding-bottom: 20px;
-    text-align: center; }
-    .rowProfile .rowPhotos .images img {
-      width: 200px;
-      height: 200px;
-      margin: 0px auto;
-      display: block; }
-    .rowProfile .rowPhotos .images div {
-      cursor: pointer;
-      display: inline-block; }
-      .rowProfile .rowPhotos .images div :hover {
-        color: #ef143c;
-        /* transitions and animations */
-        -webkit-transition: color .5s ease;
-        -moz-transition: color .5s ease;
-        -ms-transition: color .5s ease;
-        -o-transition: color .5s ease;
-        transition: color .5s ease; }
-      .rowProfile .rowPhotos .images div a {
-        text-decoration: none;
-        color: #444444; }
-      .rowProfile .rowPhotos .images div .imgTagSpan, .rowProfile .rowPhotos .images div .tagWords {
-        color: #444444;
-        cursor: pointer; }
-        .rowProfile .rowPhotos .images div .imgTagSpan :hover, .rowProfile .rowPhotos .images div .tagWords :hover {
+    padding-bottom: 20px; }
+    .rowProfile .photoArrays h4 {
+      font-family: "Rochester", cursive;
+      font-size: 35px;
+      padding-top: 20px;
+      padding-bottom: 10px; }
+    .rowProfile .photoArrays .photoSearchName {
+      margin-top: 10px; }
+      .rowProfile .photoArrays .photoSearchName .deleteItem {
+        display: inline; }
+    .rowProfile .photoArrays .images {
+      padding: 0px;
+      padding-bottom: 20px;
+      text-align: center; }
+      .rowProfile .photoArrays .images img {
+        width: 200px;
+        height: 200px;
+        margin: 0px auto;
+        display: block; }
+      .rowProfile .photoArrays .images div {
+        cursor: pointer;
+        display: inline-block; }
+        .rowProfile .photoArrays .images div :hover {
           color: #ef143c;
           /* transitions and animations */
           -webkit-transition: color .5s ease;
@@ -492,6 +480,20 @@ label {
           -ms-transition: color .5s ease;
           -o-transition: color .5s ease;
           transition: color .5s ease; }
+        .rowProfile .photoArrays .images div a {
+          text-decoration: none;
+          color: #444444; }
+        .rowProfile .photoArrays .images div .imgTagSpan, .rowProfile .photoArrays .images div .tagWords {
+          color: #444444;
+          cursor: pointer; }
+          .rowProfile .photoArrays .images div .imgTagSpan :hover, .rowProfile .photoArrays .images div .tagWords :hover {
+            color: #ef143c;
+            /* transitions and animations */
+            -webkit-transition: color .5s ease;
+            -moz-transition: color .5s ease;
+            -ms-transition: color .5s ease;
+            -o-transition: color .5s ease;
+            transition: color .5s ease; }
 
 .alertFade {
   padding: 10px;
