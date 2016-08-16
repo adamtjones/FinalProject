@@ -2,11 +2,11 @@
 <div class = "row rowText">
 	<div class="toolTips">
 			<h3>Tool tips here</h3>
-		</div>
+	</div>
+	
 	<form>
 		<!-- LEFT COLUMN -->
-		
-		<div class = "col-xs-6 enterSelectText">
+		<div class = "col-sm-6 col-xs-12 enterSelectText">
 			<div class="form-group userText">
 		    	<label class = "userTextLabel" for="textInput">
 		    		<span class = "enterText">Enter your text</span>
@@ -86,7 +86,7 @@
 		</div>
 
 		<!-- RIGHT COLUMN -->
-		<div class = "col-xs-6 userArrays">
+		<div class = "col-sm-6 col-xs-12 userArrays">
 		    <div class = "navLinks" ng-style = "{'visibility': controller.loggedIn ? 'visible' : 'hidden'}">
 		    	<ul>
 		    		<li ng-class = "{active: controller.showMine}" ng-click="controller.showMine = !controller.showMine; controller.showAll = false">Mine</li>
