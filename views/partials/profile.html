@@ -24,7 +24,14 @@
 	<!--SAVED USER TEXT --> 
  	<div ng-show = "controller.showText" class = "col-xs-12 textArrays">
  		<div class = "nothingHere" ng-hide = "controller.textPresent">
- 			<p>Nothing here!</p>
+ 			<h3>Ohhhh Noooo!</h3>
+ 			<p>Nothing's here yet. Start saving your</p> 
+ 			<span class = "title">
+ 				::placeholder
+ 				<div class = "blinkingLine">
+ 				</div>
+ 			</span> 
+ 			<p>text & photos to use later.</p>
  		</div>
  		<ul> 
  			<li ng-show = "projects.textArrayName" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
@@ -51,8 +58,15 @@
 
 	<!--SAVED USER PHOTOS -->
  	<div ng-show = "controller.showPhoto" class = "col-xs-12 photoArrays">
- 		 <div class = "nothingHere" ng-hide = "controller.photoPresent">
- 			<p>Nothing here!</p>
+ 		<div class = "nothingHere" ng-hide = "controller.textPresent">
+ 			<h3>Ohhhh Noooo!</h3>
+ 			<p>Nothing's here yet. Start saving your</p> 
+ 			<span class = "title">
+ 				::placeholder
+ 				<div class = "blinkingLine">
+ 				</div>
+ 			</span> 
+ 			<p>text & photos to use later.</p>
  		</div>
  		<div ng-show = "projects.savedImage1" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
 			<h3 class = "photoSearchName">

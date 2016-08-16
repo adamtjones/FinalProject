@@ -97,6 +97,29 @@
         cursor: pointer; }
       .rowText .userArrays .navLinks ul .active {
         color: #ef143c; }
+  .rowText .userArrays .nothingHere {
+    border: 1px solid #444444;
+    width: 75%;
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    padding-bottom: 20px;
+    margin-top: 50px; }
+    .rowText .userArrays .nothingHere h3 {
+      color: #ef143c; }
+    .rowText .userArrays .nothingHere p {
+      font-size: 25px;
+      margin-bottom: 0px; }
+    .rowText .userArrays .nothingHere span {
+      font-family: "Rochester", cursive;
+      font-size: 38px;
+      margin-left: 5px; }
+    .rowText .userArrays .nothingHere .blinkingLine {
+      margin-left: -8px;
+      border-left: 1px solid #444444;
+      width: 100px;
+      display: inline;
+      animation: 1.75s blink infinite; }
   .rowText .userArrays ul {
     list-style-type: none; }
     .rowText .userArrays ul .publicArrays {
@@ -389,6 +412,29 @@ label {
         cursor: pointer; }
       .rowProfile .navLinks ul .active {
         color: #ef143c; }
+  .rowProfile .nothingHere {
+    border: 1px solid #444444;
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    padding-bottom: 20px;
+    margin-top: 50px; }
+    .rowProfile .nothingHere h3 {
+      color: #ef143c; }
+    .rowProfile .nothingHere p {
+      font-size: 25px;
+      margin-bottom: 0px; }
+    .rowProfile .nothingHere span {
+      font-family: "Rochester", cursive;
+      font-size: 38px;
+      margin-left: 5px; }
+    .rowProfile .nothingHere .blinkingLine {
+      margin-left: -8px;
+      border-left: 1px solid #444444;
+      width: 100px;
+      display: inline;
+      animation: 1.75s blink infinite; }
   .rowProfile .userInfo {
     padding: 0px;
     padding-bottom: 20px; }

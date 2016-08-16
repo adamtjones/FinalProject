@@ -93,9 +93,16 @@
 			
 			<!-- SHOW USER'S TEXT ARRAYS -->	    
 		    <ul ng-show = "controller.showMine">  
-		    	<div class = "nothingHere" ng-hide = "controller.textPresent">
- 					<p>Nothing here!</p>
- 				</div>	
+		 		<div class = "nothingHere" ng-hide = "controller.textPresent">
+		 			<h3>Ohhhh Noooo!</h3>
+		 			<p>Nothing's here yet. Start saving your</p> 
+		 			<span class = "title">
+		 				::placeholder
+		 				<div class = "blinkingLine">
+		 				</div>
+		 			</span> 
+		 			<p>text & photos to use later.</p>
+		 		</div>	
 		     	<li ng-show = "arrays.textArrayName" ng-repeat = "arrays in controller.projects | orderBy:'-dateTime'" class = "publicArrays">
 	               	<article>
 	                    <h3 class = "textArrayName">
