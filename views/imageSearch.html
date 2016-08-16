@@ -1,5 +1,8 @@
 <main>
 <div class="row rowImageSearch">
+	<div class="toolTips">
+	<h3>Tool tips here</h3>
+</div>
 	<form class="form-inline" ng-submit="vm.search()">
 		<div class="theButtons">
 			<div class="form-group">
@@ -19,7 +22,7 @@
 				</form>
 				<div class="form-group col-lg-4 col-md-12">
 					<form class="col-md-3 col-sm-12 form-inline" ng-submit="vm.savePhotos()">
-						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
+						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn" data-target=".modalSave">Save Images to Profile</button>
 					</form>
 				</div>
 	
@@ -98,6 +101,11 @@
 			<img src="{{vm.data3.contentUrl}}">
 			<figcaption>{{vm.image4.width}}x{{vm.image4.height}}</figcaption>
 		</div>
+	</div>
+		<!-- ALERT -->
+	<div ng-show="controller.saved" class="saved alertFade">
+		<img src ="images/logo.svg">
+  		<span class = "alertFadeText"><h4>Saved!</h4></span>
 	</div>
 </div>
 </main>
