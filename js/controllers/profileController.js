@@ -6,9 +6,9 @@
         .controller('profileController', function(API, $state, back, clipboard, $timeout) {
             var vm = this;
             
-            vm.showInfo = true;
-            vm.showText = false;
+            vm.showText = true;
             vm.showPhoto = false;
+            vm.showInfo = false;            
 
             vm.userId = API.getUserId();
             vm.textCounter = 0;

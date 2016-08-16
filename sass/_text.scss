@@ -142,27 +142,26 @@
 			width: 75%;
 			text-align: center;
 			margin: 0px auto;
-			display: block;
 			padding-bottom: 20px;
 			margin-top: 50px;
 			h3 {
 				color: $red;
-				// font-style: italic;
 			}
 			p {
-				font-size: 25px;
-				margin-bottom: 0px;
-			}	
-			span {
+				font-size: 20px;
+				display: inline;
+			}
+			.title {
 				font-family: $titleFont;
-				font-size: 38px;
+				font-size: 35px;
 				margin-left: 5px;
+				display: inline;
 			}	
 				.blinkingLine {
 					margin-left: -8px;
+					padding-right: 8px;
 					border-left: 1px solid $gray;
-					width: 100px;
-					display: inline;
+					font-size: 28px;
 					animation: 1.75s blink infinite;
 				}
 		}
