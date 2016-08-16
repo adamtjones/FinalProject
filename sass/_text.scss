@@ -107,6 +107,7 @@
 				margin-top: 25px;
 				input {
 					width: 20%;
+					min-width:40px;
 					display: inline-block;
 					margin-left: 5px;
 				}
@@ -128,6 +129,7 @@
 			margin-bottom: -5px;
 			ul {
 				list-style-type: none;
+				padding: 0px;
 				li {
 					display: inline-block;
 					cursor: pointer;
@@ -168,6 +170,7 @@
 
 		ul {
 			list-style-type: none;
+			padding: 0px;
 			.publicArrays {
 				display: inline;
 				.textArrayName {

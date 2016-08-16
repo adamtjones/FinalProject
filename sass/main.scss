@@ -31,3 +31,16 @@ body {
 	}
 }
 
+@media only screen and (max-width: 500px) {
+	.rowProfile {
+		.photoArrays {
+			.images {
+				img {
+					width: 150px;
+					height: 150px;
+				}
+			}
+		}
+	}
+}
+
