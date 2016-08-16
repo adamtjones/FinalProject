@@ -102,23 +102,23 @@
     width: 75%;
     text-align: center;
     margin: 0px auto;
-    display: block;
     padding-bottom: 20px;
     margin-top: 50px; }
     .rowText .userArrays .nothingHere h3 {
       color: #ef143c; }
     .rowText .userArrays .nothingHere p {
-      font-size: 25px;
-      margin-bottom: 0px; }
-    .rowText .userArrays .nothingHere span {
+      font-size: 20px;
+      display: inline; }
+    .rowText .userArrays .nothingHere .title {
       font-family: "Rochester", cursive;
-      font-size: 38px;
-      margin-left: 5px; }
+      font-size: 35px;
+      margin-left: 5px;
+      display: inline; }
     .rowText .userArrays .nothingHere .blinkingLine {
       margin-left: -8px;
+      padding-right: 8px;
       border-left: 1px solid #444444;
-      width: 100px;
-      display: inline;
+      font-size: 28px;
       animation: 1.75s blink infinite; }
   .rowText .userArrays ul {
     list-style-type: none; }
@@ -334,6 +334,7 @@ label {
       .rowHeader .leftColumn h1 .blinkingLine {
         border-left: 1px solid #444444;
         display: inline;
+        font-size: 50px;
         animation: 1.75s blink infinite; }
   .rowHeader .rightColumn .fa-bars {
     font-size: 25px;
@@ -403,7 +404,7 @@ label {
   .rowProfile .navLinks {
     padding: 0px;
     padding-top: 15px;
-    margin-bottom: -5px; }
+    padding-bottom: 15px; }
     .rowProfile .navLinks ul {
       padding: 0px;
       list-style-type: none; }
@@ -415,11 +416,12 @@ label {
   .rowProfile .nothingHere {
     border: 1px solid #444444;
     width: 50%;
+    max-width: 525px;
+    min-width: 325px;
     text-align: center;
     margin: 0px auto;
     display: block;
-    padding-bottom: 20px;
-    margin-top: 50px; }
+    padding-bottom: 20px; }
     .rowProfile .nothingHere h3 {
       color: #ef143c; }
     .rowProfile .nothingHere p {
@@ -427,17 +429,23 @@ label {
       margin-bottom: 0px; }
     .rowProfile .nothingHere span {
       font-family: "Rochester", cursive;
-      font-size: 38px;
-      margin-left: 5px; }
+      font-size: 38px; }
     .rowProfile .nothingHere .blinkingLine {
       margin-left: -8px;
+      padding-right: 8px;
       border-left: 1px solid #444444;
-      width: 100px;
       display: inline;
+      font-size: 33px;
       animation: 1.75s blink infinite; }
   .rowProfile .userInfo {
     padding: 0px;
     padding-bottom: 20px; }
+    .rowProfile .userInfo form {
+      width: 50%;
+      max-width: 425px;
+      min-width: 275px;
+      margin: 0px auto;
+      display: block; }
   .rowProfile .textArrays {
     padding: 0px;
     padding-bottom: 20px; }
@@ -508,6 +516,7 @@ label {
       padding-bottom: 20px;
       text-align: center; }
       .rowProfile .photoArrays .images img {
+        padding-top: 20px;
         width: 200px;
         height: 200px;
         margin: 0px auto;
