@@ -221,6 +221,13 @@
         border: 1px solid #444444 !important;
         background-color: #fefbf7 !important; }
 
+.textTips {
+  margin-left: 15px;
+  margin-top: -20px;
+  padding-bottom: 0px;
+  margin-bottom: -20px;
+  padding-top: 0px; }
+
 .rowImageSearch {
   min-height: 1150px;
   background-color: #fefbf7;
@@ -284,7 +291,8 @@ label {
   border: 2px solid red; }
 
 .toolTips {
-  margin-left: 10px; }
+  margin-left: 15px;
+  padding-bottom: 20px; }
 
 @keyframes fadeIn {
   0% {
