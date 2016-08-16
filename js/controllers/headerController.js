@@ -5,7 +5,7 @@
         .module('flowers')
         .controller('headerController', function(API, back, $state, $location) {
             var vm = this;
-                            console.log($location.path());
+            
             var loggedIn = false;
 
             if (API.getToken() !== null) {

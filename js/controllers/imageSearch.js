@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('imageSearchController', function(API, $location, $stateParams, back) {
+        .controller('imageSearchController', function(API, $location, $stateParams, back, $timeout) {
             var vm = this;
 
             vm.image1 = [];
@@ -80,7 +80,25 @@
                 var save = back.saveImage(savedPhotos);
                 save.then(function(response) {
                     console.log(response);
+                
+                save.then(function(response) {
+                $('.modalSave').modal('hide');
+                vm.saved = true;
+                vm.alertFade();             
+            })
                 })
             }
+            
+            vm.alertFade = function () {
+            $timeout(function() {
+                $(".alertFade").fadeTo(500, 0)
+            }, 500);
+            $timeout(function() {
+                vm.selected = false;
+                vm.saved = false;
+                vm.copied = false;
+                $(".alertFade").fadeTo(0, 500)
+            }, 1000);
+        }
         });
 })();
