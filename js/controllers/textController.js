@@ -24,7 +24,8 @@
 		vm.form.checkbox.gibberishInput = false;
 		vm.form.checkbox.hipsterInput = false;
 		vm.form.checkbox.baconInput = false;  
-		vm.currentPage = 1;  
+		vm.currentPage = 1;
+		vm.form.percentage = [];  
 
         //shows slightly different features when user is logged in
         var loggedIn = false;
@@ -156,7 +157,6 @@
 		//when the user left the percentage input empty
 		vm.arrayCounter = function () {
 			vm.arrayCount = 0;
-			vm.form.percentage = [];
 
 			if (vm.form.textInput !== undefined && vm.form.percentage.textInput === undefined) {
 				vm.arrayCount ++;
@@ -165,7 +165,6 @@
 				} 
 			}
 			if (vm.form.checkbox.loremInput === true && vm.form.percentage.loremInput === undefined) {
-				console.log(vm.form.percentage.loremInput);
 					vm.arrayCount ++;
 			} 
 			if (vm.form.checkbox.gibberishInput === true && vm.form.percentage.gibberishInput === undefined) {
@@ -208,42 +207,45 @@
 			}
 
 			if (vm.form.checkbox.loremInput === true) {
-				if (vm.form.percentage.loremInput === undefined) {
-					var obj = new objectTemplate(loremArray, vm.defaultPercentage);
-					containerArray.push(obj);
-				}
-				else {
+				if (vm.form.percentage.loremInput !== undefined) {
 					var obj = new objectTemplate(loremArray, vm.form.percentage.loremInput);
 					containerArray.push(obj);
+				}
+				else {
+					var obj = new objectTemplate(loremArray, vm.defaultPercentage);
+					containerArray.push(obj);
 				}	
 			}
+
 			if (vm.form.checkbox.gibberishInput === true) {
-				if (vm.form.percentage.gibberishInput === undefined) {
+				if (vm.form.percentage.gibberishInput !== undefined) {
+					var obj = new objectTemplate(gibberishArray, vm.form.percentage.gibberishInput);
+					containerArray.push(obj);
+				}
+				else {
 					var obj = new objectTemplate(gibberishArray, vm.defaultPercentage);
 					containerArray.push(obj);
-				}
-				else {
-					var obj = new objectTemplate(gibberishArray, vm.form.percentage.loremInput);
-					containerArray.push(obj);
 				}	
 			}
+
 			if (vm.form.checkbox.hipsterInput === true) {
-				if (vm.form.percentage.hipsterInput === undefined) {
+				if (vm.form.percentage.hipsterInput !== undefined) {
+					var obj = new objectTemplate(hipsterArray,  vm.form.percentage.hipsterInput);
+					containerArray.push(obj);
+				}
+				else {
 					var obj = new objectTemplate(hipsterArray, vm.defaultPercentage);
 					containerArray.push(obj);
-				}
-				else {
-					var obj = new objectTemplate(hipsterArray, vm.form.percentage.loremInput);
-					containerArray.push(obj);
 				}	
 			}
+			
 			if (vm.form.checkbox.baconInput === true) {
-				if (vm.form.percentage.baconInput === undefined) {
-					var obj = new objectTemplate(baconArray, vm.defaultPercentage);
+				if (vm.form.percentage.baconInput !== undefined) {
+					var obj = new objectTemplate(baconArray,vm.form.percentage.baconInput);
 					containerArray.push(obj);
 				}
 				else {
-					var obj = new objectTemplate(baconArray, vm.form.percentage.loremInput);
+					var obj = new objectTemplate(baconArray, vm.defaultPercentage);
 					containerArray.push(obj);
 				}	
 			}
