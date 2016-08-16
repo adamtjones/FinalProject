@@ -377,22 +377,24 @@ label {
   padding-right: 15px;
   padding-bottom: 50px;
   background-color: #fefbf7; }
+  .rowProfile .navLinks {
+    padding: 0px;
+    padding-top: 15px;
+    margin-bottom: -5px; }
+    .rowProfile .navLinks ul {
+      padding: 0px;
+      list-style-type: none; }
+      .rowProfile .navLinks ul li {
+        display: inline-block;
+        cursor: pointer; }
+      .rowProfile .navLinks ul .active {
+        color: #ef143c; }
   .rowProfile .userInfo {
     padding: 0px;
     padding-bottom: 20px; }
-    .rowProfile .userInfo h4 {
-      font-family: "Rochester", cursive;
-      font-size: 35px;
-      padding-top: 20px;
-      padding-bottom: 10px; }
   .rowProfile .textArrays {
     padding: 0px;
     padding-bottom: 20px; }
-    .rowProfile .textArrays h4 {
-      font-family: "Rochester", cursive;
-      font-size: 35px;
-      padding-top: 20px;
-      padding-bottom: 10px; }
     .rowProfile .textArrays ul {
       list-style-type: none;
       padding-left: 0px; }
@@ -451,11 +453,6 @@ label {
   .rowProfile .photoArrays {
     padding: 0px;
     padding-bottom: 20px; }
-    .rowProfile .photoArrays h4 {
-      font-family: "Rochester", cursive;
-      font-size: 35px;
-      padding-top: 20px;
-      padding-bottom: 10px; }
     .rowProfile .photoArrays .photoSearchName {
       margin-top: 10px; }
       .rowProfile .photoArrays .photoSearchName .deleteItem {

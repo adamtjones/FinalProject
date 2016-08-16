@@ -5,6 +5,11 @@
         .module('flowers')
         .controller('profileController', function(API, $state, back, clipboard, $timeout) {
             var vm = this;
+            
+            vm.showInfo = true;
+            vm.showText = false;
+            vm.showPhoto = false;
+
             vm.userId = API.getUserId();
             vm.textCounter = 0;
             vm.photoCounter = 0;

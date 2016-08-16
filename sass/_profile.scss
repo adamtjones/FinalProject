@@ -5,29 +5,33 @@
 	padding-right: 15px;
 	padding-bottom: 50px;
 	background-color: $offWhite;
+	.navLinks {
+		padding: 0px;
+		padding-top:15px;
+		margin-bottom: -5px;
+		ul {
+			padding: 0px;
+			list-style-type: none;
+			li {
+				display: inline-block;
+				cursor: pointer;
+			}
+			.active {
+				color: $red;
+			}
+		}	
+	}
 
 	// USER INFO
 	.userInfo {
 		padding: 0px;
 		padding-bottom: 20px;
-		h4 {
-			font-family: $titleFont;
-			font-size: 35px;
-			padding-top: 20px;
-			padding-bottom: 10px;
-		}
 	}
 
 	// SAVED USER TEXT
 	.textArrays {
 		padding: 0px;
 		padding-bottom: 20px;
-		h4 {
-			font-family: $titleFont;
-			font-size: 35px;
-			padding-top: 20px;
-			padding-bottom: 10px;
-		}
 		ul {
 			list-style-type: none;
 			padding-left: 0px;
@@ -98,12 +102,6 @@
 	.photoArrays {
 		padding: 0px;
 		padding-bottom: 20px;
-		h4 {
-			font-family: $titleFont;
-			font-size: 35px;
-			padding-top: 20px;
-			padding-bottom: 10px;
-		}
 		.photoSearchName {
 			margin-top: 10px;
 			.deleteItem {

@@ -1,8 +1,16 @@
 <div class = "row rowProfile">
+	<div class = "col-xs-12 navLinks">
+		<ul>
+		    <li ng-class = "{active: controller.showInfo}" ng-click="controller.showInfo = !controller.showInfo; controller.showText = false; controller.showPhoto = false">My Info</li>
+		    <span> | </span>
+		    <li ng-class = "{active: controller.showText}" ng-click="controller.showText = !controller.showText; controller.showInfo = false; controller.showPhoto = false">Saved Texts</li>
+		    <span> | </span>
+		    <li ng-class = "{active: controller.showPhoto}" ng-click="controller.showPhoto = !controller.showPhoto; controller.showInfo = false; controller.showText = false">Saved Photos</li>		    
+		</ul>
+	</div>
 
 	<!-- USER INFO -->
-	<div class = "col-xs-12 userInfo">
-		<h4>Update your Info</h4>
+	<div ng-show = "controller.showInfo" class = "col-xs-12 userInfo">
 		<form name="myForm" ng-submit="controller.update()">
 			<input class="form-control m-b-10" type="text" ng-model="controller.form.firstName" required>
 			<input class="form-control m-b-10" type="text" ng-model="controller.form.lastName" required>
@@ -14,8 +22,7 @@
 	</div>
  
 	<!--SAVED USER TEXT --> 
- 	<div class = "col-xs-12 textArrays">
- 		<h4>Your saved placeholder text</h4>
+ 	<div ng-show = "controller.showText" class = "col-xs-12 textArrays">
  		<div class = "nothingHere" ng-hide = "controller.textPresent">
  			<p>Nothing here!</p>
  		</div>
@@ -43,8 +50,7 @@
  	</div>
 
 	<!--SAVED USER PHOTOS -->
- 	<div class = "col-xs-12 photoArrays">
- 		<h4>Your saved placeholder photos</h4>
+ 	<div ng-show = "controller.showPhoto" class = "col-xs-12 photoArrays">
  		 <div class = "nothingHere" ng-hide = "controller.photoPresent">
  			<p>Nothing here!</p>
  		</div>
