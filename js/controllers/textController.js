@@ -152,10 +152,40 @@
 			}, 1000);
 		}
 
+		//counter for the number of arrays selected to caluclate percentages
+		//when the user left the percentage input empty
+		vm.arrayCounter = function () {
+			vm.arrayCount = 0;
+			vm.form.percentage = [];
+
+			if (vm.form.textInput !== undefined && vm.form.percentage.textInput === undefined) {
+				vm.arrayCount ++;
+				if (vm.form.textInput.length === 0 && vm.form.percentage.textInput === undefined) {
+				vm.arrayCount --;
+				} 
+			}
+			if (vm.form.checkbox.loremInput === true && vm.form.percentage.loremInput === undefined) {
+				console.log(vm.form.percentage.loremInput);
+					vm.arrayCount ++;
+			} 
+			if (vm.form.checkbox.gibberishInput === true && vm.form.percentage.gibberishInput === undefined) {
+				vm.arrayCount ++;
+			} 
+			if (vm.form.checkbox.hipsterInput === true && vm.form.percentage.hipsterInput === undefined){
+				vm.arrayCount ++;
+			} 				
+			if (vm.form.checkbox.baconInput === true && vm.form.percentage.baconInput === undefined){
+				vm.arrayCount ++;
+			} 
+			console.log(vm.arrayCount);
+			return vm.arrayCount;
+		}
+
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()
 		vm.submit = function(){
-
+			vm.arrayCounter();
+			vm.defaultPercentage = 100/vm.arrayCount;
 			var objectTemplate = (function(array,percentage){
 			  this.array = array;
 			  this.percentage = percentage;
@@ -167,28 +197,57 @@
 				data = data.split(" ");
 				userArray.push(data);
 				userArray = _.flatten(userArray);
-
-				var obj = new objectTemplate (userArray, vm.form.percentage.textInput);
-				containerArray.push(obj);
+				if (vm.form.percentage.textInput === undefined) {
+					var obj = new objectTemplate(userArray, vm.defaultPercentage);
+					containerArray.push(obj);
+				}
+				else {
+					var obj = new objectTemplate(userArray, vm.form.percentage.loremInput);
+					containerArray.push(obj);
+				}	
 			}
 
-			if (vm.form.checkbox.loremInput === true){
-				var obj = new objectTemplate(loremArray, vm.form.percentage.loremInput);
-				containerArray.push(obj);
+			if (vm.form.checkbox.loremInput === true) {
+				if (vm.form.percentage.loremInput === undefined) {
+					var obj = new objectTemplate(loremArray, vm.defaultPercentage);
+					containerArray.push(obj);
+				}
+				else {
+					var obj = new objectTemplate(loremArray, vm.form.percentage.loremInput);
+					containerArray.push(obj);
+				}	
 			}
-			if (vm.form.checkbox.gibberishInput === true){
-				var obj = new objectTemplate(gibberishArray, vm.form.percentage.gibberishInput);
-				containerArray.push(obj);
+			if (vm.form.checkbox.gibberishInput === true) {
+				if (vm.form.percentage.gibberishInput === undefined) {
+					var obj = new objectTemplate(gibberishArray, vm.defaultPercentage);
+					containerArray.push(obj);
+				}
+				else {
+					var obj = new objectTemplate(gibberishArray, vm.form.percentage.loremInput);
+					containerArray.push(obj);
+				}	
 			}
-			if (vm.form.checkbox.hipsterInput === true){
-				var obj = new objectTemplate(hipsterArray, vm.form.percentage.hipsterInput);
-				containerArray.push(obj);
+			if (vm.form.checkbox.hipsterInput === true) {
+				if (vm.form.percentage.hipsterInput === undefined) {
+					var obj = new objectTemplate(hipsterArray, vm.defaultPercentage);
+					containerArray.push(obj);
+				}
+				else {
+					var obj = new objectTemplate(hipsterArray, vm.form.percentage.loremInput);
+					containerArray.push(obj);
+				}	
 			}
-			if (vm.form.checkbox.baconInput === true){
-				var obj = new objectTemplate(baconArray, vm.form.percentage.baconInput);
-				containerArray.push(obj);	
+			if (vm.form.checkbox.baconInput === true) {
+				if (vm.form.percentage.baconInput === undefined) {
+					var obj = new objectTemplate(baconArray, vm.defaultPercentage);
+					containerArray.push(obj);
+				}
+				else {
+					var obj = new objectTemplate(baconArray, vm.form.percentage.loremInput);
+					containerArray.push(obj);
+				}	
 			}
-
+			console.log(containerArray);
 			writeTextArray();
 		}
 
@@ -232,9 +291,7 @@
 			//sets containerArray to tempArray for further changes
 			var tempArray = JSON.parse(JSON.stringify(containerArray));
 			
-			// console.log("BEFORE:",JSON.stringify(tempArray));
 			tempArray = vm.calPercentage(tempArray,wordLength);
-			// console.log("AFTER",JSON.stringify(tempArray));
 
 			//mixes up the tempArray so everything is random, makes sure wordTotal 
 			//from output is equal to user input or default, pushes tempArray to
