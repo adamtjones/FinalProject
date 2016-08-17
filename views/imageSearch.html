@@ -22,7 +22,7 @@
 				</form>
 				<div class="form-group col-lg-4 col-md-12">
 					<form class="col-md-3 col-sm-12 form-inline" ng-submit="vm.savePhotos()">
-						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn" data-target=".modalSave">Save Images to Profile</button>
+						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
 					</form>
 				</div>
 	
@@ -63,9 +63,6 @@
 		</div>	
 	</form>
 
-
-	
-
 	<div class="results">
 		
 		<div class = "col-lg-3 col-md-12" ng-hide="searchResults">
@@ -102,8 +99,9 @@
 			<figcaption>{{vm.image4.width}}x{{vm.image4.height}}</figcaption>
 		</div>
 	</div>
-		<!-- ALERT -->
-	<div ng-show="controller.saved" class="saved alertFade">
+		
+	<!-- ALERT -->
+	<div ng-show="vm.saved" class="saved alertFade">
 		<img src ="images/logo.svg">
   		<span class = "alertFadeText"><h4>Saved!</h4></span>
 	</div>

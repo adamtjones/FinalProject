@@ -78,14 +78,10 @@
                 }
                  
                 var save = back.saveImage(savedPhotos);
-                save.then(function(response) {
-                    console.log(response);
                 
                 save.then(function(response) {
-                $('.modalSave').modal('hide');
-                vm.saved = true;
-                vm.alertFade();             
-            })
+                    vm.saved = true;
+                    vm.alertFade();             
                 })
             }
             
@@ -94,9 +90,7 @@
                 $(".alertFade").fadeTo(500, 0)
             }, 500);
             $timeout(function() {
-                vm.selected = false;
                 vm.saved = false;
-                vm.copied = false;
                 $(".alertFade").fadeTo(0, 500)
             }, 1000);
         }
