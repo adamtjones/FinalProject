@@ -14,7 +14,7 @@
 						<span>% of total:</span>
 				    </div>
 		    		<span>
-		    			<i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i>
+		    			<a href="#" data-toggle="tooltip" title="Save text to profile"><i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i></a>
 		    		</span>	
 		    	</label>	
 		    	<textarea class="form-control" id = "textInput" rows="5" ng-model= "controller.form.textInput"></textarea>
@@ -80,7 +80,9 @@
 				</div>
 				<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.submit()">Submit</button>
 				<button class="btn btn-default" ng-click = "controller.reset()">Reset</button>
-				<button class="btn btn-default random" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Let's get weird!</button>
+				<a href="#" data-toggle="tooltip" title="Random text generator">
+					<button class="btn btn-default random" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Let's get weird!</button>
+				</a>
 			</div>
 		</div>
 

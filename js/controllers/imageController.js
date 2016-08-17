@@ -79,7 +79,6 @@
                 var save = back.saveImage(savedPhotos);
                 save.then(function(response) {
                     vm.saved = true;
-                    console.log(vm.saved);
                     vm.alertFade();             
                 })
             }
@@ -94,5 +93,10 @@
                     $(".alertFade").fadeTo(0, 500)
                 }, 1000);
             }
+
+            // $(document).ready(function(){
+            //     $('[data-toggle="tooltip"]').tooltip(); 
+            // });
+
         });
 })();

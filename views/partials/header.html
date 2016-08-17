@@ -8,7 +8,10 @@
 			<li ng-show = "controller.loggedIn"><a ui-sref="profile">Profile</a</li>
 		</ul>
 		<div class = "welcome" ng-show = "controller.loggedIn">
-			<a ui-sref="profile"><span>oh hey </span>{{controller.user.userName}}!</a><i class="fa fa-sign-out" ng-click="controller.logout()"aria-hidden="true"></i>
+			<a ui-sref="profile"><span>oh hey </span>{{controller.user.userName}}!</a>
+			<a href="#" data-toggle="tooltip" title="Log Out">
+				<i class="fa fa-sign-out" ng-click="controller.logout()"aria-hidden="true">
+				</i></a>
 		</div>
 	</div>
 	<div class = "col-xs-12 leftColumn">

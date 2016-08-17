@@ -34,6 +34,11 @@
         	vm.userId = API.getUserId();
        	}	
 
+
+       	$(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+         });
+
         //gets users saved projects from backand
         var projects = back.getSavedInfo();
         projects.then(function(response) {

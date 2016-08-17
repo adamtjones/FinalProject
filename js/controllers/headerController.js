@@ -12,6 +12,10 @@
                 vm.loggedIn = true;
             }
 
+            $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            });
+
             var call = back.getUserInfo(API.getToken());
             call.then(function(data) {
                 vm.user = data.data.data[0];
