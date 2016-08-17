@@ -23,11 +23,6 @@
 				<div class="form-group col-lg-4 col-md-12">
 					<form class="col-md-3 col-sm-12 form-inline" ng-submit="vm.savePhotos()">
 						<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images to Profile</button>
-
-
-		
-
-
 					</form>
 				</div>
 	
@@ -77,24 +72,31 @@
 			<img src="{{vm.data.contentUrl}}">
 			<figcaption>{{vm.image1.width}}x{{vm.image1.height}}</figcaption>
 		</div>
+		<div class = "imgTag" clipboard supported="vm.supported" on-copied="vm.success(vm.data.contentUrl)" on-error="vm.fail(err)">
+	 		<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+	 	</div>
 		
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
 			<img src="http://placehold.it/250x250">
-			
 		</div>
 		<div class = "col-lg-4 col-md-12" ng-show="searchResults">
 			<img src="{{vm.data1.contentUrl}}">
 			<figcaption>{{vm.image2.width}}x{{vm.image2.height}}</figcaption>
 		</div>
+		<div class = "imgTag" clipboard supported="vm.supported" on-copied="vm.success(vm.data1.contentUrl)" on-error="vm.fail(err)">
+    		<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+    	</div>
 
 		<div class = "col-lg-4 col-md-12" ng-hide="searchResults">
-			<img src="http://placehold.it/400x400">
-			
+			<img src="http://placehold.it/400x400">			
 		</div>
 		<div class = "col-lg-4 col-md-12" ng-show="searchResults">
 			<img src="{{vm.data2.contentUrl}}">
 			<figcaption>{{vm.image3.width}}x{{vm.image3.height}}</figcaption>
 		</div>
+		<div class = "imgTag" clipboard supported="vm.supported" on-copied="vm.success(vm.data2.contentUrl)" on-error="vm.fail(err)">
+    		<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+    	</div>
 		<div class = "col-xs-12 check-element" ng-hide="searchResults">
 			<img src="http://placehold.it/600x600">
 			
@@ -103,6 +105,9 @@
 			<img src="{{vm.data3.contentUrl}}">
 			<figcaption>{{vm.image4.width}}x{{vm.image4.height}}</figcaption>
 		</div>
+		<div class = "imgTag" clipboard supported="vm.supported" on-copied="vm.success(vm.data3.contentUrl)" on-error="vm.fail(err)">
+    		<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+    	</div>
 	</div>
 		
 	<!-- ALERT -->
@@ -110,6 +115,10 @@
 		<img src ="images/logo.svg">
   		<span class = "alertFadeText"><h4>Saved!</h4></span>
 	</div>
+	<div ng-show="vm.copied" class="copied alertFade">
+ 		<img src ="images/logo.svg">
+   		<span class = "alertFadeText"><h4>Copied!</h4></span>
+ 	</div>
 </div>
 
 </main>

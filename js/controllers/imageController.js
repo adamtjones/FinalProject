@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('imageController', function(API, $location, $stateParams, back, $timeout) {
+        .controller('imageController', function(API, $location, $stateParams, back, $timeout, clipboard) {
             var vm = this;
 
             vm.image1 = [];
@@ -94,9 +94,21 @@
                 }, 1000);
             }
 
-            // $(document).ready(function(){
-            //     $('[data-toggle="tooltip"]').tooltip(); 
-            // });
+            //clipboard function so users can copy text
+            vm.supported = false;
+            vm.textToCopy = 'I can copy by clicking!';
+
+            vm.success = function (text) {
+
+                // var url = text;
+                // var imgTag = '<img src ="' + url + '">'
+                clipboard.copyText(text);          
+                    vm.copied = true;
+                    vm.alertFade(); 
+            };
+            vm.fail = function (err) {
+                console.error('Error!', err);
+            };
 
         });
 })();
