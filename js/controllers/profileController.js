@@ -109,6 +109,14 @@
                     vm.copied = true;
                     vm.alertFade(); 
             };
+
+            vm.success = function (text) {
+                // var url = text;
+                // var imgTag = '<img src ="' + url + '">'
+                clipboard.copyText(text);          
+                    vm.copied = true;
+                    vm.alertFade(); 
+            };
             vm.fail = function (err) {
                 console.error('Error!', err);
             };

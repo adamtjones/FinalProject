@@ -225,6 +225,9 @@
     .rowText .modalSave .modal-content i, .rowText .modal .modal-content i {
       float: right;
       margin-bottom: 10px; }
+      .rowText .modalSave .modal-content i:hover, .rowText .modal .modal-content i:hover {
+        cursor: pointer;
+        color: #ef143c; }
     .rowText .modalSave .modal-content .modal-body, .rowText .modal .modal-content .modal-body {
       padding-top: 10px; }
       .rowText .modalSave .modal-content .modal-body textarea, .rowText .modal .modal-content .modal-body textarea {
@@ -353,7 +356,7 @@ label {
   margin-top: 30px; }
   .rowHeader .leftColumn img {
     width: 25%;
-    min-width: 100px;
+    min-width: 85px;
     max-width: 125px;
     margin-top: -20px;
     margin-left: -5px; }
@@ -415,7 +418,7 @@ label {
 .rowRegister, .rowLogin {
   width: 50%;
   max-width: 550px;
-  min-width: 350px;
+  min-width: 325px;
   margin: 0px auto;
   margin-top: 20px;
   background-color: #fefbf7;
@@ -509,10 +512,10 @@ label {
           padding: 10px;
           margin-bottom: 5px;
           margin-top: 5px; }
-          .rowProfile .textArrays ul li .textArrayName .deleteItem {
+          .rowProfile .textArrays ul li .textArrayName .deleteItem, .rowProfile .textArrays ul li .textArrayName .copy {
             display: inline;
             padding-left: 10px; }
-            .rowProfile .textArrays ul li .textArrayName .deleteItem:hover {
+            .rowProfile .textArrays ul li .textArrayName .deleteItem:hover, .rowProfile .textArrays ul li .textArrayName .copy:hover {
               color: #ef143c;
               cursor: pointer; }
         .rowProfile .textArrays ul li .heartIcon {
