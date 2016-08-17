@@ -303,6 +303,10 @@
 			i {
 				float: right;
 				margin-bottom: 10px;
+				&:hover {
+					cursor: pointer;
+					color: $red;
+				}
 			}
 			.modal-body {
 				padding-top: 10px;

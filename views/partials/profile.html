@@ -40,6 +40,9 @@
  		     	   	<h3 class = "textArrayName">
  		            	<div class = "name">
  			                    {{projects.textArrayName}}
+ 			                <div class = "copy" clipboard supported="controller.supported" on-copied="controller.successText(projects.textArray)" on-error="controller.fail(err)">
+	 		    				<i class="fa fa-files-o" aria-hidden="true"></i>
+	 		    			</div>    
  			              	<div class = "deleteItem" ng-click = "controller.deleteItem(projects)">
  								<i class="fa fa-trash-o" aria-hidden="true"></i>
  							</div> 
