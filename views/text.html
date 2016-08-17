@@ -7,11 +7,11 @@
 		<!-- LEFT COLUMN -->
 		<div class = "col-sm-6 col-xs-12 enterSelectText">
 			<div class="form-group userText">
-		    	<label class = "userTextLabel" for="textInput">
+		    	<label class = "userTextLabel">
 		    		<span class = "enterText">Enter your text</span>
 			    	<div class="" ng-show = "controller.form.textInput">
-						<input type="number" class="form-control" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput">
-						<span>% of total:</span>
+						<input type="number" class="form-control textPercentInput" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput" />
+						<span>% of total: </span>
 				    </div>
 		    		<span>
 		    			<i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i>

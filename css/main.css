@@ -32,7 +32,9 @@
             margin-bottom: 2px;
             float: right;
             height: 25px;
-            margin-left: 10px; }
+            margin-left: 10px;
+            padding-top: 2px;
+            padding-bottom: 0px; }
       .rowText .enterSelectText .userText .saveButton {
         cursor: pointer;
         margin-left: 10px; }
@@ -354,6 +356,10 @@ label {
   background-color: #fefbf7;
   padding-top: 25px;
   margin-top: 30px; }
+  .rowHeader .leftColumn a:hover {
+    text-decoration: none; }
+  .rowHeader .leftColumn a:focus {
+    outline: none; }
   .rowHeader .leftColumn img {
     width: 25%;
     min-width: 85px;
