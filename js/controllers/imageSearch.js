@@ -73,12 +73,10 @@
                     savedImage3Width: vm.image3.width,
                     savedImage3Height: vm.image3.height,
                     savedImage4Width: vm.image3.width,
-                    savedImage4Height: vm.image4.height,
-                       
-                }
-                 
-                var save = back.saveImage(savedPhotos);
+                    savedImage4Height: vm.image4.height,       
+                } 
                 
+                var save = back.saveImage(savedPhotos);
                 save.then(function(response) {
                     vm.saved = true;
                     vm.alertFade();             

@@ -2,7 +2,21 @@
 	padding-top: 20px;
 	margin-top: 20px;
 	padding-bottom: 20px;
-	background-color: $offWhite;	
+	background-color: $offWhite;
+	.textTitle {
+		font-family: $titleFont;
+		font-size: 45px;
+		color: $offWhite;
+		background-color: $gray;
+		border-top: 3px solid $red;
+		border-bottom: 3px solid $red;
+		padding-bottom: 10px;
+
+		text-align: center;
+		.title {
+			text-align: center;
+		}
+	}	
 	
 	// LEFT COLUMN
 	.enterSelectText {
@@ -307,11 +321,4 @@
 		}	
 	}
 		
-}
-.textTips {
-	margin-left:15px;
-	margin-top:-20px;
-	padding-bottom:0px;
-	margin-bottom:-20px;
-	padding-top:0px;
 }
