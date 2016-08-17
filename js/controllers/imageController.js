@@ -90,6 +90,7 @@
                 }, 500);
                 $timeout(function() {
                     vm.saved = false;
+                    vm.copied = false;
                     $(".alertFade").fadeTo(0, 500)
                 }, 1000);
             }
@@ -99,10 +100,9 @@
             vm.textToCopy = 'I can copy by clicking!';
 
             vm.success = function (text) {
-
-                // var url = text;
-                // var imgTag = '<img src ="' + url + '">'
-                clipboard.copyText(text);          
+                var url = text;
+                var imgTag = '<img src ="' + url + '">'
+                clipboard.copyText(imgTag);          
                     vm.copied = true;
                     vm.alertFade(); 
             };

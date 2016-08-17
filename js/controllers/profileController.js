@@ -113,9 +113,7 @@
                     vm.alertFade(); 
             };
 
-            vm.success = function (text) {
-                // var url = text;
-                // var imgTag = '<img src ="' + url + '">'
+            vm.successText = function (text) {
                 clipboard.copyText(text);          
                     vm.copied = true;
                     vm.alertFade(); 
@@ -125,5 +123,4 @@
             };
 
         });
-       
 })();
