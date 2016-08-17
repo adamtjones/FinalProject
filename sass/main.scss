@@ -6,13 +6,13 @@ $offWhite: #fefbf7;
 $green: #1D9E74;
 
 @import "text";
-@import "imageSearch";
 @import "animations";
 @import "header";
 @import "registerLogin";
 @import "profile";
 @import "alerts";
 @import "tooltip";
+@import "images";
 
 body {
 	background-color: $red;

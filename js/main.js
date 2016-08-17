@@ -21,9 +21,9 @@
                         controllerAs: 'controller'
                     },
                     'imageSearch': {
-                        templateUrl: '../views/imageSearch.html',
+                        templateUrl: '../views/image.html',
                         controller: 'imageController',
-                        controllerAs: 'vm',  
+                        controllerAs: 'controller',  
                     },
                     'header': {
                         templateUrl: '../views/partials/header.html',

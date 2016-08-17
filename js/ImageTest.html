@@ -1,0 +1,26 @@
+		
+								
+					</div>
+				</div>	
+			</form>
+			<div class="form-group">
+				<form ng-submit="vm.savePhotos()">
+					<button class="btn btn-default" id="save" ng-show = "vm.loggedIn">Save Images</button>
+				</form>
+			</div>
+		</form>
+
+	
+
+	
+		
+	<!-- ALERT -->
+	<div ng-show="controller.saved" class="saved alertFade">
+		<img src ="images/logo.svg">
+  		<span class = "alertFadeText"><h4>Saved!</h4></span>
+	</div>
+	<div ng-show="controller.copied" class="copied alertFade">
+ 		<img src ="images/logo.svg">
+   		<span class = "alertFadeText"><h4>Copied!</h4></span>
+ 	</div>
+</div>

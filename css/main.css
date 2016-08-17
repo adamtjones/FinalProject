@@ -245,84 +245,6 @@
         border: 1px solid #444444 !important;
         background-color: #fefbf7 !important; }
 
-.rowImageSearch {
-  background-color: #fefbf7;
-  padding-top: 20px;
-  margin-top: 20px;
-  padding-bottom: 20px; }
-  .rowImageSearch .imageTitle {
-    font-family: "Rochester", cursive;
-    font-size: 40px;
-    color: #fefbf7;
-    background-color: #444444;
-    border-top: 3px solid #ef143c;
-    border-bottom: 3px solid #ef143c;
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    text-align: center; }
-    .rowImageSearch .imageTitle .title {
-      text-align: center; }
-  .rowImageSearch form {
-    padding-bottom: 20px;
-    padding-left: 0px; }
-    .rowImageSearch form .searchBox {
-      width: 14%; }
-    .rowImageSearch form .custom {
-      margin-top: 20px; }
-  .rowImageSearch .results {
-    padding: 0px; }
-    .rowImageSearch .results img {
-      margin: 0px auto;
-      padding-bottom: 20px; }
-
-.results img {
-  max-width: 100%; }
-
-label {
-  font-weight: 400; }
-
-.customSize {
-  padding-top: 20px; }
-
-.form-group {
-  padding-bottom: 20px; }
-
-.image-fields label {
-  width: 100%; }
-
-.bullet {
-  list-style-type: none; }
-
-.imageButtons {
-  display: block;
-  padding-left: 0px;
-  margin-left: -10px; }
-
-#custom {
-  margin-top: 0px;
-  border: 2px solid black;
-  margin-left: 10px;
-  margin-right: 0px;
-  width: 200px;
-  margin-bottom: 5px;
-  text-align: center; }
-
-#submit {
-  width: 100px; }
-
-#save {
-  margin-top: 0px; }
-
-#searchBox {
-  width: 200px; }
-
-.form-control {
-  border: 2px solid red; }
-
-.toolTips {
-  margin-left: 15px;
-  padding-bottom: 20px; }
-
 @keyframes fadeIn {
   0% {
     transform: scale(0);
@@ -648,6 +570,87 @@ label {
 
 .copy + .tooltip > .tooltip-arrow {
   border-bottom-color: #2b2b2b; }
+
+.rowImageSearch {
+  background-color: #fefbf7;
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px; }
+  .rowImageSearch .imageTitle {
+    font-family: "Rochester", cursive;
+    font-size: 40px;
+    color: #fefbf7;
+    background-color: #444444;
+    border-top: 3px solid #ef143c;
+    border-bottom: 3px solid #ef143c;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center; }
+    .rowImageSearch .imageTitle .title {
+      text-align: center; }
+    .rowImageSearch .imageTitle .savePhotos form button {
+      z-index: 1000;
+      position: absolute;
+      font-family: "Reem Kufi", sans-serif;
+      top: 100px;
+      right: 15px; }
+  .rowImageSearch form .search {
+    padding-bottom: 20px; }
+    .rowImageSearch form .search .searchBox input {
+      width: 250px !important;
+      margin-right: 10px; }
+    .rowImageSearch form .search .customDrop {
+      margin-right: 10px;
+      font-size: 15px; }
+    .rowImageSearch form .search .searchButton {
+      color: #444444; }
+  .rowImageSearch form .showImageSize {
+    text-align: center; }
+    .rowImageSearch form .showImageSize .imageSize {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .rowImageSearch form .showImageSize .imageSize h4 {
+        background-color: #444444;
+        color: #fefbf7;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+      .rowImageSearch form .showImageSize .imageSize h5 {
+        margin: 0px;
+        padding-top: 5px;
+        float: left; }
+      .rowImageSearch form .showImageSize .imageSize p {
+        font-size: 20px;
+        text-align: left;
+        padding-left: 48%; }
+  .rowImageSearch .searchResults {
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px; }
+    .rowImageSearch .searchResults h4 {
+      margin-top: 0px;
+      background-color: #444444;
+      color: #fefbf7;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .rowImageSearch .searchResults img {
+      max-width: 100%;
+      margin: 0px auto;
+      display: block; }
+    .rowImageSearch .searchResults .imgTag, .rowImageSearch .searchResults .imageSizeLink {
+      cursor: pointer;
+      display: block; }
+      .rowImageSearch .searchResults .imgTag :hover, .rowImageSearch .searchResults .imageSizeLink :hover {
+        color: #ef143c;
+        /* transitions and animations */
+        -webkit-transition: color .5s ease;
+        -moz-transition: color .5s ease;
+        -ms-transition: color .5s ease;
+        -o-transition: color .5s ease;
+        transition: color .5s ease; }
+      .rowImageSearch .searchResults .imgTag a, .rowImageSearch .searchResults .imageSizeLink a {
+        text-decoration: none;
+        color: #444444; }
 
 body {
   background-color: #ef143c;

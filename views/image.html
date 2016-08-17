@@ -1,0 +1,140 @@
+<div class="row rowImageSearch">
+	<div class = "col-xs-12 imageTitle">
+		<span class = "title">&#60;!-- filler images --&#62;</span>
+		<span class="form-group savePhotos">
+			<form ng-submit="controller.savePhotos()">
+				<button class="btn btn-default" id="save" ng-show = "controller.loggedIn && controller.searchResults">Save Images</button>
+			</form>
+		</span>
+	</div>
+	<form ng-submit="controller.search()">
+  		<div class = "search form-inline col-xs-12">
+	  		<div class="searchBox form-group">
+	    		<input type="text" class="form-control" placeholder="Image search" ng-model= "controller.getInfo">
+	    	</div>	
+	  		<div class = "customDrop form-group">
+	  			<div aria-haspopup="true" aria-expanded="false" ng-click= "vis = !vis">Custom Image Sizes <span class="caret"></span></div>
+	  		</div>
+	  		<button type="submit" class="btn btn-primary searchButton">Search</button>
+	  	</div>	
+  		
+  		<div class = "showImageSize" ng-show="vis">
+  			<div class="imageSize col-sm-3 col-xs-6">
+  				<h4>Image 1</h4>
+				<input class="form-control" id = "width" type = "number" ng-model="controller.image1.width"></input>
+				<h5>width in px</h5>
+				<p>x</p>
+				<input class="form-control" type = "number" ng-model="controller.image1.height" ></input>
+				<h5>height in px</h5>
+			</div>
+  			<div class="imageSize col-sm-3 col-xs-6">
+  				<h4>Image 2</h4>
+				<input class="form-control" id = "width" type = "number" ng-model="controller.image2.width"></input>
+				<h5>width in px</h5>
+				<p>x</p>
+				<input class="form-control" type = "number" ng-model="controller.image2.height" ></input>
+				<h5>height in px</h5>
+			</div>
+  			<div class="imageSize col-sm-3 col-xs-6">
+  				<h4>Image 3</h4>
+				<input class="form-control" id = "width" type = "number" ng-model="controller.image3.width"></input>
+				<h5>width in px</h5>
+				<p>x</p>
+				<input class="form-control" type = "number" ng-model="controller.image3.height" ></input>
+				<h5>height in px</h5>
+			</div>
+  			<div class="imageSize col-sm-3 col-xs-6">
+  				<h4>Image 4</h4>
+				<input class="form-control" id = "width" type = "number" ng-model="controller.image4.width"></input>
+				<h5>width in px</h5>
+				<p>x</p>
+				<input class="form-control" type = "number" ng-model="controller.image4.height" ></input>
+				<h5>height in px</h5>
+			</div>										
+  		</div>						
+	</form>
+
+	<div class="searchResults col-xs-12">
+		<div class = "col-sm-4 col-xs-6 m-b-10" ng-hide="controller.searchResults">
+			<h4>Image 1</h4>			
+			<img src="http://placehold.it/125x125">
+		</div>
+		<div class = "col-sm-4 col-xs-6 m-b-10" ng-show="controller.searchResults">
+			<h4>Image 1</h4>
+			<img src="{{controller.data.contentUrl}}">
+			<div class = "imageSizeLink">
+	 			<a href = "{{controller.data.contentUrl}}" target="_blank">
+	 				{{controller.image1.width}}<span class = "x">x</span>{{controller.image1.height}}
+		 			<span class = "imageLink">view image</span>
+		 		</a>
+	 		</div>
+			<div class = "imgTag" clipboard supported="controller.supported" on-copied="controller.success(controller.data.contentUrl)" on-error="controller.fail(err)">
+	 			<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+	 		</div>
+		</div>
+		
+		<div class = "col-sm-4 col-xs-6 m-b-10" ng-hide="controller.searchResults">
+			<h4>Image 2</h4>
+			<img src="http://placehold.it/250x250">
+		</div>
+		<div class = "col-sm-4 col-xs-6 m-b-10" ng-show="controller.searchResults">
+			<h4>Image 2</h4>		
+			<img src="{{controller.data1.contentUrl}}">
+			<div class = "imageSizeLink">
+	 			<a href = "{{controller.data1.contentUrl}}" target="_blank">
+	 				{{controller.image2.width}}<span class = "x">x</span>{{controller.image2.height}}
+		 			<span class = "imageLink">view image</span>
+		 		</a>
+	 		</div>
+			<div class = "imgTag" clipboard supported="controller.supported" on-copied="controller.success(controller.data1.contentUrl)" on-error="controller.fail(err)">
+    			<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+    		</div>
+		</div>
+
+		<div class = "col-sm-4 col-xs-12 m-b-10" ng-hide="controller.searchResults">
+			<h4>Image 3</h4>	
+			<img src="http://placehold.it/400x400">			
+		</div>
+		<div class = "col-sm-4 col-xs-12 m-b-10" ng-show="controller.searchResults">
+			<h4>Image 3</h4>			
+			<img src="{{controller.data2.contentUrl}}">
+			<div class = "imageSizeLink">
+	 			<a href = "{{controller.data2.contentUrl}}" target="_blank">
+	 				{{controller.image3.width}}<span class = "x">x</span>{{controller.image3.height}}
+		 			<span class = "imageLink">view image</span>
+		 		</a>
+	 		</div>
+			<div class = "imgTag" clipboard supported="controller.supported" on-copied="controller.success(controller.data2.contentUrl)" on-error="controller.fail(err)">
+    			<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+    		</div>		
+		</div>
+		<div class = "col-sm-6 col-xs-12 m-b-10" ng-hide="controller.searchResults">
+			<h4>Image 4</h4>
+			<img src="http://placehold.it/600x600">
+		</div>
+		<div class = "col-sm-6 col-xs-12 m-b-10" ng-show="controller.searchResults">
+			<h4>Image 4</h4>			
+			<img src="{{controller.data3.contentUrl}}">
+			<div class = "imageSizeLink">
+	 			<a href = "{{controller.data3.contentUrl}}" target="_blank">
+	 				{{controller.image4.width}}<span class = "x">x</span>{{controller.image4.height}}
+		 			<span class = "imageLink">view image</span>
+		 		</a>
+	 		</div>
+			<div class = "imgTag" clipboard supported="controller.supported" on-copied="controller.success(controller.data3.contentUrl)" on-error="controller.fail(err)">
+    			<i class="fa fa-files-o" aria-hidden="true"></i><span class = "tag"> &lt;copy img tag&gt;</span>
+    		</div>
+		</div>
+	</div>
+	
+	<!-- ALERTS -->
+	<div ng-show="controller.saved" class="saved alertFade">
+		<img src ="images/logo.svg">
+  		<span class = "alertFadeText"><h4>Saved!</h4></span>
+	</div>
+	<div ng-show="controller.copied" class="copied alertFade">
+ 		<img src ="images/logo.svg">
+   		<span class = "alertFadeText"><h4>Copied!</h4></span>
+ 	</div>	
+
+</div>	
