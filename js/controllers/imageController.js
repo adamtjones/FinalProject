@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('imageSearchController', function(API, $location, $stateParams, back, $timeout) {
+        .controller('imageController', function(API, $location, $stateParams, back, $timeout) {
             var vm = this;
 
             vm.image1 = [];
@@ -25,8 +25,8 @@
 
             //shows slightly different features when user is logged in
             var loggedIn = false;
-                if(API.getToken() !== null) {
-                    vm.loggedIn = true;
+            if(API.getToken() !== null) {
+                vm.loggedIn = true;
             }
 
             vm.search = function() {
@@ -79,18 +79,20 @@
                 var save = back.saveImage(savedPhotos);
                 save.then(function(response) {
                     vm.saved = true;
+                    console.log(vm.saved);
                     vm.alertFade();             
                 })
             }
             
             vm.alertFade = function () {
-            $timeout(function() {
-                $(".alertFade").fadeTo(500, 0)
-            }, 500);
-            $timeout(function() {
-                vm.saved = false;
-                $(".alertFade").fadeTo(0, 500)
-            }, 1000);
-        }
+                console.log("alertFade");
+                $timeout(function() {
+                    $(".alertFade").fadeTo(500, 0)
+                }, 500);
+                $timeout(function() {
+                    vm.saved = false;
+                    $(".alertFade").fadeTo(0, 500)
+                }, 1000);
+            }
         });
 })();

@@ -5,7 +5,7 @@
 	background-color: $offWhite;
 	.textTitle {
 		font-family: $titleFont;
-		font-size: 45px;
+		font-size: 40px;
 		color: $offWhite;
 		background-color: $gray;
 		border-top: 3px solid $red;
@@ -45,6 +45,9 @@
 			.saveButton {
 				cursor: pointer;
 				margin-left: 10px;
+				&:hover {
+					color: $red;
+				}
 			}
 		}	
 		.standardLorems {
@@ -92,7 +95,7 @@
 		}
 		.standardLoremPercentages {
 			padding-left: 0px;
-			padding-right: 0px;			
+			padding-right: 0px;		
 			h4 {
 				color: $offWhite;
 				background-color: $gray;
@@ -116,12 +119,14 @@
 			}
 		}	
 		.wordTotalSubmit {
-			margin-left: -15px;
+			padding-left: 0px;
 			.wordTotal {
-				margin-top: 25px;
+				padding-top: 10px;
+				padding-bottom: 20px;
 				input {
-					width: 20%;
-					min-width:40px;
+					width: 18%;
+					max-width: 70px;
+					min-width: 65px;
 					display: inline-block;
 					margin-left: 5px;
 				}

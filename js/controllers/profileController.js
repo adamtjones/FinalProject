@@ -18,6 +18,10 @@
                 $location.path('home');   
             };
 
+           if(API.getUserId() === null) {
+            $state.go('login');
+           }
+
             //gets users saved projects from backand
             var projects = back.getSavedInfo();
             projects.then(function(response) {

@@ -22,7 +22,7 @@
                     },
                     'imageSearch': {
                         templateUrl: '../views/imageSearch.html',
-                        controller: 'imageSearchController',
+                        controller: 'imageController',
                         controllerAs: 'vm',  
                     },
                     'header': {

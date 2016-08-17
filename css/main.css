@@ -5,7 +5,7 @@
   background-color: #fefbf7; }
   .rowText .textTitle {
     font-family: "Rochester", cursive;
-    font-size: 45px;
+    font-size: 40px;
     color: #fefbf7;
     background-color: #444444;
     border-top: 3px solid #ef143c;
@@ -36,6 +36,8 @@
       .rowText .enterSelectText .userText .saveButton {
         cursor: pointer;
         margin-left: 10px; }
+        .rowText .enterSelectText .userText .saveButton:hover {
+          color: #ef143c; }
     .rowText .enterSelectText .standardLorems {
       padding-left: 0px;
       padding-right: 0px; }
@@ -86,12 +88,14 @@
       .rowText .enterSelectText .standardLoremPercentages #hipsterPercentInput {
         margin-bottom: 23px; }
     .rowText .enterSelectText .wordTotalSubmit {
-      margin-left: -15px; }
+      padding-left: 0px; }
       .rowText .enterSelectText .wordTotalSubmit .wordTotal {
-        margin-top: 25px; }
+        padding-top: 10px;
+        padding-bottom: 20px; }
         .rowText .enterSelectText .wordTotalSubmit .wordTotal input {
-          width: 20%;
-          min-width: 40px;
+          width: 18%;
+          max-width: 70px;
+          min-width: 65px;
           display: inline-block;
           margin-left: 5px; }
       .rowText .enterSelectText .wordTotalSubmit button {
@@ -242,7 +246,7 @@
   padding-bottom: 20px; }
   .rowImageSearch .imageTitle {
     font-family: "Rochester", cursive;
-    font-size: 45px;
+    font-size: 40px;
     color: #fefbf7;
     background-color: #444444;
     border-top: 3px solid #ef143c;
@@ -347,25 +351,24 @@ label {
   background-color: #fefbf7;
   padding-top: 25px;
   margin-top: 30px; }
-  .rowHeader .leftColumn {
-    padding-bottom: 12px; }
-    .rowHeader .leftColumn svg {
-      width: 25%;
-      margin-top: -26px;
-      margin-left: -20px;
-      min-width: 95px; }
-    .rowHeader .leftColumn h1 {
-      margin-left: -10px;
-      font-family: "Rochester", cursive;
-      font-size: 60px;
-      color: #444444;
-      display: inline-block;
-      vertical-align: top; }
-      .rowHeader .leftColumn h1 .blinkingLine {
-        border-left: 1px solid #444444;
-        display: inline;
-        font-size: 50px;
-        animation: 1.75s blink infinite; }
+  .rowHeader .leftColumn img {
+    width: 25%;
+    min-width: 100px;
+    max-width: 125px;
+    margin-top: -20px;
+    margin-left: -5px; }
+  .rowHeader .leftColumn h1 {
+    margin-left: -10px;
+    font-family: "Rochester", cursive;
+    font-size: 60px;
+    color: #444444;
+    display: inline-block;
+    vertical-align: top; }
+    .rowHeader .leftColumn h1 .blinkingLine {
+      border-left: 1px solid #444444;
+      display: inline;
+      font-size: 50px;
+      animation: 1.75s blink infinite; }
   .rowHeader .rightColumn .fa-bars {
     font-size: 25px;
     float: right;
@@ -373,14 +376,14 @@ label {
     color: #444444;
     cursor: pointer; }
   .rowHeader .rightColumn .menuList {
+    z-index: 1000;
+    position: absolute;
+    right: 15px;
     animation: 2s fadeIn;
-    float: right;
     padding: 10px;
     list-style-type: none;
     background-color: #444444;
-    margin-right: -22px;
     margin-top: 15px;
-    font-family: "Reem Kufi", sans-serif;
     font-size: 18px;
     margin-left: 5px; }
     .rowHeader .rightColumn .menuList li a {
@@ -388,26 +391,30 @@ label {
       color: #fefbf7; }
     .rowHeader .rightColumn .menuList li :hover {
       text-decoration: none; }
-  .rowHeader .rightColumn .welcome h4 {
+  .rowHeader .rightColumn .welcome {
     margin-top: -14px;
     float: right;
     margin-right: 15px; }
-    .rowHeader .rightColumn .welcome h4 i {
+    .rowHeader .rightColumn .welcome span {
+      color: #444444; }
+    .rowHeader .rightColumn .welcome a:hover {
+      text-decoration: none; }
+    .rowHeader .rightColumn .welcome i {
       margin-left: 5px;
       cursor: pointer; }
-  .rowHeader .rightColumn h3 {
+  .rowHeader .tag h3 {
     text-align: right;
     font-family: "Rochester", cursive;
-    font-size: 34px;
-    margin-top: 75px; }
-    .rowHeader .rightColumn h3 span {
+    font-size: 35px;
+    margin-top: -10px; }
+    .rowHeader .tag h3 span {
       color: #ef143c; }
-      .rowHeader .rightColumn h3 span .fa-heart {
+      .rowHeader .tag h3 span .fa-heart {
         font-size: 28px; }
 
 .rowRegister, .rowLogin {
   width: 50%;
-  max-width: 450px;
+  max-width: 550px;
   min-width: 350px;
   margin: 0px auto;
   margin-top: 20px;
@@ -585,16 +592,19 @@ label {
   border-radius: 5px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
   color: #ef143c;
-  height: 25%;
+  width: 175px;
   z-index: 900;
   position: fixed;
-  left: 45%;
+  left: 50%;
+  margin-left: -87.5px;
   top: 25%; }
   .alertFade img {
     height: 100%;
-    margin: 0px auto; }
+    margin: 0px auto;
+    display: block; }
   .alertFade .alertFadeText {
-    display: inline-block; }
+    display: inline;
+    text-align: center; }
 
 body {
   background-color: #ef143c;
@@ -614,3 +624,9 @@ body {
   .rowProfile .photoArrays .images img {
     width: 150px;
     height: 150px; } }
+
+@media only screen and (max-width: 600px) {
+  .rowHeader {
+    padding-bottom: 10px; }
+    .rowHeader .tag {
+      display: none; } }

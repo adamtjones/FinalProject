@@ -161,6 +161,18 @@
 			}, 1000);
 		}
 
+		//performs a soft reload when the reset function is called
+		vm.reset = function() {
+			$state.reload();
+		};
+
+		//calls the reset function when the text modal is closed
+		$('#modal').on('hidden.bs.modal', function (e) {
+ 			$timeout(function() {
+				vm.reset();
+			}, 500);
+		})
+
 		//counter for the number of arrays selected to caluclate percentages
 		//when the user left the percentage input empty
 		vm.arrayCounter = function () {
@@ -317,16 +329,6 @@
 			vm.form.textOutput = "";
 			vm.form.textOutput = finalArray.join(" ");
 		};
-
-		//performs a soft reload when the reset function is called
-		vm.reset = function() {
-			$state.reload();
-		};
-
-		//calls the reset function when the text modal is closed
-		$('#modal').on('hidden.bs.modal', function (e) {
- 			vm.reset();
-		})
 
 		//gets random text based with word count when the random button is clicked
 		vm.random = function() { 

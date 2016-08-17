@@ -4,12 +4,12 @@
 	padding-top: 25px;
 	margin-top: 30px;
 	.leftColumn {
-		padding-bottom: 12px;
-		svg {
+		img {
 			width: 25%;
-			margin-top: -26px;
-			margin-left: -20px;
-			min-width: 95px;
+			min-width: 100px;
+			max-width: 125px;
+			margin-top: -20px;
+			margin-left: -5px;
 		}
 		h1 {
 			margin-left: -10px;
@@ -36,14 +36,14 @@
 			cursor: pointer;
 		}
 		.menuList {
+			z-index: 1000;
+			position: absolute;
+			right: 15px;
 			animation: 2s fadeIn;
-			float: right;
 			padding: 10px;
 			list-style-type: none;
 			background-color: $gray;
-			margin-right: -22px;
 			margin-top: 15px;
-			font-family: $bodyFont;
 			font-size: 18px;
 			margin-left: 5px;
 
@@ -58,21 +58,30 @@
 			}			
 		}
 		.welcome {
-			h4 {
-				margin-top: -14px;
-				float: right;
-				margin-right: 15px;
-				i {
-					margin-left: 5px;
-					cursor: pointer;
+			margin-top: -14px;
+			float: right;
+			margin-right: 15px;
+			span {
+				color: $gray;
+			}
+			a {
+				&:hover {
+					text-decoration: none;
 				}
 			}
+			i {
+				margin-left: 5px;
+				cursor: pointer;
+			}
 		}	
+	}
+
+	.tag {
 		h3 {
 			text-align: right;
 			font-family: $titleFont;
-			font-size: 34px;
-			margin-top: 75px;
+			font-size: 35px;
+			margin-top: -10px;
 			span {
 				color: $red;
 				.fa-heart {

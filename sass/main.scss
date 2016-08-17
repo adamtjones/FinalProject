@@ -43,4 +43,13 @@ body {
 		}
 	}
 }
+@media only screen and (max-width: 600px) {
+	.rowHeader {
+		padding-bottom: 10px;
+		.tag {
+			display: none;
+		}
+	}
+
+}
 
