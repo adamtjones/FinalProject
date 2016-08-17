@@ -1,11 +1,11 @@
 <div class = "row rowProfile">
 	<div class = "col-xs-12 navLinks">
 		<ul>
+			<li ng-class = "{active: controller.showInfo}" ng-click="controller.showInfo = !controller.showInfo; controller.showText = false; controller.showPhoto = false">My Info</li>		
+		   	<span> | </span>		    
 		    <li ng-class = "{active: controller.showText}" ng-click="controller.showText = !controller.showText; controller.showInfo = false; controller.showPhoto = false">Saved Texts</li>
 		    <span> | </span>
-		    <li ng-class = "{active: controller.showPhoto}" ng-click="controller.showPhoto = !controller.showPhoto; controller.showInfo = false; controller.showText = false">Saved Photos</li>	
-		   	<span> | </span>
-		    <li ng-class = "{active: controller.showInfo}" ng-click="controller.showInfo = !controller.showInfo; controller.showText = false; controller.showPhoto = false">My Info</li>		   		    
+		    <li ng-class = "{active: controller.showPhoto}" ng-click="controller.showPhoto = !controller.showPhoto; controller.showInfo = false; controller.showText = false">Saved Images</li>
 		</ul>
 	</div>
 
@@ -17,6 +17,7 @@
 			<input class="form-control m-b-10" type="text" ng-model="controller.form.email" required>
 			<input class="form-control m-b-10" type="text" ng-model="controller.form.userName" required>
 			<input class="form-control m-b-10" type="password" ng-model="controller.form.password" required>
+			<span class = "logout" ng-click = "controller.logout()">Log out :-(</span>
 			<button class = "btn btn-default" type="submit">Update</button>
 		</form>
 	</div>
@@ -31,7 +32,7 @@
  				<span class = "blinkingLine">
  				</span>
  			</span> 
- 			text & photos to use later.</p>
+ 			text & images to use later.</p>
  		</div>
  		<ul> 
  			<li ng-show = "projects.textArrayName" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
@@ -66,7 +67,7 @@
  				<span class = "blinkingLine">
  				</span>
  			</span> 
- 			text & photos to use later.</p>
+ 			text & images to use later.</p>
  		</div>
  		<div ng-show = "projects.savedImage1" ng-repeat = "projects in controller.projects | orderBy:'-dateTime'">
 			<h3 class = "photoSearchName">

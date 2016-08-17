@@ -1,5 +1,5 @@
 .rowProfile{
-	padding-top: 50px;
+	// padding-top: 50px;
 	margin-top: 20px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -9,10 +9,10 @@
 	.navLinks {
 		padding: 0px;
 		padding-top:15px;
-		padding-bottom: 15px;
 		ul {
 			padding: 0px;
 			list-style-type: none;
+					float: right;
 			li {
 				display: inline-block;
 				cursor: pointer;
@@ -56,13 +56,26 @@
 	// USER INFO
 	.userInfo {
 		padding: 0px;
+		padding-top: 8px;
 		padding-bottom: 20px;
 		form {
 			width: 50%;
 			max-width: 425px;
 			min-width: 275px;
 			margin: 0px auto;
-			display: block;	
+			display: block;
+			.logout {
+				font-size: 15px;
+				color: #337ab7;
+				&:hover {
+					color: #23527c;
+    				text-decoration: underline;
+    				cursor: pointer;
+				}
+			}
+			button {
+				float: right;
+			}
 		}
 	}
 
@@ -85,25 +98,9 @@
 					.deleteItem {
 						display: inline;
 						padding-left: 10px;
-				  		.name:hover{
-					  		color: $red;
-					  		cursor: pointer;
-							/* transitions and animations */
-							-webkit-transition: color .5s ease;
-							-moz-transition: color .5s ease;
-							-ms-transition: color .5s ease;
-							-o-transition: color .5s ease;
-							transition: color .5s ease;		
-				  			i {
-					  			color: $green;
-					  			cursor: pointer;
-								/* transitions and animations */
-								-webkit-transition: color .5s ease;
-								-moz-transition: color .5s ease;
-								-ms-transition: color .5s ease;
-								-o-transition: color .5s ease;
-								transition: color .5s ease;
-							}	
+						&:hover {
+							color: $red;
+							cursor: pointer;
 						}
 					}
 				}
@@ -141,17 +138,23 @@
 		padding: 0px;
 		padding-bottom: 20px;
 		.photoSearchName {
-			margin-top: 10px;
+			margin-top: 0px;
+			margin-bottom: 0px;
 			.deleteItem {
 				display: inline;
+				padding-left: 10px;
+				&:hover {
+					color: $red;
+					cursor: pointer;
+				}
 			}
 		}
 		.images {
 			padding: 0px;
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 			text-align: center;
 			img {
-				padding-top: 20px;
+				padding-top: 10px;
 				width: 200px;
 				height: 200px;
 				margin: 0px auto;

@@ -3,16 +3,20 @@
 
     angular
         .module('flowers')
-        .controller('profileController', function(API, $state, back, clipboard, $timeout) {
+        .controller('profileController', function(API, $state, back, clipboard, $timeout, $location) {
             var vm = this;
             
-            vm.showText = true;
-            vm.showPhoto = false;
-            vm.showInfo = false;            
-
+            vm.showInfo = false; 
+            vm.showText = false;
+            vm.showPhoto = true;
+                       
             vm.userId = API.getUserId();
             vm.textCounter = 0;
             vm.photoCounter = 0;
+
+            vm.logout = function() {
+                $location.path('home');   
+            };
 
             //gets users saved projects from backand
             var projects = back.getSavedInfo();

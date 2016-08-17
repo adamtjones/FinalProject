@@ -1,5 +1,7 @@
 .rowRegister, .rowLogin {
 	width: 50%;
+	max-width: 450px;
+	min-width: 350px;
 	margin: 0px auto;	
 	margin-top: 20px;
 	background-color: $offWhite;

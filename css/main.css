@@ -407,6 +407,8 @@ label {
 
 .rowRegister, .rowLogin {
   width: 50%;
+  max-width: 450px;
+  min-width: 350px;
   margin: 0px auto;
   margin-top: 20px;
   background-color: #fefbf7;
@@ -425,7 +427,6 @@ label {
     margin-left: 5px; }
 
 .rowProfile {
-  padding-top: 50px;
   margin-top: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -433,11 +434,11 @@ label {
   background-color: #fefbf7; }
   .rowProfile .navLinks {
     padding: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px; }
+    padding-top: 15px; }
     .rowProfile .navLinks ul {
       padding: 0px;
-      list-style-type: none; }
+      list-style-type: none;
+      float: right; }
       .rowProfile .navLinks ul li {
         display: inline-block;
         cursor: pointer; }
@@ -469,6 +470,7 @@ label {
       animation: 1.75s blink infinite; }
   .rowProfile .userInfo {
     padding: 0px;
+    padding-top: 8px;
     padding-bottom: 20px; }
     .rowProfile .userInfo form {
       width: 50%;
@@ -476,6 +478,15 @@ label {
       min-width: 275px;
       margin: 0px auto;
       display: block; }
+      .rowProfile .userInfo form .logout {
+        font-size: 15px;
+        color: #337ab7; }
+        .rowProfile .userInfo form .logout:hover {
+          color: #23527c;
+          text-decoration: underline;
+          cursor: pointer; }
+      .rowProfile .userInfo form button {
+        float: right; }
   .rowProfile .textArrays {
     padding: 0px;
     padding-bottom: 20px; }
@@ -494,24 +505,9 @@ label {
           .rowProfile .textArrays ul li .textArrayName .deleteItem {
             display: inline;
             padding-left: 10px; }
-            .rowProfile .textArrays ul li .textArrayName .deleteItem .name:hover {
+            .rowProfile .textArrays ul li .textArrayName .deleteItem:hover {
               color: #ef143c;
-              cursor: pointer;
-              /* transitions and animations */
-              -webkit-transition: color .5s ease;
-              -moz-transition: color .5s ease;
-              -ms-transition: color .5s ease;
-              -o-transition: color .5s ease;
-              transition: color .5s ease; }
-              .rowProfile .textArrays ul li .textArrayName .deleteItem .name:hover i {
-                color: #1D9E74;
-                cursor: pointer;
-                /* transitions and animations */
-                -webkit-transition: color .5s ease;
-                -moz-transition: color .5s ease;
-                -ms-transition: color .5s ease;
-                -o-transition: color .5s ease;
-                transition: color .5s ease; }
+              cursor: pointer; }
         .rowProfile .textArrays ul li .heartIcon {
           color: #ef143c;
           cursor: pointer;
@@ -538,15 +534,20 @@ label {
     padding: 0px;
     padding-bottom: 20px; }
     .rowProfile .photoArrays .photoSearchName {
-      margin-top: 10px; }
+      margin-top: 0px;
+      margin-bottom: 0px; }
       .rowProfile .photoArrays .photoSearchName .deleteItem {
-        display: inline; }
+        display: inline;
+        padding-left: 10px; }
+        .rowProfile .photoArrays .photoSearchName .deleteItem:hover {
+          color: #ef143c;
+          cursor: pointer; }
     .rowProfile .photoArrays .images {
       padding: 0px;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
       text-align: center; }
       .rowProfile .photoArrays .images img {
-        padding-top: 20px;
+        padding-top: 10px;
         width: 200px;
         height: 200px;
         margin: 0px auto;
@@ -587,7 +588,7 @@ label {
   height: 25%;
   z-index: 900;
   position: fixed;
-  left: 40%;
+  left: 45%;
   top: 25%; }
   .alertFade img {
     height: 100%;
