@@ -3,7 +3,7 @@
 
     angular
         .module('flowers')
-        .controller('imageController', function(API, $location, $stateParams, back, $timeout) {
+        .controller('imageController', function(API, $location, $stateParams, back, $timeout, clipboard) {
             var vm = this;
 
             vm.image1 = [];
@@ -79,7 +79,6 @@
                 var save = back.saveImage(savedPhotos);
                 save.then(function(response) {
                     vm.saved = true;
-                    console.log(vm.saved);
                     vm.alertFade();             
                 })
             }
@@ -94,5 +93,22 @@
                     $(".alertFade").fadeTo(0, 500)
                 }, 1000);
             }
+
+            //clipboard function so users can copy text
+            vm.supported = false;
+            vm.textToCopy = 'I can copy by clicking!';
+
+            vm.success = function (text) {
+
+                // var url = text;
+                // var imgTag = '<img src ="' + url + '">'
+                clipboard.copyText(text);          
+                    vm.copied = true;
+                    vm.alertFade(); 
+            };
+            vm.fail = function (err) {
+                console.error('Error!', err);
+            };
+
         });
 })();

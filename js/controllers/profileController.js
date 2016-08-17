@@ -22,6 +22,8 @@
             $state.go('login');
            }
 
+    
+
             //gets users saved projects from backand
             var projects = back.getSavedInfo();
             projects.then(function(response) {
@@ -55,6 +57,7 @@
                 if (vm.photoCounter > 0) {
                     vm.photoPresent = true;
                 }
+            
             })
 
             //gets users info from backand
