@@ -5,6 +5,10 @@
     .module('flowers')
     .controller('textController', function($state, textAPI,clipboard, API, back, $timeout) {
 
+        $(document).ready(function(){
+            $("i, button, span").tooltip();
+        });
+
         var vm = this;      
 
         // empty container arrays to be populated by writeTextArray()
@@ -33,11 +37,6 @@
         	vm.loggedIn = true;
         	vm.userId = API.getUserId();
        	}	
-
-
-       	$(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-         });
 
         //gets users saved projects from backand
         var projects = back.getSavedInfo();

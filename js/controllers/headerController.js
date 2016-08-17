@@ -4,6 +4,11 @@
     angular
         .module('flowers')
         .controller('headerController', function(API, back, $state, $location) {
+            
+            $(document).ready(function(){
+                $("i").tooltip();
+            });
+
             var vm = this;
             
             var loggedIn = false;
@@ -11,10 +16,6 @@
             if (API.getToken() !== null) {
                 vm.loggedIn = true;
             }
-
-            $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-            });
 
             var call = back.getUserInfo(API.getToken());
             call.then(function(data) {

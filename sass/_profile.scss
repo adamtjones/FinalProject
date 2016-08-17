@@ -98,9 +98,15 @@
 					.deleteItem, .copy {
 						display: inline;
 						padding-left: 10px;
-						&:hover {
+						:hover {
 							color: $red;
 							cursor: pointer;
+							/* transitions and animations */
+							-webkit-transition: color .5s ease;
+							-moz-transition: color .5s ease;
+							-ms-transition: color .5s ease;
+							-o-transition: color .5s ease;
+							transition: color .5s ease;	
 						}
 					}
 				}
@@ -143,9 +149,15 @@
 			.deleteItem {
 				display: inline;
 				padding-left: 10px;
-				&:hover {
+				:hover {
 					color: $red;
 					cursor: pointer;
+					/* transitions and animations */
+					-webkit-transition: color .5s ease;
+					-moz-transition: color .5s ease;
+					-ms-transition: color .5s ease;
+					-o-transition: color .5s ease;
+					transition: color .5s ease;	
 				}
 			}
 		}

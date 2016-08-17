@@ -11,7 +11,6 @@
 		border-top: 3px solid $red;
 		border-bottom: 3px solid $red;
 		padding-bottom: 10px;
-
 		text-align: center;
 		.title {
 			text-align: center;
@@ -257,6 +256,7 @@
 					x-index: 1000;
 					position: absolute;
 					right: 25px;
+					cursor: pointer;
 
 				}	
 				.textArray {

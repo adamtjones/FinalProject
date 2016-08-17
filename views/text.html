@@ -10,11 +10,11 @@
 		    	<label class = "userTextLabel">
 		    		<span class = "enterText">Enter your text</span>
 			    	<div class="" ng-show = "controller.form.textInput">
-						<input type="number" class="form-control textPercentInput" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput" />
+						<input type="number" class="form-control textPercentInput" id="textPercentInput" placeholder="0" ng-model= "controller.form.percentage.textInput">
 						<span>% of total: </span>
 				    </div>
-		    		<span>
-		    			<a href="#" data-toggle="tooltip" title="Save text to profile"><i class="fa fa-floppy-o saveButton" ng-show = "controller.loggedIn && controller.form.textInput" aria-hidden="true" data-toggle="modal" data-target=".modalSave"></i></a>
+		    		<span class = "save" data-toggle="modal" data-target=".modalSave" ng-show = "controller.loggedIn && controller.form.textInput">
+						<i data-toggle="tooltip" title="Save" data-placement="top"class="fa fa-floppy-o saveButton" aria-hidden="true"></i>
 		    		</span>	
 		    	</label>	
 		    	<textarea class="form-control" id = "textInput" rows="5" ng-model= "controller.form.textInput"></textarea>
@@ -80,9 +80,7 @@
 				</div>
 				<button type="submit" class="btn btn-default" data-toggle="modal" data-target="#modal" ng-click = "controller.submit()">Submit</button>
 				<button class="btn btn-default" ng-click = "controller.reset()">Reset</button>
-				<a href="#" data-toggle="tooltip" title="Random text generator">
-					<button class="btn btn-default random" data-toggle="modal" data-target="#modal" ng-click = "controller.random()">Let's get weird!</button>
-				</a>
+				<button class="btn btn-default random" data-toggle="modal" data-target="#modal" ng-click = "controller.random()"><span data-toggle="tooltip" title="Random" class = "randomSpan">Let's get weird!</span></button>
 			</div>
 		</div>
 
@@ -162,7 +160,7 @@
                          <h2 class="modal-title">And here's your dummy text:</h2>
                     </div>
                     <div class="modal-body"> 
-                     	<i class="fa fa-files-o" aria-hidden="true" clipboard supported="controller.supported" text="textToCopy" on-copied="controller.success()" on-error="controller.fail(err)"></i>
+                     	<i class="fa fa-files-o" data-toggle="tooltip" title="Copy" class = "copy	" aria-hidden="true" clipboard supported="controller.supported" text="textToCopy" on-copied="controller.success()" on-error="controller.fail(err)"></i>
 						<textarea class="form-control" id = "textOutput" rows="20" readonly ng-model= "controller.form.textOutput" ng-model="textToCopy">{{controller.form.textOutput}}</textarea>   
                     </div>
                 </div>

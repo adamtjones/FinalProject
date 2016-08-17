@@ -198,7 +198,8 @@
         text-align: center;
         x-index: 1000;
         position: absolute;
-        right: 25px; }
+        right: 25px;
+        cursor: pointer; }
       .rowText .userArrays ul .publicArrays .textArray {
         font-style: italic;
         margin-bottom: 0px;
@@ -521,9 +522,15 @@ label {
           .rowProfile .textArrays ul li .textArrayName .deleteItem, .rowProfile .textArrays ul li .textArrayName .copy {
             display: inline;
             padding-left: 10px; }
-            .rowProfile .textArrays ul li .textArrayName .deleteItem:hover, .rowProfile .textArrays ul li .textArrayName .copy:hover {
+            .rowProfile .textArrays ul li .textArrayName .deleteItem :hover, .rowProfile .textArrays ul li .textArrayName .copy :hover {
               color: #ef143c;
-              cursor: pointer; }
+              cursor: pointer;
+              /* transitions and animations */
+              -webkit-transition: color .5s ease;
+              -moz-transition: color .5s ease;
+              -ms-transition: color .5s ease;
+              -o-transition: color .5s ease;
+              transition: color .5s ease; }
         .rowProfile .textArrays ul li .heartIcon {
           color: #ef143c;
           cursor: pointer;
@@ -555,9 +562,15 @@ label {
       .rowProfile .photoArrays .photoSearchName .deleteItem {
         display: inline;
         padding-left: 10px; }
-        .rowProfile .photoArrays .photoSearchName .deleteItem:hover {
+        .rowProfile .photoArrays .photoSearchName .deleteItem :hover {
           color: #ef143c;
-          cursor: pointer; }
+          cursor: pointer;
+          /* transitions and animations */
+          -webkit-transition: color .5s ease;
+          -moz-transition: color .5s ease;
+          -ms-transition: color .5s ease;
+          -o-transition: color .5s ease;
+          transition: color .5s ease; }
     .rowProfile .photoArrays .images {
       padding: 0px;
       padding-bottom: 30px;
@@ -614,6 +627,27 @@ label {
   .alertFade .alertFadeText {
     display: inline;
     text-align: center; }
+
+.tooltip > .tooltip-inner {
+  background-color: #2b2b2b;
+  color: #fefbf7;
+  padding-top: 5px; }
+
+.ttLogOut + .tooltip > .tooltip-arrow {
+  border-bottom-color: #2b2b2b; }
+
+.saveButton + .tooltip > .tooltip-arrow {
+  border-top-color: #2b2b2b; }
+
+.randomSpan + .tooltip > .tooltip-arrow {
+  border-top-color: #2b2b2b;
+  padding-bottom: 5px; }
+
+.randomSpan + .tooltip > .tooltip-inner {
+  margin-bottom: 5px; }
+
+.copy + .tooltip > .tooltip-arrow {
+  border-bottom-color: #2b2b2b; }
 
 body {
   background-color: #ef143c;
