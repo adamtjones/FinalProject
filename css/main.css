@@ -601,7 +601,8 @@
       margin-right: 10px; }
     .rowImageSearch form .search .customDrop {
       margin-right: 10px;
-      font-size: 15px; }
+      font-size: 15px;
+      cursor: pointer; }
     .rowImageSearch form .search .searchButton {
       color: #444444; }
   .rowImageSearch form .showImageSize {

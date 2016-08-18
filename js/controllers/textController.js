@@ -123,6 +123,7 @@
         };
         vm.fail = function (err) {
             console.error('Error!', err);
+            alert("Oh no! Something went wrong. Are you on Safari? I promise you if you were on any other browser it would work. My bad. I'm afraid you will have to copy using your cursor :-(")
         };
 
         //changes showPercentages to true when item is selected
@@ -200,13 +201,19 @@
 			if (vm.form.checkbox.baconInput === true && vm.form.percentage.baconInput === undefined){
 				vm.arrayCount ++;
 			} 
-			console.log(vm.arrayCount);
 			return vm.arrayCount;
 		}
 
 		//translates user inputs to objectTemplate and pushes to containerArray
 		//calls function writeTextArray()
 		vm.submit = function(){
+			if (vm.form.textInput === undefined && 
+				vm.form.checkbox.loremInput === false &&
+				vm.form.checkbox.gibberishInput === false &&
+			 	vm.form.checkbox.hipsterInput === false && 
+			 	vm.form.checkbox.baconInput === false) {
+				vm.random();
+			}
 			vm.arrayCounter();
 			vm.defaultPercentage = 100/vm.arrayCount;
 			var objectTemplate = (function(array,percentage){
@@ -273,7 +280,6 @@
 					containerArray.push(obj);
 				}	
 			}
-			console.log(containerArray);
 			writeTextArray();
 		}
 

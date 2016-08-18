@@ -22,8 +22,6 @@
             $state.go('login');
            }
 
-    
-
             //gets users saved projects from backand
             var projects = back.getSavedInfo();
             projects.then(function(response) {
@@ -120,6 +118,7 @@
             };
             vm.fail = function (err) {
                 console.error('Error!', err);
+            alert("Oh no! Something went wrong. Are you on Safari? I promise you if you were on any other browser it would work. My bad. I'm afraid you will have to copy using your cursor :-(")
             };
 
         });

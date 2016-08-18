@@ -9,6 +9,7 @@
                 var call = $http({
                     headers: {
                         "Ocp-Apim-Subscription-Key": "ed9ce55ba1b7454aa7326f5342e94ef7",
+                                                      // 9c11996c1e134df38cbbd612bed6e3b2
                     },
                     method: 'GET',
                     url: "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + image + "&height=" + height + "&width=" + width,
